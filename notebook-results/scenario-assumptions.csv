@@ -1,0 +1,5 @@
+name,weight,buy_eth_hour,demand_half_life_hours,sell_hazard_day,exit_hazard_day,exit_drawdown_sensitivity,license_demand_day
+Fast fade,0.3,271.70321870106835,6,0.28211302827313445,0.04,0.5,25
+Central case,0.5,359.8761906418734,24,0.19211840932582247,0.02,0.3,60
+Continued rebound,0.2,448.04916258267843,72,0.10212379037851052,0.01,0.15,100
+Withdrawal wave (stress),0.0,359.8761906418734,24,0.19211840932582247,0.005,0.05,60

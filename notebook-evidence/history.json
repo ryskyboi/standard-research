@@ -1,0 +1,36 @@
+[
+  {
+    "block": 63576310,
+    "hash": "0xaa4a216e415c3fe6a7d2bdfdd661bdf8d1486d9f183b96422db098a8468d6a6b",
+    "timestamp": 1789466959,
+    "values": [
+      {
+        "label": "getSlot0",
+        "value": [
+          "5825937481154428342934892680273",
+          85959,
+          0,
+          10000
+        ]
+      },
+      {
+        "label": "getLiquidity",
+        "value": "321376285068141828027926"
+      },
+      {
+        "label": "flow",
+        "value": "3436391158749774068109"
+      },
+      {
+        "label": "depth",
+        "value": "4329575768470681620963"
+      }
+    ]
+  },
+  {
+    "block": 63558593,
+    "hash": "0x7ff3fee65255326291c06235e986e259280c52a09590b47c4f42512c31413c1d",
+    "timestamp": 1789465166,
+    "error": "Error: {\"code\":-32000,\"message\":\"metadata is not found, 63558596\"}"
+  }
+]

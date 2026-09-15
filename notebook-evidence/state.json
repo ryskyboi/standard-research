@@ -1,0 +1,140 @@
+{
+  "poolKey": [
+    "0x0000000000000000000000000000000000000000",
+    "0x88ad8DdF1E3898412146a534538d418c6F8A9062",
+    10000,
+    200,
+    "0xF1eE073811B14359D850825E48d200483200eDcd"
+  ],
+  "poolId": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+  "poolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+  "stateView": "0xf3334192d15450cdd385c8b70e03f9a6bd9e673b",
+  "block": "63576310",
+  "values": [
+    {
+      "label": "bank.baseIssuancePerDay",
+      "value": "700000000000000000000000"
+    },
+    {
+      "label": "bank.totalBranches",
+      "value": "1099"
+    },
+    {
+      "label": "bank.totalPendingLive",
+      "value": "887398764443797852455591"
+    },
+    {
+      "label": "bank.multiplierWad",
+      "value": "1000000000000000000"
+    },
+    {
+      "label": "bank.epochEnd",
+      "value": "1789693230"
+    },
+    {
+      "label": "bank.epochDays",
+      "value": "3"
+    },
+    {
+      "label": "bank.genesisTime",
+      "value": "1789434030"
+    },
+    {
+      "label": "bank.issuanceRate",
+      "value": "8101851851851851851"
+    },
+    {
+      "label": "bank.owner",
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "vault.poolEthDepth",
+      "value": "4329575768470681620963"
+    },
+    {
+      "label": "vault.tickVaultPctBps",
+      "value": "1000"
+    },
+    {
+      "label": "vault.effectiveTickPoolPctBps",
+      "value": "20"
+    },
+    {
+      "label": "vault.tickCooldown",
+      "value": "3600"
+    },
+    {
+      "label": "vault.lastTickAt",
+      "value": "0"
+    },
+    {
+      "label": "vault.owner",
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "license.remainingToday",
+      "value": "0"
+    },
+    {
+      "label": "license.lastSalePrice",
+      "value": "11888340929148039869600"
+    },
+    {
+      "label": "license.dayFloorPrice",
+      "value": "1400000000000000000000"
+    },
+    {
+      "label": "license.auctionAnchor",
+      "value": "1789434244"
+    },
+    {
+      "label": "license.owner",
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "token.name",
+      "value": "STANDARD"
+    },
+    {
+      "label": "token.symbol",
+      "value": "STANDARD"
+    },
+    {
+      "label": "token.decimals",
+      "value": 18
+    },
+    {
+      "label": "token.totalSupply",
+      "value": "98185031341343272347436212"
+    },
+    {
+      "label": "getSlot0",
+      "value": [
+        "5825937481154428342934892680273",
+        85959,
+        0,
+        10000
+      ]
+    },
+    {
+      "label": "getLiquidity",
+      "value": "321376285068141828027926"
+    },
+    {
+      "label": "exitFee.0",
+      "value": "20084525840868683"
+    },
+    {
+      "label": "exitFee.1000",
+      "value": "20099109410085684"
+    },
+    {
+      "label": "exitFee.100000",
+      "value": "27284882762568811"
+    },
+    {
+      "label": "exitFee.1000000",
+      "value": "600000000000000000"
+    }
+  ]
+}

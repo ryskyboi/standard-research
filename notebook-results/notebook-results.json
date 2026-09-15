@@ -1,0 +1,794 @@
+{
+  "snapshot_utc": "2026-09-15 10:09:19+00:00",
+  "snapshot_jst": "2026-09-15 19:09:19+09:00",
+  "block": "63576310",
+  "block_hash": "0xaa4a216e415c3fe6a7d2bdfdd661bdf8d1486d9f183b96422db098a8468d6a6b",
+  "token_quantity": 100000,
+  "paths": 200,
+  "position_paths": 80,
+  "horizon_days": 14,
+  "seed": 20260915,
+  "state": {
+    "timestamp": 1789466959,
+    "genesis": 1789434030,
+    "eth": 4370.464431513929,
+    "token": 23631977.384248473,
+    "available_eth": 3352.87912897183,
+    "float_tokens": 74724461.04001313,
+    "pending": 887398.7644437979,
+    "branches": 1099,
+    "active_charters": 999,
+    "own_pending": 242.94800759541397,
+    "base_per_day": 700000.0,
+    "multiplier": 1.0,
+    "withdrawn": 12072.04242844939,
+    "contraction_eth": 111.7189937774005,
+    "epoch_flow": 3436.391158749774,
+    "epoch_end": 1789693230,
+    "epoch_days": 3,
+    "auction_anchor": 1789434244,
+    "last_license_price": 11888.34092914804,
+    "next_auction_hours": 14.9125,
+    "buy_tax": 0.02,
+    "sell_tax": 0.03,
+    "lp_fee": 0.01,
+    "protocol_depth_getter": 4329.575768470681,
+    "pool_token_principal": 23460570.301330138,
+    "liquidity_profile": {
+      "block": "63576310",
+      "blockHash": "0xaa4a216e415c3fe6a7d2bdfdd661bdf8d1486d9f183b96422db098a8468d6a6b",
+      "poolId": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+      "spacing": 200,
+      "words": [
+        -18,
+        -17,
+        -16,
+        -15,
+        -14,
+        -13,
+        -12,
+        -11,
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "bitmaps": [
+        "5986310706507378352962293074805895248510699696029696",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "14150492295118660241302000681097072008892686541283191157140967005960011776",
+        "27670116110564327424",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "19342813113834066795298816"
+      ],
+      "activeLiquidity": "321376285068141828027926",
+      "sqrtPriceX96": "5825937481154428342934892680273",
+      "ticks": [
+        {
+          "tick": -887200,
+          "liquidityGross": "318379506221141812421016",
+          "liquidityNet": "318379506221141812421016"
+        },
+        {
+          "tick": 57200,
+          "liquidityGross": "7815684603772933064",
+          "liquidityNet": "7815684603772933064"
+        },
+        {
+          "tick": 58000,
+          "liquidityGross": "13623101989691824750",
+          "liquidityNet": "13623101989691824750"
+        },
+        {
+          "tick": 60200,
+          "liquidityGross": "4238021923736959837",
+          "liquidityNet": "4238021923736959837"
+        },
+        {
+          "tick": 73400,
+          "liquidityGross": "113395661848297705",
+          "liquidityNet": "113395661848297705"
+        },
+        {
+          "tick": 77000,
+          "liquidityGross": "8171199627789214016",
+          "liquidityNet": "8171199627789214016"
+        },
+        {
+          "tick": 78200,
+          "liquidityGross": "10925276402478520046",
+          "liquidityNet": "10925276402478520046"
+        },
+        {
+          "tick": 78600,
+          "liquidityGross": "406818397611508619972",
+          "liquidityNet": "406818397611508619972"
+        },
+        {
+          "tick": 79600,
+          "liquidityGross": "32838067865136279796",
+          "liquidityNet": "32838067865136279796"
+        },
+        {
+          "tick": 80200,
+          "liquidityGross": "394841373393452613482",
+          "liquidityNet": "394841373393452613482"
+        },
+        {
+          "tick": 80800,
+          "liquidityGross": "47891581026883419122",
+          "liquidityNet": "47891581026883419122"
+        },
+        {
+          "tick": 81000,
+          "liquidityGross": "30351046433129502440",
+          "liquidityNet": "30351046433129502440"
+        },
+        {
+          "tick": 81200,
+          "liquidityGross": "1327336341504214673509",
+          "liquidityNet": "1327336341504214673509"
+        },
+        {
+          "tick": 81600,
+          "liquidityGross": "11146346642797397182",
+          "liquidityNet": "11146346642797397182"
+        },
+        {
+          "tick": 81800,
+          "liquidityGross": "12387216529248287658",
+          "liquidityNet": "12387216529248287658"
+        },
+        {
+          "tick": 82000,
+          "liquidityGross": "25236599228974323868",
+          "liquidityNet": "25236599228974323868"
+        },
+        {
+          "tick": 82400,
+          "liquidityGross": "266721471439182449479",
+          "liquidityNet": "266721471439182449479"
+        },
+        {
+          "tick": 82600,
+          "liquidityGross": "1131082783936860610",
+          "liquidityNet": "1131082783936860610"
+        },
+        {
+          "tick": 83800,
+          "liquidityGross": "312712157835350440323",
+          "liquidityNet": "312712157835350440323"
+        },
+        {
+          "tick": 84000,
+          "liquidityGross": "27223878990625952756",
+          "liquidityNet": "27223878990625952756"
+        },
+        {
+          "tick": 84200,
+          "liquidityGross": "354590149305917715958",
+          "liquidityNet": "354590149305917715958"
+        },
+        {
+          "tick": 84800,
+          "liquidityGross": "33430807473779071344",
+          "liquidityNet": "33430807473779071344"
+        },
+        {
+          "tick": 85000,
+          "liquidityGross": "11891957458595832612",
+          "liquidityNet": "-9958595346361207480"
+        },
+        {
+          "tick": 85400,
+          "liquidityGross": "428610376464880047135",
+          "liquidityNet": "-385026418758137192809"
+        },
+        {
+          "tick": 85800,
+          "liquidityGross": "62220662831058650282",
+          "liquidityNet": "62220662831058650282"
+        },
+        {
+          "tick": 86000,
+          "liquidityGross": "8171199627789214016",
+          "liquidityNet": "-8171199627789214016"
+        },
+        {
+          "tick": 86200,
+          "liquidityGross": "6480144484696601503",
+          "liquidityNet": "6480144484696601503"
+        },
+        {
+          "tick": 86600,
+          "liquidityGross": "106808278052159653617",
+          "liquidityNet": "106808278052159653617"
+        },
+        {
+          "tick": 86800,
+          "liquidityGross": "178362582816610592274",
+          "liquidityNet": "178362582816610592274"
+        },
+        {
+          "tick": 87000,
+          "liquidityGross": "21929886116159348824",
+          "liquidityNet": "21071857160794768484"
+        },
+        {
+          "tick": 87400,
+          "liquidityGross": "48703076178730323652",
+          "liquidityNet": "-48703076178730323652"
+        },
+        {
+          "tick": 87600,
+          "liquidityGross": "45386374183274707782",
+          "liquidityNet": "-45386374183274707782"
+        },
+        {
+          "tick": 87800,
+          "liquidityGross": "59934030732123210475",
+          "liquidityNet": "-59934030732123210475"
+        },
+        {
+          "tick": 88000,
+          "liquidityGross": "22782813268059776064",
+          "liquidityNet": "1308736724199724102"
+        },
+        {
+          "tick": 88200,
+          "liquidityGross": "11146346642797397182",
+          "liquidityNet": "-11146346642797397182"
+        },
+        {
+          "tick": 88600,
+          "liquidityGross": "24845563919367314834",
+          "liquidityNet": "24845563919367314834"
+        },
+        {
+          "tick": 88800,
+          "liquidityGross": "37938151878425121153",
+          "liquidityNet": "37938151878425121153"
+        },
+        {
+          "tick": 89000,
+          "liquidityGross": "127913611187354068842",
+          "liquidityNet": "-127913611187354068842"
+        },
+        {
+          "tick": 89400,
+          "liquidityGross": "12045774996129750083",
+          "liquidityNet": "-12045774996129750083"
+        },
+        {
+          "tick": 89800,
+          "liquidityGross": "25812244975484627400",
+          "liquidityNet": "-25812244975484627400"
+        },
+        {
+          "tick": 90200,
+          "liquidityGross": "351668795637760623041",
+          "liquidityNet": "-351668795637760623041"
+        },
+        {
+          "tick": 90400,
+          "liquidityGross": "31856088566026109574",
+          "liquidityNet": "31856088566026109574"
+        },
+        {
+          "tick": 90600,
+          "liquidityGross": "33430807473779071344",
+          "liquidityNet": "-33430807473779071344"
+        },
+        {
+          "tick": 90800,
+          "liquidityGross": "32053128824357574833",
+          "liquidityNet": "-32053128824357574833"
+        },
+        {
+          "tick": 91000,
+          "liquidityGross": "35415080843063251913",
+          "liquidityNet": "-35415080843063251913"
+        },
+        {
+          "tick": 91200,
+          "liquidityGross": "379319445650408181373",
+          "liquidityNet": "-194958901340970752613"
+        },
+        {
+          "tick": 92200,
+          "liquidityGross": "1327336341504214673509",
+          "liquidityNet": "-1327336341504214673509"
+        },
+        {
+          "tick": 92400,
+          "liquidityGross": "394841373393452613482",
+          "liquidityNet": "-394841373393452613482"
+        },
+        {
+          "tick": 92800,
+          "liquidityGross": "104095509287595416355",
+          "liquidityNet": "-104095509287595416355"
+        },
+        {
+          "tick": 93400,
+          "liquidityGross": "35550836629700517058",
+          "liquidityNet": "-35550836629700517058"
+        },
+        {
+          "tick": 93600,
+          "liquidityGross": "118541947746335679504",
+          "liquidityNet": "-118541947746335679504"
+        },
+        {
+          "tick": 93800,
+          "liquidityGross": "21500871638477058654",
+          "liquidityNet": "-21500871638477058654"
+        },
+        {
+          "tick": 94600,
+          "liquidityGross": "34733065434758520358",
+          "liquidityNet": "-34733065434758520358"
+        },
+        {
+          "tick": 94800,
+          "liquidityGross": "30351046433129502440",
+          "liquidityNet": "-30351046433129502440"
+        },
+        {
+          "tick": 95000,
+          "liquidityGross": "12719380510586315433",
+          "liquidityNet": "-12719380510586315433"
+        },
+        {
+          "tick": 95400,
+          "liquidityGross": "5190070835071075552",
+          "liquidityNet": "-5190070835071075552"
+        },
+        {
+          "tick": 95600,
+          "liquidityGross": "20625712413391675345",
+          "liquidityNet": "-20625712413391675345"
+        },
+        {
+          "tick": 95800,
+          "liquidityGross": "21169331263757870014",
+          "liquidityNet": "-21169331263757870014"
+        },
+        {
+          "tick": 96200,
+          "liquidityGross": "4067267965216453854",
+          "liquidityNet": "-4067267965216453854"
+        },
+        {
+          "tick": 96400,
+          "liquidityGross": "139938943035765241247",
+          "liquidityNet": "-139938943035765241247"
+        },
+        {
+          "tick": 97200,
+          "liquidityGross": "124036360720744823954",
+          "liquidityNet": "-124036360720744823954"
+        },
+        {
+          "tick": 97800,
+          "liquidityGross": "8084592574122180198",
+          "liquidityNet": "-8084592574122180198"
+        },
+        {
+          "tick": 99800,
+          "liquidityGross": "16028226572361302318",
+          "liquidityNet": "-16028226572361302318"
+        },
+        {
+          "tick": 115000,
+          "liquidityGross": "1107592525015152029618356",
+          "liquidityNet": "470853341710478013434400"
+        },
+        {
+          "tick": 115200,
+          "liquidityGross": "789222933362815021526378",
+          "liquidityNet": "-789222933362815021526378"
+        },
+        {
+          "tick": 887200,
+          "liquidityGross": "9914568804804329038",
+          "liquidityNet": "-9914568804804329038"
+        }
+      ]
+    }
+  },
+  "scenarios": {
+    "Fast fade": {
+      "name": "Fast fade",
+      "buy_eth_hour": 271.70321870106835,
+      "demand_half_life_hours": 6,
+      "sell_hazard_day": 0.28211302827313445,
+      "exit_hazard_day": 0.04,
+      "exit_drawdown_sensitivity": 0.5,
+      "license_demand_day": 25,
+      "external_license_fraction": 0.25,
+      "returned_sell_fraction": 0.9,
+      "buybacks_enabled": false,
+      "coordinated_exit_hour": null,
+      "coordinated_exit_fraction": 0.5
+    },
+    "Central case": {
+      "name": "Central case",
+      "buy_eth_hour": 359.8761906418734,
+      "demand_half_life_hours": 24,
+      "sell_hazard_day": 0.19211840932582247,
+      "exit_hazard_day": 0.02,
+      "exit_drawdown_sensitivity": 0.3,
+      "license_demand_day": 60,
+      "external_license_fraction": 0.25,
+      "returned_sell_fraction": 0.9,
+      "buybacks_enabled": false,
+      "coordinated_exit_hour": null,
+      "coordinated_exit_fraction": 0.5
+    },
+    "Continued rebound": {
+      "name": "Continued rebound",
+      "buy_eth_hour": 448.04916258267843,
+      "demand_half_life_hours": 72,
+      "sell_hazard_day": 0.10212379037851052,
+      "exit_hazard_day": 0.01,
+      "exit_drawdown_sensitivity": 0.15,
+      "license_demand_day": 100,
+      "external_license_fraction": 0.25,
+      "returned_sell_fraction": 0.9,
+      "buybacks_enabled": false,
+      "coordinated_exit_hour": null,
+      "coordinated_exit_fraction": 0.5
+    },
+    "Withdrawal wave (stress)": {
+      "name": "Withdrawal wave (stress)",
+      "buy_eth_hour": 359.8761906418734,
+      "demand_half_life_hours": 24,
+      "sell_hazard_day": 0.19211840932582247,
+      "exit_hazard_day": 0.005,
+      "exit_drawdown_sensitivity": 0.05,
+      "license_demand_day": 60,
+      "external_license_fraction": 0.25,
+      "returned_sell_fraction": 0.9,
+      "buybacks_enabled": false,
+      "coordinated_exit_hour": 48,
+      "coordinated_exit_fraction": 0.5
+    }
+  },
+  "subjective_weights": {
+    "Fast fade": 0.3,
+    "Central case": 0.5,
+    "Continued rebound": 0.2,
+    "Withdrawal wave (stress)": 0.0
+  },
+  "peak_summary": [
+    {
+      "scenario": "Fast fade",
+      "weight": 0.3,
+      "median_path_peak_h": 3.0,
+      "p10_peak_h": 0.0,
+      "p90_peak_h": 8.099999999999994,
+      "peak_of_mean_price_h": 4.0,
+      "best_precommitted_sale_h": 4.0,
+      "best_sale_JST": "Sep 15 23:09 JST",
+      "mean_net_ETH_at_best": 18.98211240728142,
+      "snapshot_is_future_max_fraction": 0.19,
+      "final_hour_peak_fraction": 0.0,
+      "recent_observed_high_not_exceeded_fraction": 0.19
+    },
+    {
+      "scenario": "Central case",
+      "weight": 0.5,
+      "median_path_peak_h": 19.0,
+      "p10_peak_h": 8.0,
+      "p90_peak_h": 32.0,
+      "peak_of_mean_price_h": 19.0,
+      "best_precommitted_sale_h": 19.0,
+      "best_sale_JST": "Sep 16 14:09 JST",
+      "mean_net_ETH_at_best": 33.81933646188305,
+      "snapshot_is_future_max_fraction": 0.0,
+      "final_hour_peak_fraction": 0.0,
+      "recent_observed_high_not_exceeded_fraction": 0.0
+    },
+    {
+      "scenario": "Continued rebound",
+      "weight": 0.2,
+      "median_path_peak_h": 37.5,
+      "p10_peak_h": 22.0,
+      "p90_peak_h": 72.19999999999999,
+      "peak_of_mean_price_h": 35.0,
+      "best_precommitted_sale_h": 35.0,
+      "best_sale_JST": "Sep 17 06:09 JST",
+      "mean_net_ETH_at_best": 87.26798147097847,
+      "snapshot_is_future_max_fraction": 0.0,
+      "final_hour_peak_fraction": 0.0,
+      "recent_observed_high_not_exceeded_fraction": 0.0
+    },
+    {
+      "scenario": "Withdrawal wave (stress)",
+      "weight": 0.0,
+      "median_path_peak_h": 19.0,
+      "p10_peak_h": 8.0,
+      "p90_peak_h": 32.0,
+      "peak_of_mean_price_h": 19.0,
+      "best_precommitted_sale_h": 19.0,
+      "best_sale_JST": "Sep 16 14:09 JST",
+      "mean_net_ETH_at_best": 33.849449165525385,
+      "snapshot_is_future_max_fraction": 0.0,
+      "final_hour_peak_fraction": 0.0,
+      "recent_observed_high_not_exceeded_fraction": 0.0
+    }
+  ],
+  "position_summary": [
+    {
+      "scenario": "Fast fade",
+      "position": "Existing one branch",
+      "best_h": 336.0,
+      "mean_ETH": 0.47679866808483934,
+      "p10_ETH": 0.4505723720824366,
+      "p90_ETH": 0.5102432291080904,
+      "boundary_optimum": true,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Fast fade",
+      "position": "Existing 10 branches",
+      "best_h": 336.0,
+      "mean_ETH": 4.173093139162684,
+      "p10_ETH": 3.9655498960536373,
+      "p90_ETH": 4.457417642915408,
+      "boundary_optimum": true,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Fast fade",
+      "position": "External: next opening price",
+      "best_h": 336.0,
+      "mean_ETH": -3.3092058227905548,
+      "p10_ETH": -4.957025064948627,
+      "p90_ETH": -2.0939434379997244,
+      "boundary_optimum": true,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Fast fade",
+      "position": "External: floor if available",
+      "best_h": 336.0,
+      "mean_ETH": 0.25709912744958346,
+      "p10_ETH": 0.16012252064455954,
+      "p90_ETH": 0.3290203696816423,
+      "boundary_optimum": true,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Fast fade",
+      "position": "Reinvest: floor if available",
+      "best_h": 336.0,
+      "mean_ETH": 0.9275486272674709,
+      "p10_ETH": 0.8766894287074221,
+      "p90_ETH": 0.9921418076379528,
+      "boundary_optimum": true,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Central case",
+      "position": "Existing one branch",
+      "best_h": 44.0,
+      "mean_ETH": 0.33792215059480035,
+      "p10_ETH": 0.1699402860251962,
+      "p90_ETH": 0.5352953068185128,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Central case",
+      "position": "Existing 10 branches",
+      "best_h": 44.0,
+      "mean_ETH": 3.370274977755372,
+      "p10_ETH": 1.6944936726114035,
+      "p90_ETH": 5.340589700296121,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Central case",
+      "position": "External: next opening price",
+      "best_h": 56.0,
+      "mean_ETH": -8.272592733370239,
+      "p10_ETH": -13.057194054839238,
+      "p90_ETH": -4.82282856615332,
+      "boundary_optimum": false,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Central case",
+      "position": "External: floor if available",
+      "best_h": 56.0,
+      "mean_ETH": -0.25047302080095274,
+      "p10_ETH": -0.42031025249300197,
+      "p90_ETH": -0.13255624303824648,
+      "boundary_optimum": false,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Central case",
+      "position": "Reinvest: floor if available",
+      "best_h": 38.0,
+      "mean_ETH": 0.33559224641690066,
+      "p10_ETH": 0.16036860478176004,
+      "p90_ETH": 0.5545762869897722,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Continued rebound",
+      "position": "Existing one branch",
+      "best_h": 98.0,
+      "mean_ETH": 1.4109100734975741,
+      "p10_ETH": 0.7382744179140082,
+      "p90_ETH": 2.251058287640661,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Continued rebound",
+      "position": "Existing 10 branches",
+      "best_h": 97.0,
+      "mean_ETH": 13.975525391221828,
+      "p10_ETH": 7.34844077843154,
+      "p90_ETH": 22.196784172842623,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Continued rebound",
+      "position": "External: next opening price",
+      "best_h": 104.0,
+      "mean_ETH": -15.164415698191288,
+      "p10_ETH": -24.432583030470358,
+      "p90_ETH": -7.997637545596151,
+      "boundary_optimum": false,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Continued rebound",
+      "position": "External: floor if available",
+      "best_h": 104.0,
+      "mean_ETH": 0.19960646116149003,
+      "p10_ETH": -0.26319766038627884,
+      "p90_ETH": 0.694577397307498,
+      "boundary_optimum": false,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Continued rebound",
+      "position": "Reinvest: floor if available",
+      "best_h": 110.0,
+      "mean_ETH": 1.5284924199101988,
+      "p10_ETH": 0.7152028154653671,
+      "p90_ETH": 2.538541468161569,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Withdrawal wave (stress)",
+      "position": "Existing one branch",
+      "best_h": 44.0,
+      "mean_ETH": 0.33763694279910295,
+      "p10_ETH": 0.16974223150817624,
+      "p90_ETH": 0.5353679293830486,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Withdrawal wave (stress)",
+      "position": "Existing 10 branches",
+      "best_h": 44.0,
+      "mean_ETH": 3.37194120183013,
+      "p10_ETH": 1.6954137679433765,
+      "p90_ETH": 5.346616110595769,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    },
+    {
+      "scenario": "Withdrawal wave (stress)",
+      "position": "External: next opening price",
+      "best_h": 48.0,
+      "mean_ETH": -8.289469059556671,
+      "p10_ETH": -13.054263953337657,
+      "p90_ETH": -4.830618692992638,
+      "boundary_optimum": false,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Withdrawal wave (stress)",
+      "position": "External: floor if available",
+      "best_h": 48.0,
+      "mean_ETH": -0.26189326476513375,
+      "p10_ETH": -0.4176541825199112,
+      "p90_ETH": -0.1435593731704904,
+      "boundary_optimum": false,
+      "measure": "incremental net ETH"
+    },
+    {
+      "scenario": "Withdrawal wave (stress)",
+      "position": "Reinvest: floor if available",
+      "best_h": 39.0,
+      "mean_ETH": 0.33464899205291865,
+      "p10_ETH": 0.1605396132304736,
+      "p90_ETH": 0.543637955949434,
+      "boundary_optimum": false,
+      "measure": "total net ETH"
+    }
+  ],
+  "weighted_modal_peak_bucket": "0\u20136 h",
+  "equal_width_modal_window": "0\u20136 h",
+  "equal_width_modal_mass": 0.18849999999999997,
+  "weighted_modal_bucket_mass": 0.1885,
+  "weighted_best_sale_h": 23.0,
+  "weighted_best_sale_JST": "Sep 16 18:09 JST",
+  "evidence_sha256": {
+    "home.json": "61366d444b52338d2c982edf1b5062c76aebb7623e6de355030cea0f8db972e8",
+    "state.json": "dd97ff2be592c36a8eaba72d89ae8102892547c56c81942e20739fef0bd16f8c",
+    "charters.json": "5b417d88a8c10058ebbcfb60962dbb471bca9111299986247604aabeb98e2adb",
+    "recent-swaps.json": "4b7115de35ccb2f2309cebf56e198e1de5eed316511b4d4ff5fd9812aef526e5",
+    "swap-time-headers.json": "3c228d8d5637e790bbfe471adb21044baf9bae3ae399c2891fb9021e81536f6d",
+    "collection-complete.json": "7ef3b84959da7b7edf8565332d6efe34b1926b2429170ca995ef02f91fd1b6dc",
+    "liquidity-ticks.json": "9b6c9a8e4b756747b5ea9b3188db1e2052c8ed6b5f9412aecc105ad175ec5c10",
+    "liquidity-positions.json": "e2be605724fb741ccde9fa446d9dfbdd2f89c4eee60f2f54fbed909e783760c0"
+  }
+}

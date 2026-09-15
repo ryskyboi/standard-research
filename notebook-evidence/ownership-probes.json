@@ -1,0 +1,14 @@
+[
+  {
+    "functionName": "withdraw",
+    "error": "Error: {\"code\":3,\"message\":\"execution reverted\",\"data\":\"0x64e788a5\"}"
+  },
+  {
+    "functionName": "deposit",
+    "error": "Error: {\"code\":3,\"message\":\"execution reverted\",\"data\":\"0x64e788a5\"}"
+  },
+  {
+    "functionName": "buyLicenses",
+    "error": "Error: {\"code\":3,\"message\":\"execution reverted\",\"data\":\"0x64e788a5\"}"
+  }
+]

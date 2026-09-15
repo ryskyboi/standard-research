@@ -1,0 +1,40 @@
+{
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 50,
+    "method": "eth_getLogs",
+    "params": [
+      {
+        "address": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+        "topics": [
+          "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+          "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9"
+        ],
+        "fromBlock": "0x3ca0f8b",
+        "toBlock": "0x3ca18f6"
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 50,
+    "result": [
+      {
+        "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+        "topics": [
+          "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+          "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+          "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000000000000000e2900000000000000000000000000000000000000000000000000000000000016378000000000000000000000000000000000000000000000000bd0efb14d27f9a6e000000000000000000000000000000000000000000000000000000000029b7eb",
+        "blockNumber": "0x3ca108c",
+        "transactionHash": "0x3f158ce029ac157bfb6426193094abcd4380d45da7784ee6e5e8a29141624cdb",
+        "transactionIndex": "0x2",
+        "blockHash": "0x55c8646b83c9912eba6376815cf2eaafe66b4c7ea405f2146b40f4bfd490ac6d",
+        "blockTimestamp": "0x0",
+        "logIndex": "0x1",
+        "removed": false
+      }
+    ]
+  }
+}

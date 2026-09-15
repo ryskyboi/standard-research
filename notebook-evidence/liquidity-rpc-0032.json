@@ -1,0 +1,56 @@
+{
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 32,
+    "method": "eth_getLogs",
+    "params": [
+      {
+        "address": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+        "topics": [
+          "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+          "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9"
+        ],
+        "fromBlock": "0x3c7506b",
+        "toBlock": "0x3c7777a"
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 32,
+    "result": [
+      {
+        "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+        "topics": [
+          "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+          "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+          "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000000000000001605800000000000000000000000000000000000000000000000000000000000162b0fffffffffffffffffffffffffffffffffffffffffffffff73ac42851082fc9b2000000000000000000000000000000000000000000000000000000000029907e",
+        "blockNumber": "0x3c755b6",
+        "transactionHash": "0xdec0a6093c63fc146e6a69573c11fecd427dddcaf97e0e0cc84978b25ee951d6",
+        "transactionIndex": "0x7",
+        "blockHash": "0x701faff43ad0c09afb48cb608075379b333d7093d556c2a5d73d0610d9891312",
+        "blockTimestamp": "0x0",
+        "logIndex": "0x25",
+        "removed": false
+      },
+      {
+        "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+        "topics": [
+          "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+          "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+          "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000000000000012750000000000000000000000000000000000000000000000000000000000001812800000000000000000000000000000000000000000000000214505571ddff2e440000000000000000000000000000000000000000000000000000000000299b7f",
+        "blockNumber": "0x3c776c8",
+        "transactionHash": "0xd2665e479dc955e93c613ab749dbd805955822a4ebacae068635f8333d8412cd",
+        "transactionIndex": "0x6",
+        "blockHash": "0x6977e432b63a4e03d8c2865bd564502aa9da0ef4f0a1ae0be45158584964214b",
+        "blockTimestamp": "0x0",
+        "logIndex": "0x2d",
+        "removed": false
+      }
+    ]
+  }
+}

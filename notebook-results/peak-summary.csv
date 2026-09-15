@@ -1,0 +1,5 @@
+scenario,weight,median_path_peak_h,p10_peak_h,p90_peak_h,peak_of_mean_price_h,best_precommitted_sale_h,best_sale_JST,mean_net_ETH_at_best,snapshot_is_future_max_fraction,final_hour_peak_fraction,recent_observed_high_not_exceeded_fraction
+Fast fade,0.3,3.0,0.0,8.099999999999994,4.0,4.0,Sep 15 23:09 JST,18.98211240728142,0.19,0.0,0.19
+Central case,0.5,19.0,8.0,32.0,19.0,19.0,Sep 16 14:09 JST,33.81933646188305,0.0,0.0,0.0
+Continued rebound,0.2,37.5,22.0,72.19999999999999,35.0,35.0,Sep 17 06:09 JST,87.26798147097847,0.0,0.0,0.0
+Withdrawal wave (stress),0.0,19.0,8.0,32.0,19.0,19.0,Sep 16 14:09 JST,33.849449165525385,0.0,0.0,0.0

@@ -1,0 +1,5 @@
+scenario,within_1pct_first_h,within_1pct_last_h,bootstrap_p10_best_h,bootstrap_p90_best_h
+Fast fade,3.0,5.0,4.0,4.0
+Central case,16.0,22.0,18.0,20.0
+Continued rebound,31.0,40.0,33.0,38.0
+Withdrawal wave (stress),16.0,22.0,17.900000000000002,20.0
