@@ -1,0 +1,13 @@
+beliefs,license_price_tokens,multiple_of_floor,profitable_and_fundable_charters,prefer_ledger,prefer_external
+Flat beliefs,1273.8853503184714,1.0,999,33,966
+Flat beliefs,2547.770700636943,2.0,997,27,970
+Flat beliefs,5095.541401273886,4.0,995,24,971
+Flat beliefs,10191.082802547771,8.0,0,0,0
+Flat beliefs,15286.624203821657,12.0,0,0,0
+Flat beliefs,23770.700636942678,18.66,0,0,0
+Adaptive beliefs,1273.8853503184714,1.0,999,0,999
+Adaptive beliefs,2547.770700636943,2.0,999,0,999
+Adaptive beliefs,5095.541401273886,4.0,999,0,999
+Adaptive beliefs,10191.082802547771,8.0,999,0,999
+Adaptive beliefs,15286.624203821657,12.0,0,0,0
+Adaptive beliefs,23770.700636942678,18.66,0,0,0

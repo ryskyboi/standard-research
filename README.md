@@ -1,53 +1,46 @@
-# STANDARD research: flows, liquidity, and selling time
+# STANDARD research: incentives, taxes, liquidity and exits
 
-An executed, editable notebook comparing wallet-token sales, Charter withdrawals, branch purchases, reinvestment, and hypothetical funding of another owner's branch.
+**Decision-tree coverage:** [what participant choices are modeled, and what remains approximate](DECISION_TREE.md).
 
-**[Open the notebook](standard_scenarios.ipynb)** · **[Read the findings](FINDINGS.md)** · [Methodology](METHODOLOGY.md) · [Evidence and reproduction](DATA.md)
+An executed, editable notebook for wallet tokens, Charter earnings, branch purchases, reinvestment and hypothetical funding of someone else's branch.
 
-## Conditional timing experiment
+**[Open the agent notebook](rational_scenarios.ipynb)** · **[Read the findings](AGENT_FINDINGS.md)** · [Model and tax details](AGENT_MODEL.md) · [Evidence and reproduction](DATA.md)
 
-**Interpretation update:** speculative buying decay is an input, not a predicted event. The notebook does not establish that a flywheel is unlikely or that a drop within 48 hours is likely. See [branch caps and rational demand](RATIONAL_DEMAND.md) for the constraints a demand model must satisfy.
+## What can this tell us about the top?
 
-**The central scenario peaks around September 16, 2026 at 14:09 JST, about 19 hours after the frozen snapshot.** Its simulated 10–90% peak-time range is +8 to +32 hours. The central sale-proceeds curve is within 1% of its maximum from **+16 to +22 hours**.
+**The available evidence does not establish a most likely top or a decline within 48 hours.** The new model generates buying from expected profits, available cash and auction eligibility. It does not impose a buying-decay half-life. Its results still depend on assumed capital, expectations and participation limits; they are conditional experiments, not calibrated market probabilities.
 
-This is a conditional estimate. The short observed history does not establish the future buying half-life. Here is how changing that assumption changes the answer:
+The notebook compares eight scenarios, tests capital and license quotas, and checks whether agents' forecasts agree with the paths they generate. A separate [assumption audit](assumption_sensitivity.ipynb) varies spending pace and valuation horizon. It distinguishes the peak in spot price from the best precommitted exit for an existing wallet or branch. An optimum at the final observation remains unresolved.
 
-| Scenario | Buying half-life | Median simulated price top | Best precommitted wallet sale |
-| --- | ---: | ---: | ---: |
-| Fast fade | 6 hours | +3 hours | +4 hours |
-| Central | 24 hours | +19 hours | +19 hours |
-| Continued rebound | 72 hours | +37.5 hours | +35 hours |
+![Agent scenario paths](agent-results/agent-price-scenarios.png)
 
-The illustrative **30% / 50% / 20% weights are subjective**. Under those weights, the densest six-hour peak bucket is **0–6 hours** (18.8% of weighted paths), while the sale time maximizing mean ETH is **+23 hours**. The early modal bucket reflects the fast-fade paths; the later cash optimum gives weight to the larger payoff in sustained buying paths. Neither is a calibrated market probability.
+The [earlier flow notebook](standard_scenarios.ipynb) and [its findings](FINDINGS.md) remain available. Its +19-hour central peak came from an assumed buying half-life. It is not an independently established forecast and is not the conclusion of the new agent model.
 
-Snapshot: **2026-09-15 10:09:19 UTC / 19:09:19 JST**, Robinhood chain 4663, block **63,576,310**. Re-running the notebook uses this same frozen observation; it does not turn these dates into a current forecast.
+## What is modeled?
 
-![Scenario price paths](notebook-results/price-scenarios.png)
+- All 999 observed live Charters, with their actual initial integer branch counts and pending balances.
+- Ten branches per Charter, three license purchases per Charter per auction day and the global daily quota. Entry, partial retirement and Charter destruction change available capacity.
+- Separate ledger reinvestment, spending prefunded tokens, fresh pool purchases and advance inventory purchases.
+- Finite banker/speculator cash and explicit optional capital arrivals. Reusing sale proceeds does not count as new capital.
+- Trading hook taxes, the pool's LP fee, the 2–60% resolution fee, fee recycling, vault/POL/team routing and hypothetical manual tax overrides.
+- ETH Charter auctions closed in the baseline; a separate scenario enables them after 48 hours. Charter payments enter the fee engine, not the token pool directly.
+- Optional buybacks and POL under explicit execution assumptions.
+- A protected 100,000-token wallet and representative one-branch Charter; hypothetical third-party payout-sharing calculations. The earlier notebook also compares wallet sizes and one-/ten-branch positions.
+- Public pinned evidence, offline execution, event ledgers and independent ETH, physical-token and internal-ledger accounting checks.
 
-## Known liquidity, including tick ranges
+Agents compare actions under their forecasts. This is an approximate decision model, not a solved strategic equilibrium or a complete dynamic trading strategy. Results target net ETH, not USD.
 
-The model uses **3,352.88 ETH of actual pool principal**, reconstructed from **66 initialized ticks and 54 positions**. It does not treat the 4,370.46 ETH active virtual reserve as cash available for selling.
+## Known liquidity
 
-**Locked protocol liquidity is assumed permanently safe and retained**, as requested. It accounts for **3,340.98 ETH** of current principal. The model still allows ETH to leave through swaps. Range crossings, LP fees, hook taxes, and the seller's own price impact are included.
+The model reconstructs **3,352.88 ETH of actual pool principal** from **66 initialized ticks and 54 positions**, including range crossings and the seller's own price impact. The 4,370.46 ETH active virtual reserve is not treated as withdrawable cash.
 
-![Liquidity depth](notebook-results/liquidity-depth.png)
+**Locked protocol liquidity is assumed permanently safe and retained.** It accounts for **3,340.98 ETH** of current principal. Swaps can still remove ETH from that liquidity.
 
-## What is included?
-
-- Executed notebook with editable assumptions and embedded figures.
-- Token-flow simulation with ledger issuance, dilution, retirement, congestion fees and fee recycling.
-- Wallet quantities of 10,000, 100,000 and 1,000,000 tokens; one- and ten-branch Charters.
-- External branch purchases at illustrative opening/floor prices and internal reinvestment.
-- Conditional third-party payout-sharing worksheet; native non-owner operations are unavailable in the tested interface.
-- Scenario fan charts, peak-time distributions, downside tables, sensitivity heatmap, and Monte Carlo sampling checks.
-- Pinned public RPC evidence and read-only collectors.
-- Tests covering economic accounting, branch protection, tick crossings, finite liquidity, and observed swap replay.
-
-The optimization selects a **precommitted full-exit hour**, not an adaptive or partial-sale strategy. Branch results at the final simulation boundary are explicitly unresolved. The model targets ETH proceeds, not USD returns.
+Snapshot: **September 15, 2026 at 10:09:19 UTC / 19:09:19 JST**, Robinhood chain 4663, block **63,576,310**. Cap getters were checked separately at a later identified block. Re-running uses the same frozen observations; it does not produce a current market forecast.
 
 ## Run locally
 
-Python **3.11+**; the published run used Python 3.11.6. All numerical work runs offline after installing packages.
+Python **3.11+**; published execution used Python 3.11.6. Numerical work runs offline after installing packages.
 
 ```bash
 git clone https://github.com/ryskyboi/standard-research.git
@@ -58,11 +51,18 @@ python -m pip install -r requirements.txt
 python -m ipykernel install --sys-prefix --name python3 --display-name 'Python 3'
 python -m unittest discover -s . -p 'test_*.py' -v
 python run_notebook.py
+python run_notebook.py assumption_sensitivity.ipynb
 python verify_artifacts.py
 ```
 
-Open the notebook in VS Code or your preferred Jupyter frontend. Change the configuration and scenario cells, then run all cells. A full run typically takes a few minutes depending on the machine. The saved figures and CSVs are regenerated in `notebook-results/`.
+Open `rational_scenarios.ipynb` in Jupyter or VS Code, edit the assumptions and run all cells. The default runs 12 seeds for each of eight 14-day scenarios, plus sensitivity and consistency experiments; allow several minutes. Outputs go to `agent-results/`.
 
-`build_notebook.py` regenerates the notebook from its source template and **overwrites notebook-cell edits**. Use it only if editing that template. Normal users should edit and execute the notebook directly.
+To execute the older imposed-flow comparison:
 
-No private keys, wallet configuration, trading modules, or transaction submission are included. All chain observations are public; the notebook makes no network calls.
+```bash
+python run_notebook.py standard_scenarios.ipynb
+```
+
+The `build_*notebook.py` scripts regenerate notebooks from templates and **overwrite notebook-cell edits**. Use them only when editing those templates. Normal users should edit and execute notebooks directly.
+
+No keys, wallet configuration, trading modules or transaction submission are included. All chain observations are public; neither notebook makes network calls.

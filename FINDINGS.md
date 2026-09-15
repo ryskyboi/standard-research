@@ -1,5 +1,7 @@
 # Findings from the frozen September 15 snapshot
 
+**Earlier imposed-flow experiment.** For the model with profit-seeking demand, taxes, finite cash and Charter-entry scenarios, see [the new findings](AGENT_FINDINGS.md) and [agent notebook](rational_scenarios.ipynb). Timing below is conditional on the older buying-decay assumptions.
+
 **Read first:** these dates are conditional on imposed buying-decay assumptions. They are not calibrated forecasts of when buyers stop. [The rational-demand analysis](RATIONAL_DEMAND.md) explains the branch caps, dilution, funding sources and disabled ETH Charter auction.
 
 ## 1. A top estimate requires a view on how long buying continues
