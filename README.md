@@ -8,6 +8,10 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Open the agent notebook](rational_scenarios.ipynb)** · **[Read the findings](AGENT_FINDINGS.md)** · [Model and tax details](AGENT_MODEL.md) · [Evidence and reproduction](DATA.md)
 
+## Observed market update
+
+[September 15, 2026, 13:20:38–13:40:38 UTC: fees and the observed twenty-minute decline](live-observations/2026-09-15T13-40-35.886Z/FINDINGS.md). This separate on-chain observation leaves the notebooks' frozen inputs unchanged.
+
 ## What can this tell us about the top?
 
 **The available evidence does not establish a most likely top or a decline within 48 hours.** The new model generates buying from expected profits, available cash and auction eligibility. It does not impose a buying-decay half-life. Its results still depend on assumed capital, expectations and participation limits; they are conditional experiments, not calibrated market probabilities.

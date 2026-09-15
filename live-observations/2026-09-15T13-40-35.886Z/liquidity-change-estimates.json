@@ -1,0 +1,59 @@
+{
+  "method": "Concentrated-liquidity principal from ModifyLiquidity delta, bounds and last preceding Swap sqrt price. Floating-point estimate; uncollected fees excluded. Events retained in order.",
+  "changes": [
+    {
+      "transaction": "0xe257a9b944c3574f7d8ba2b86e40d801dfec7a353693f9df99b3f93a65efc11f",
+      "tickLower": 83200,
+      "tickUpper": 90200,
+      "liquidityDelta": "744908454997482961",
+      "sqrtPrice": 78.81961330661562,
+      "estimatedETHPrincipalDelta": 0.0012561071306986897,
+      "estimatedTokenPrincipalDelta": 10.995903071629073
+    },
+    {
+      "transaction": "0x1946bea8e3867635f66fbc040bbb5afd88320f55ca316bb73493dd47edbd2192",
+      "tickLower": 80600,
+      "tickUpper": 94400,
+      "liquidityDelta": "9431978227454143107",
+      "sqrtPrice": 79.57467083261957,
+      "estimatedETHPrincipalDelta": 0.034422289974107206,
+      "estimatedTokenPrincipalDelta": 220.00178122766349
+    },
+    {
+      "transaction": "0xdac2684390a27cd135693e60749805f8b355e76b4e7bbaafd768dc653a8204a9",
+      "tickLower": 80600,
+      "tickUpper": 94400,
+      "liquidityDelta": "93490000315597405024",
+      "sqrtPrice": 79.64136241667241,
+      "estimatedETHPrincipalDelta": 0.34021074947848173,
+      "estimatedTokenPrincipalDelta": 2186.8980660819316
+    },
+    {
+      "transaction": "0xa0a9b58f6715d042d15355a7516065f8c669ddd73c04f4e9926384258d9489ca",
+      "tickLower": 86200,
+      "tickUpper": 87400,
+      "liquidityDelta": "0",
+      "sqrtPrice": 79.6411347507393,
+      "estimatedETHPrincipalDelta": 0.0,
+      "estimatedTokenPrincipalDelta": 0.0
+    },
+    {
+      "transaction": "0xa0a9b58f6715d042d15355a7516065f8c669ddd73c04f4e9926384258d9489ca",
+      "tickLower": 86200,
+      "tickUpper": 87400,
+      "liquidityDelta": "-2552802155444683164459",
+      "sqrtPrice": 79.6411347507393,
+      "estimatedETHPrincipalDelta": -0.0,
+      "estimatedTokenPrincipalDelta": -11747.775700880382
+    },
+    {
+      "transaction": "0xfb79bb012ee69926084ae7bf21ac2c29fbdb15466166c2c9a1662b27edc116f2",
+      "tickLower": 85400,
+      "tickUpper": 91000,
+      "liquidityDelta": "-21791978853371427163",
+      "sqrtPrice": 81.82898249485108,
+      "estimatedETHPrincipalDelta": -0.035978567214150686,
+      "estimatedTokenPrincipalDelta": -224.95018811834998
+    }
+  ]
+}
