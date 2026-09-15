@@ -9,6 +9,8 @@ def code(s):cells.append(nbf.v4.new_code_cell(s.strip()))
 md(r"""
 # STANDARD: can the participation loop sustain buying?
 
+**Times are UTC**, with elapsed hours/days retained. See the [UTC reference](TIME_REFERENCE.md).
+
 This notebook extends the original flow experiment with **profit-seeking decisions, actual Charter-level caps, finite ETH budgets, funding sources, partial retirement, taxes, and hypothetical ETH Charter auctions**.
 
 **There is no imposed half-life for buying.** Actors buy only when the modeled expected benefit exceeds the cost and they have the funds and eligibility. They can still be wrong: forecasts of prices and other participants are explicit assumptions. Optimizing under beliefs is not proof those beliefs form a rational-expectations or Nash equilibrium.
@@ -17,7 +19,7 @@ The notebook includes a forecast-consistency iteration rather than silently assu
 
 The old [flow notebook](standard_scenarios.ipynb) remains a useful comparison, with its buying-decay assumption clearly identified. [Model details and tax treatment](AGENT_MODEL.md) explain the new model's approximations.
 
-**Published-run interpretation:** the baseline +31-hour peak is strongly tied to the assumed spending allowance. A separate [spending-pace and valuation audit](assumption_sensitivity.ipynb) moves the peak of mean price between +16 and +92 hours by changing spending pace alone. The forecast-consistency iteration does not meet its stated tolerance. Read [the findings](AGENT_FINDINGS.md) before treating a plotted peak as a forecast.
+**Published-run interpretation:** the baseline peak at +31 hours (2026-09-16 17:09:19 UTC) is strongly tied to the assumed spending allowance. A separate [spending-pace and valuation audit](assumption_sensitivity.ipynb) moves the peak of mean price between +16 and +92 hours (2026-09-16 02:09:19 UTC to 2026-09-19 06:09:19 UTC) by changing spending pace alone. The forecast-consistency iteration does not meet its stated tolerance. Read [the findings](AGENT_FINDINGS.md) before treating a plotted peak as a forecast.
 
 **Capital-allocation coverage:** [decision tree and implementation gaps](DECISION_TREE.md). In particular, auction waiting is not fully optimized and population withdrawals are immediately sold; withdrawal timing and sale timing are not independently optimized.
 
@@ -34,10 +36,11 @@ ROOT=next(p for p in [Path.cwd(),Path.cwd()/'research'/'standard-exit'] if (p/'r
 sys.path.insert(0,str(ROOT))
 import model as old
 import rational_model as rm
+from time_display import utc_at, with_utc, utc_axis
 old.EVIDENCE=ROOT/'notebook-evidence'
 OUT=ROOT/'agent-results';OUT.mkdir(exist_ok=True)
 plt.rcParams.update({'figure.figsize':(11,4.5),'axes.grid':True,'grid.alpha':.2,'figure.dpi':110})
-pd.set_option('display.max_columns',20)
+pd.set_option('display.max_columns',None)
 pd.set_option('display.float_format',lambda x:f'{x:,.4f}')
 
 # EDIT. Twelve seeds measure scenario variation, not calibrated probabilities.
@@ -49,8 +52,8 @@ BASE=rm.Config(days=DAYS,protected_wallet_tokens=WALLET_TOKENS)
 snapshot=old.snapshot();home=old.read('home.json');complete=old.read('collection-complete.json')
 assert home['blockHash']==complete['hash']==snapshot['liquidity_profile']['blockHash']
 start=pd.Timestamp(snapshot['timestamp'],unit='s',tz='UTC')
-def jst(hours):return (start+pd.Timedelta(hours=float(hours))).tz_convert('Asia/Tokyo').strftime('%b %d %H:%M JST')
-display(Markdown(f'**Frozen market snapshot:** {start} / **{start.tz_convert("Asia/Tokyo")}**, '
+def at_utc(hours):return utc_at(start,hours)
+display(Markdown(f'**Frozen market snapshot:** **{utc_at(start)}**, '
  f'block **{complete["block"]}**, chain **4663**. No live data is fetched when running this notebook.'))
 """)
 md(r"""
@@ -102,6 +105,7 @@ pressure=np.linspace(0,.12,200)
 fees=.02+.58*np.minimum(pressure/.1,1)**2
 axes[1].plot(100*pressure,100*fees)
 axes[1].set(xlabel='Seven-day exit pressure including proposed withdrawal, %',ylabel='Resolution fee, %',title='Crowded withdrawals make waiting/partial exit more valuable')
+utc_axis(axes[0],pd.Timestamp(launch,unit='s',tz='UTC'),1/60)
 fig.tight_layout();fig.savefig(OUT/'tax-schedules.png',dpi=160);plt.show()
 fee_rows=[]
 for f in [.02,.16,.60]:
@@ -172,8 +176,9 @@ configs=[
  replace(BASE,name='No initial banker cash/inventory',banker_cash_eth=0,banker_token_fraction=0),
 ]
 config_table=pd.DataFrame([asdict(c) for c in configs])
+config_table['charter_open_utc']=config_table.charter_open_hour.map(lambda h: at_utc(h) if pd.notna(h) else 'disabled')
 display(config_table[['name','license_daily_cap','banker_cash_eth','banker_token_fraction','allow_internal',
-    'fresh_capital_eth_day','charter_open_hour','execute_buybacks','execute_pol','buy_tax_override','sell_tax_override']].fillna('unchanged/disabled'))
+    'fresh_capital_eth_day','charter_open_hour','charter_open_utc','execute_buybacks','execute_pol','buy_tax_override','sell_tax_override']].fillna('unchanged/disabled'))
 """)
 code(r"""
 runs={};started=time.time()
@@ -205,12 +210,12 @@ for name,fs in frames.items():
     peaks=hours[np.argmax(prices,axis=1)];best=int(np.argmax(wallet_cash[name].mean(axis=0)))
     branch_best=int(np.argmax(branch_cash[name].mean(axis=0)))
     summary.append(dict(scenario=name,median_peak_h=float(np.median(peaks)),p10_peak_h=float(np.quantile(peaks,.1)),p90_peak_h=float(np.quantile(peaks,.9)),
-        best_precommitted_wallet_h=float(hours[best]),wallet_date_JST=jst(hours[best]),mean_wallet_ETH=float(wallet_cash[name][:,best].mean()),
+        best_precommitted_wallet_h=float(hours[best]),wallet_date_UTC=at_utc(hours[best]),mean_wallet_ETH=float(wallet_cash[name][:,best].mean()),
         wallet_now_ETH=float(wallet_cash[name][0,0]),fraction_below_selling_now=float(np.mean(wallet_cash[name][:,best]<wallet_cash[name][:,0])),
         best_protected_branch_h=float(hours[branch_best]),mean_protected_branch_ETH=float(branch_cash[name][:,branch_best].mean()),
         branch_boundary_optimum=bool(branch_best==len(hours)-1),
         median_final_price_ratio=float(np.median(prices[:,-1]/prices[:,0])),fraction_peak_at_horizon=float(np.mean(peaks==hours[-1]))))
-summary=pd.DataFrame(summary);display(summary)
+summary=with_utc(pd.DataFrame(summary),start);display(summary)
 summary.to_csv(OUT/'scenario-summary.csv',index=False)
 colors=plt.cm.tab10(np.arange(len(configs)))
 fig,axes=plt.subplots(1,2,figsize=(14,5))
@@ -220,7 +225,7 @@ for c,color in zip(configs,colors):
     axes[1].plot(hours/24,np.median(p,axis=0),color=color)
 axes[0].set(xlim=(0,96),xlabel='Hours after snapshot',ylabel='Price / snapshot price',title='First four days: no imposed buying half-life')
 axes[1].set(xlabel='Days after snapshot',ylabel='Price / snapshot price',title='Full horizon: conditional scenario medians')
-axes[0].legend(fontsize=7);fig.tight_layout();fig.savefig(OUT/'agent-price-scenarios.png',dpi=160);plt.show()
+axes[0].legend(fontsize=7);utc_axis(axes[0],start);utc_axis(axes[1],start,24);fig.tight_layout();fig.savefig(OUT/'agent-price-scenarios.png',dpi=160);plt.show()
 """)
 md(r"""
 ## 6. Why does buying increase or decrease?
@@ -256,6 +261,8 @@ axes[1,0].plot(hours/24,mean.speculator_cash,label='Speculator cash');axes[1,0].
 axes[1,0].set(xlabel='Days',ylabel='ETH',title='Cash is finite, but sale proceeds can be reused');axes[1,0].legend()
 axes[1,1].plot(hours/24,100*mean.resolution_fee_small)
 axes[1,1].set(xlabel='Days',ylabel='Resolution fee for a 1,000-token withdrawal, %',title='Congestion changes the incentive to retire')
+for ax in axes[0]:utc_axis(ax,start)
+for ax in axes[1]:utc_axis(ax,start,24)
 fig.tight_layout();fig.savefig(OUT/'agent-flow-drivers.png',dpi=160);plt.show()
 """)
 md(r"""
@@ -277,7 +284,9 @@ axes[0,0].set(xlabel='Days',ylabel='Branches',title='Net expansion after retirem
 axes[0,1].set(xlabel='Days',ylabel='Live Charters',title='Entry and Charter destruction')
 axes[1,0].set(xlabel='Days',ylabel='Available branch slots',title='Capacity is state-dependent')
 axes[1,1].set(xlabel='Days',ylabel='Net ETH',title='Protected existing branch: hypothetical exit proceeds')
-axes[0,0].legend(fontsize=8);fig.tight_layout();fig.savefig(OUT/'charter-policy-comparison.png',dpi=160);plt.show()
+axes[0,0].legend(fontsize=8)
+for ax in axes.flat:utc_axis(ax,start,24)
+fig.tight_layout();fig.savefig(OUT/'charter-policy-comparison.png',dpi=160);plt.show()
 """)
 md(r"""
 ## 8. What would owners pay? What about funding someone else's Charter?
@@ -328,14 +337,14 @@ for budget in budgets:
         sensitivity.append(dict(speculator_budget_ETH=budget,daily_license_cap=quota,peak_of_mean_price_h=float(h[best]),
             horizon_censored=bool(best==len(h)-1),mean_licenses=float(np.mean([x['totals']['licenses_bought'] for x in paths])),
             mean_fresh_license_ETH=float(np.mean([x['totals']['license_buy_eth'] for x in paths]))))
-sensitivity=pd.DataFrame(sensitivity);display(sensitivity)
+sensitivity=with_utc(pd.DataFrame(sensitivity),start);display(sensitivity)
 sensitivity.to_csv(OUT/'capital-and-quota-sensitivity.csv',index=False)
 grid=sensitivity.pivot(index='speculator_budget_ETH',columns='daily_license_cap',values='peak_of_mean_price_h')
-fig,ax=plt.subplots(figsize=(7,4))
+fig,ax=plt.subplots(figsize=(9,5))
 im=ax.imshow(grid.to_numpy(),aspect='auto',cmap='YlOrRd',origin='lower')
 ax.set_xticks(range(len(quotas)),quotas);ax.set_yticks(range(len(budgets)),budgets)
 for i in range(len(budgets)):
-    for j in range(len(quotas)):ax.text(j,i,f'{grid.iloc[i,j]:.0f} h',ha='center',va='center')
+    for j in range(len(quotas)):ax.text(j,i,f'{grid.iloc[i,j]:.0f} h\n{utc_at(start,grid.iloc[i,j],"%m-%d %H:%M")} UTC',ha='center',va='center')
 ax.set(xlabel='Daily license quota',ylabel='Starting speculative ETH budget',title='Timing sensitivity: peak of mean price within seven days')
 fig.colorbar(im,ax=ax,label='Hours');fig.tight_layout();fig.savefig(OUT/'capital-quota-sensitivity.png',dpi=160);plt.show()
 """)
@@ -359,6 +368,7 @@ for name,fs in frames.items():
 forecast_errors=pd.DataFrame(forecast_rows);display(forecast_errors)
 forecast_errors.to_csv(OUT/'forecast-errors.csv',index=False)
 iteration,last=rm.consistency_iteration(replace(BASE,days=7,belief_dispersion_day=0),iterations=5,damping=.5,seed=SEED)
+iteration=with_utc(iteration,start)
 display(iteration)
 iteration.to_csv(OUT/'consistency-iteration.csv',index=False)
 if iteration.max_abs_log_price_error.iloc[-1]>.05:
@@ -394,14 +404,14 @@ audit.to_csv(OUT/'accounting-checks.csv',index=False)
 for index,c in enumerate(configs):
     label=f'{index+1:02d}'
     mean=pd.concat(frames[c.name]).groupby('hour').mean(numeric_only=True)
-    mean.to_csv(OUT/f'{label}-mean-path.csv')
-    runs[c.name][0]['frame'].to_csv(OUT/f'{label}-example-path.csv',index=False)
-    runs[c.name][0]['events'].to_csv(OUT/f'{label}-example-events.csv',index=False)
+    with_utc(mean.reset_index(),start).to_csv(OUT/f'{label}-mean-path.csv',index=False)
+    with_utc(runs[c.name][0]['frame'],start).to_csv(OUT/f'{label}-example-path.csv',index=False)
+    with_utc(runs[c.name][0]['events'],start).to_csv(OUT/f'{label}-example-events.csv',index=False)
     runs[c.name][0]['final_population'].to_csv(OUT/f'{label}-final-charters.csv',index=False)
 metadata=dict(snapshot_utc=str(start),block=complete['block'],block_hash=complete['hash'],paths=PATHS,seed=SEED,
     scenarios=[asdict(c) for c in configs],summary=summary.to_dict('records'),
     interpretation='Profit-seeking actions under explicit beliefs; no imposed demand half-life, no fitted scenario probabilities, no equilibrium guarantee.',
-    source_sha256={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ['rational_model.py','model.py','liquidity.py']},
+    source_sha256={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ['rational_model.py','model.py','liquidity.py','time_display.py']},
     evidence_sha256={n:hashlib.sha256((old.EVIDENCE/n).read_bytes()).hexdigest() for n in ['home.json','state.json','charters.json','liquidity-ticks.json','liquidity-positions.json']})
 (OUT/'run-metadata.json').write_text(json.dumps(metadata,indent=2,allow_nan=False)+'\n')
 print('Saved model configuration, curves, event ledgers, accounting checks and diagnostics to',OUT.name)

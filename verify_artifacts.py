@@ -85,4 +85,20 @@ for i,cfg in enumerate(meta['scenarios'],start=1):
     assert licenses.groupby(['day','charter'])['count'].sum().max()<=cfg['per_charter_daily_cap']
     pop=pd.read_csv(agent/f'{i:02d}-final-charters.csv')
     assert pop.branches.between(0,cfg['max_branches']).all()
+# Presentation timestamps must match elapsed model time; evidence stays frozen.
+from time_display import with_utc
+anchor=pd.Timestamp(result['snapshot_utc'])
+for source,digest in result.get('presentation_source_sha256',{}).items():
+    assert hashlib.sha256((root/source).read_bytes()).hexdigest()==digest
+utc_tables=0
+for directory in [root/'notebook-results',agent]:
+    for path in directory.glob('*.csv'):
+        table=pd.read_csv(path)
+        expected=with_utc(table,anchor)
+        date_columns=[c for c in expected if c.endswith('_utc')]
+        for col in date_columns:
+            assert col in table, f'Missing UTC column: {path.name}: {col}'
+            assert table[col].fillna('').equals(expected[col].fillna('')),f'Wrong UTC timestamp: {path.name}: {col}'
+        utc_tables+=bool(date_columns)
+print(f'UTC presentation: verified {utc_tables} tables against the frozen snapshot.')
 print(f'OK: {len(manifest["sha256"])} evidence files; {executed} executed code cells across three notebooks; source hashes, tables and liquidity/accounting reconcile.')

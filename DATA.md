@@ -1,5 +1,11 @@
 # Evidence and reproduction
 
+[UTC timestamp reference](TIME_REFERENCE.md): elapsed hours/days are retained; calendar times are UTC.
+
+## Time presentation
+
+Calendar dates use UTC. `time_display.py` adds UTC columns beside snapshot-relative hours and elapsed days, and a UTC calendar axis above elapsed-time charts. Raw evidence timestamps and simulation time steps retain their original values. Existing numerical result columns are unchanged by this presentation update. The helpers are hashed with the generated artifacts.
+
 ## Data layout
 
 - `notebook-evidence/`: current pinned public observation. Derived tables and raw RPC request/response files are included. `home.json` is the saved official application snapshot used to identify contracts and the pin; contract reads independently check the identity and state.

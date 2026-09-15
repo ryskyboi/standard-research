@@ -1,21 +1,21 @@
-scenario,position,best_h,mean_ETH,p10_ETH,p90_ETH,boundary_optimum,measure
-Fast fade,Existing one branch,336.0,0.47679866808483934,0.4505723720824366,0.5102432291080904,True,total net ETH
-Fast fade,Existing 10 branches,336.0,4.173093139162684,3.9655498960536373,4.457417642915408,True,total net ETH
-Fast fade,External: next opening price,336.0,-3.3092058227905548,-4.957025064948627,-2.0939434379997244,True,incremental net ETH
-Fast fade,External: floor if available,336.0,0.25709912744958346,0.16012252064455954,0.3290203696816423,True,incremental net ETH
-Fast fade,Reinvest: floor if available,336.0,0.9275486272674709,0.8766894287074221,0.9921418076379528,True,total net ETH
-Central case,Existing one branch,44.0,0.33792215059480035,0.1699402860251962,0.5352953068185128,False,total net ETH
-Central case,Existing 10 branches,44.0,3.370274977755372,1.6944936726114035,5.340589700296121,False,total net ETH
-Central case,External: next opening price,56.0,-8.272592733370239,-13.057194054839238,-4.82282856615332,False,incremental net ETH
-Central case,External: floor if available,56.0,-0.25047302080095274,-0.42031025249300197,-0.13255624303824648,False,incremental net ETH
-Central case,Reinvest: floor if available,38.0,0.33559224641690066,0.16036860478176004,0.5545762869897722,False,total net ETH
-Continued rebound,Existing one branch,98.0,1.4109100734975741,0.7382744179140082,2.251058287640661,False,total net ETH
-Continued rebound,Existing 10 branches,97.0,13.975525391221828,7.34844077843154,22.196784172842623,False,total net ETH
-Continued rebound,External: next opening price,104.0,-15.164415698191288,-24.432583030470358,-7.997637545596151,False,incremental net ETH
-Continued rebound,External: floor if available,104.0,0.19960646116149003,-0.26319766038627884,0.694577397307498,False,incremental net ETH
-Continued rebound,Reinvest: floor if available,110.0,1.5284924199101988,0.7152028154653671,2.538541468161569,False,total net ETH
-Withdrawal wave (stress),Existing one branch,44.0,0.33763694279910295,0.16974223150817624,0.5353679293830486,False,total net ETH
-Withdrawal wave (stress),Existing 10 branches,44.0,3.37194120183013,1.6954137679433765,5.346616110595769,False,total net ETH
-Withdrawal wave (stress),External: next opening price,48.0,-8.289469059556671,-13.054263953337657,-4.830618692992638,False,incremental net ETH
-Withdrawal wave (stress),External: floor if available,48.0,-0.26189326476513375,-0.4176541825199112,-0.1435593731704904,False,incremental net ETH
-Withdrawal wave (stress),Reinvest: floor if available,39.0,0.33464899205291865,0.1605396132304736,0.543637955949434,False,total net ETH
+scenario,position,best_h,mean_ETH,p10_ETH,p90_ETH,boundary_optimum,measure,best_utc
+Fast fade,Existing one branch,336.0,0.47679866808483934,0.4505723720824366,0.5102432291080904,True,total net ETH,2026-09-29 10:09:19 UTC
+Fast fade,Existing 10 branches,336.0,4.173093139162684,3.9655498960536373,4.457417642915408,True,total net ETH,2026-09-29 10:09:19 UTC
+Fast fade,External: next opening price,336.0,-3.3092058227905548,-4.957025064948627,-2.0939434379997244,True,incremental net ETH,2026-09-29 10:09:19 UTC
+Fast fade,External: floor if available,336.0,0.25709912744958346,0.16012252064455954,0.3290203696816423,True,incremental net ETH,2026-09-29 10:09:19 UTC
+Fast fade,Reinvest: floor if available,336.0,0.9275486272674709,0.8766894287074221,0.9921418076379528,True,total net ETH,2026-09-29 10:09:19 UTC
+Central case,Existing one branch,44.0,0.33792215059480035,0.1699402860251962,0.5352953068185128,False,total net ETH,2026-09-17 06:09:19 UTC
+Central case,Existing 10 branches,44.0,3.370274977755372,1.6944936726114035,5.340589700296121,False,total net ETH,2026-09-17 06:09:19 UTC
+Central case,External: next opening price,56.0,-8.272592733370239,-13.057194054839238,-4.82282856615332,False,incremental net ETH,2026-09-17 18:09:19 UTC
+Central case,External: floor if available,56.0,-0.25047302080095274,-0.42031025249300197,-0.13255624303824648,False,incremental net ETH,2026-09-17 18:09:19 UTC
+Central case,Reinvest: floor if available,38.0,0.33559224641690066,0.16036860478176004,0.5545762869897722,False,total net ETH,2026-09-17 00:09:19 UTC
+Continued rebound,Existing one branch,98.0,1.4109100734975741,0.7382744179140082,2.251058287640661,False,total net ETH,2026-09-19 12:09:19 UTC
+Continued rebound,Existing 10 branches,97.0,13.975525391221828,7.34844077843154,22.196784172842623,False,total net ETH,2026-09-19 11:09:19 UTC
+Continued rebound,External: next opening price,104.0,-15.164415698191288,-24.432583030470358,-7.997637545596151,False,incremental net ETH,2026-09-19 18:09:19 UTC
+Continued rebound,External: floor if available,104.0,0.19960646116149003,-0.26319766038627884,0.694577397307498,False,incremental net ETH,2026-09-19 18:09:19 UTC
+Continued rebound,Reinvest: floor if available,110.0,1.5284924199101988,0.7152028154653671,2.538541468161569,False,total net ETH,2026-09-20 00:09:19 UTC
+Withdrawal wave (stress),Existing one branch,44.0,0.33763694279910295,0.16974223150817624,0.5353679293830486,False,total net ETH,2026-09-17 06:09:19 UTC
+Withdrawal wave (stress),Existing 10 branches,44.0,3.37194120183013,1.6954137679433765,5.346616110595769,False,total net ETH,2026-09-17 06:09:19 UTC
+Withdrawal wave (stress),External: next opening price,48.0,-8.289469059556671,-13.054263953337657,-4.830618692992638,False,incremental net ETH,2026-09-17 10:09:19 UTC
+Withdrawal wave (stress),External: floor if available,48.0,-0.26189326476513375,-0.4176541825199112,-0.1435593731704904,False,incremental net ETH,2026-09-17 10:09:19 UTC
+Withdrawal wave (stress),Reinvest: floor if available,39.0,0.33464899205291865,0.1605396132304736,0.543637955949434,False,total net ETH,2026-09-17 01:09:19 UTC

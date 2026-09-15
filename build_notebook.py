@@ -10,6 +10,8 @@ def code(s): cells.append(nbf.v4.new_code_cell(s.strip()))
 md(r"""
 # STANDARD: when does the buying stop?
 
+**Times are UTC**, with elapsed hours/days retained. See the [UTC reference](TIME_REFERENCE.md).
+
 An editable scenario notebook for **token-price tops, wallet-token exits, existing Charters, and buying additional branches**.
 
 **Read the timing summary in section 4 after running all cells.** The defaults use a refreshed, pinned public-chain snapshot, observed two-hour/one-hour flows, and explicit behavioral assumptions. They produce a working conditional forecast, not a statistically calibrated probability of the market top.
@@ -36,11 +38,13 @@ candidates=[Path.cwd(),Path.cwd()/'research'/'standard-exit']
 ROOT=next(p for p in candidates if (p/'model.py').exists() and (p/'notebook-evidence').exists())
 sys.path.insert(0,str(ROOT))
 import model as m
+from time_display import utc_at, with_utc, utc_axis
+import matplotlib.dates as mdates
 m.EVIDENCE=ROOT/'notebook-evidence'
 OUT=ROOT/'notebook-results'
 OUT.mkdir(exist_ok=True)
 plt.rcParams.update({'figure.figsize':(11,4.5),'axes.grid':True,'grid.alpha':.2,'figure.dpi':110})
-pd.set_option('display.max_columns',20)
+pd.set_option('display.max_columns',None)
 pd.set_option('display.float_format',lambda x:f'{x:,.4f}')
 
 # EDIT THESE: runs are deterministic for a given seed and configuration.
@@ -65,14 +69,13 @@ assert home['blockHash']==complete['hash']
 assert int(home['snapshot']['blockNumber'])==int(complete['block'])
 assert 0<TOKEN_QUANTITY<state['float_tokens'] and PATHS>=2 and POSITION_PATHS>=2
 snapshot_utc=pd.Timestamp(state['timestamp'],unit='s',tz='UTC')
-snapshot_jst=snapshot_utc.tz_convert('Asia/Tokyo')
-def at_jst(hours): return (snapshot_jst+pd.Timedelta(hours=float(hours))).strftime('%b %d %H:%M JST')
+def at_utc(hours): return utc_at(snapshot_utc,hours)
 
 # EDIT if you know your balance; the default is an observed one-branch median.
 OWN_PENDING_PER_BRANCH=state['own_pending']
 state['own_pending']=OWN_PENDING_PER_BRANCH
 assert 0<=OWN_PENDING_PER_BRANCH*TEN_BRANCH_COUNT<=state['pending']
-display(Markdown(f'**Frozen observation:** {snapshot_utc} / **{snapshot_jst}**. '
+display(Markdown(f'**Frozen observation:** **{utc_at(snapshot_utc)}**. '
                  f'Block **{complete["block"]}**, chain **4663**. '
                  'The notebook performs no live refresh when rerun.'))
 """)
@@ -123,13 +126,14 @@ trade_times=np.interp([int(x['blockNumber'],16) for x in logs],hb,ht)
 trade_prices=np.array([(2**96/int(x['decoded']['sqrtPriceX96']))**2 for x in logs])
 recent_peak=float(np.max(trade_prices))
 observed=pd.DataFrame(flows['bins'])
-observed['time']=pd.to_datetime(observed['end'],unit='s',utc=True).dt.tz_convert('Asia/Tokyo')
+observed['time']=pd.to_datetime(observed['end'],unit='s',utc=True)
 fig,axes=plt.subplots(1,2,figsize=(13,4))
-axes[0].plot(pd.to_datetime(trade_times,unit='s',utc=True).tz_convert('Asia/Tokyo'),trade_prices/price0)
-axes[0].set(title='Observed price / current snapshot price',ylabel='Price ratio',xlabel='JST; interpolated trade times')
+axes[0].plot(pd.to_datetime(trade_times,unit='s',utc=True),trade_prices/price0)
+axes[0].set(title='Observed price / current snapshot price',ylabel='Price ratio',xlabel='UTC; interpolated trade times')
 axes[1].bar(observed['time'],observed['buys_eth'],width=.007,label='ETH buys')
 axes[1].bar(observed['time'],-observed['sells_eth'],width=.007,label='ETH sells')
-axes[1].set(title='Observed pool flows per ~15-minute bin',ylabel='ETH',xlabel='JST')
+axes[1].set(title='Observed pool flows per ~15-minute bin',ylabel='ETH',xlabel='UTC')
+for ax in axes:ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d %H:%M',tz='UTC'))
 axes[1].legend();fig.autofmt_xdate();fig.tight_layout()
 fig.savefig(OUT/'observed-market.png',dpi=160);plt.show()
 display(Markdown(f'This window contains **{len(logs):,} swaps**. Its observed high is '
@@ -267,7 +271,7 @@ for name,path in market.items():
     axes[1].plot(hours/24,np.median(price,axis=0),label=name,color=colors[name])
 axes[0].set(xlim=(0,96),xlabel='Hours after snapshot',ylabel='Price / snapshot price',title='First four days: median and scenario 10–90% bands')
 axes[1].set(xlabel='Days after snapshot',ylabel='Price / snapshot price',title='Full horizon; scenario medians')
-axes[0].legend(fontsize=8);fig.tight_layout()
+axes[0].legend(fontsize=8);utc_axis(axes[0],snapshot_utc);utc_axis(axes[1],snapshot_utc,24);fig.tight_layout()
 fig.savefig(OUT/'price-scenarios.png',dpi=160);plt.show()
 """)
 
@@ -289,17 +293,17 @@ for name,path in market.items():
     peak_rows.append(dict(scenario=name,weight=weights[name],
         median_path_peak_h=float(np.median(ph)),p10_peak_h=float(np.quantile(ph,.1)),p90_peak_h=float(np.quantile(ph,.9)),
         peak_of_mean_price_h=float(hours[np.argmax(price.mean(axis=0))]),
-        best_precommitted_sale_h=float(hours[best]),best_sale_JST=at_jst(hours[best]),
+        best_precommitted_sale_h=float(hours[best]),best_sale_UTC=at_utc(hours[best]),
         mean_net_ETH_at_best=float(cash[:,best].mean()),
         snapshot_is_future_max_fraction=float(np.mean(ph==0)),
         final_hour_peak_fraction=float(np.mean(ph==hours[-1])),
         recent_observed_high_not_exceeded_fraction=float(np.mean(price.max(axis=1)<=recent_peak))))
-peak_summary=pd.DataFrame(peak_rows)
+peak_summary=with_utc(pd.DataFrame(peak_rows),snapshot_utc)
 display(peak_summary)
 
 edges=np.array([0,6,12,18,24,36,48,72,96,168,HORIZON_DAYS*24],dtype=float)
 edges=np.unique(edges[(edges>=0)&(edges<=hours[-1])])
-labels=['At snapshot']+[f'{a:g}–{b:g} h' for a,b in zip(edges,edges[1:])]
+labels=['At snapshot\n'+utc_at(snapshot_utc,0,'%m-%d %H:%M')]+[f'{a:g}–{b:g} h\n{utc_at(snapshot_utc,a,"%m-%d %H:%M")}–\n{utc_at(snapshot_utc,b,"%m-%d %H:%M")}' for a,b in zip(edges,edges[1:])]
 mass={}
 for name,ph in peak_hours.items():
     mass[name]=np.r_[np.sum(ph==0),np.histogram(ph[ph>0],bins=edges)[0]]/len(ph)
@@ -310,26 +314,26 @@ weighted_best=float(hours[np.argmax(weighted_cash)])
 mode_idx=int(np.argmax(weighted_mass));modal_window=labels[mode_idx]
 six_edges=np.arange(0,hours[-1]+6.01,6)
 six_mass=sum(weights[n]*np.histogram(peak_hours[n][peak_hours[n]>0],bins=six_edges)[0]/PATHS for n in scenarios)
-six_mode=int(np.argmax(six_mass)); six_window=f'{six_edges[six_mode]:g}–{six_edges[six_mode+1]:g} h'
+six_mode=int(np.argmax(six_mass)); six_window=f'{six_edges[six_mode]:g}–{six_edges[six_mode+1]:g} h ({at_utc(six_edges[six_mode])} to {at_utc(six_edges[six_mode+1])})'
 central=peak_summary.set_index('scenario').loc['Central case']
 summary_text=(f'## Working timing estimate\n\n'
  f'**Central case:** median simulated price top at **+{central.median_path_peak_h:.0f} hours** '
- f'(**{at_jst(central.median_path_peak_h)}**). Its scenario 10–90% timing range is '
- f'**+{central.p10_peak_h:.0f} to +{central.p90_peak_h:.0f} hours**.\n\n'
+ f'(**{at_utc(central.median_path_peak_h)}**). Its scenario 10–90% timing range is '
+ f'**+{central.p10_peak_h:.0f} to +{central.p90_peak_h:.0f} hours** ({at_utc(central.p10_peak_h)} to {at_utc(central.p90_peak_h)}).\n\n'
  f'With the **subjective** weights shown above, the highest-mass peak bucket is '
  f'**{modal_window}** ({weighted_mass[mode_idx]:.1%} of the weighted simulated paths). '
  f'The densest equal-width six-hour window is **{six_window}** ({six_mass[six_mode]:.1%}); '
  f'the point mass at the snapshot is {weighted_mass[0]:.1%}. '
  f'The mixture\'s best precommitted sale is **+{weighted_best:.0f} hours**, '
- f'**{at_jst(weighted_best)}**.\n\n'
+ f'**{at_utc(weighted_best)}**.\n\n'
  f'These are conditional model outputs. The priors and behavioral parameters are not empirically estimated '
  f'probabilities. Changing demand persistence or selling behavior can move the top substantially.')
 display(Markdown(summary_text))
 (OUT/'timing-summary.md').write_text(summary_text)
 
-fig,ax=plt.subplots(figsize=(11,4))
+fig,ax=plt.subplots(figsize=(14,6))
 ax.bar(labels,weighted_mass*100,color='#385e83')
-ax.set(title='Peak-window mass under the editable subjective scenario weights',ylabel='% of weighted simulated paths',xlabel='Hours after snapshot')
+ax.set(title='Peak-window mass under the editable subjective scenario weights',ylabel='% of weighted simulated paths',xlabel='Hours after snapshot and UTC interval boundaries (2026)')
 ax.tick_params(axis='x',rotation=30);fig.tight_layout()
 fig.savefig(OUT/'top-window.png',dpi=160);plt.show()
 """)
@@ -347,8 +351,8 @@ for label,ws in prior_sets.items():
     curve=sum(w*sale_curves[n].mean(axis=0) for w,n in zip(ws,names))
     pm=sum(w*mass[n] for w,n in zip(ws,names))
     best=float(hours[np.argmax(curve)])
-    mixtures.append(dict(prior=label,weights=ws,best_sale_h=best,JST=at_jst(best),modal_peak_bucket=labels[np.argmax(pm)]))
-display(pd.DataFrame(mixtures))
+    mixtures.append(dict(prior=label,weights=ws,best_sale_h=best,UTC=at_utc(best),modal_peak_bucket=labels[np.argmax(pm)]))
+display(with_utc(pd.DataFrame(mixtures),snapshot_utc))
 """)
 
 md("""
@@ -366,7 +370,7 @@ for name,cash in sale_curves.items():
         bests.append(hours[np.argmax(sample.mean(axis=0))])
     precision.append(dict(scenario=name,within_1pct_first_h=float(near.min()),within_1pct_last_h=float(near.max()),
         bootstrap_p10_best_h=float(np.quantile(bests,.1)),bootstrap_p90_best_h=float(np.quantile(bests,.9))))
-precision_table=pd.DataFrame(precision);display(precision_table)
+precision_table=with_utc(pd.DataFrame(precision),snapshot_utc);display(precision_table)
 precision_table.to_csv(OUT/'timing-precision.csv',index=False)
 """)
 
@@ -389,7 +393,7 @@ for name,scenario in scenarios.items():
         wallet_risk.append(dict(scenario=name,quantity=quantity,best_h=float(hours[best]),now_ETH=now,
             mean_ETH=float(terminal.mean()),p10_ETH=float(np.quantile(terminal,.1)),p90_ETH=float(np.quantile(terminal,.9)),
             fraction_below_selling_now=float(np.mean(terminal<now)),mean_return_vs_now=float(terminal.mean()/now-1)))
-wallet_risk_table=pd.DataFrame(wallet_risk);display(wallet_risk_table)
+wallet_risk_table=with_utc(pd.DataFrame(wallet_risk),snapshot_utc);display(wallet_risk_table)
 wallet_risk_table.to_csv(OUT/'wallet-risk-reward.csv',index=False)
 """)
 
@@ -434,7 +438,7 @@ for name,scenario in scenarios.items():
             mean_ETH=float(mean[best]),p10_ETH=float(np.quantile(arr[:,best],.1)),p90_ETH=float(np.quantile(arr[:,best],.9)),
             boundary_optimum=bool(best==len(hours)-1),
             measure='incremental net ETH' if label.startswith('External:') else 'total net ETH'))
-position_summary=pd.DataFrame(position_rows)
+position_summary=with_utc(pd.DataFrame(position_rows),snapshot_utc)
 display(position_summary)
 """)
 code(r"""
@@ -445,7 +449,7 @@ for name,vals in positions.items():
     axes[1].plot(hours[valid]/24,arr[:,valid].mean(axis=0),label=name,color=colors[name])
 axes[0].set(title='Already-owned branch: final withdrawal proceeds',xlabel='Days after snapshot',ylabel='Mean modeled ETH')
 axes[1].set(title='One added branch at the illustrative floor',xlabel='Days after snapshot',ylabel='Incremental net ETH after purchase cost')
-axes[1].axhline(0,color='black',lw=1);axes[0].legend(fontsize=8);fig.tight_layout()
+axes[1].axhline(0,color='black',lw=1);axes[0].legend(fontsize=8);utc_axis(axes[0],snapshot_utc,24);utc_axis(axes[1],snapshot_utc,24);fig.tight_layout()
 fig.savefig(OUT/'branch-comparison.png',dpi=160);plt.show()
 display(Markdown('**Boundary optima are unresolved.** A branch curve still rising at day 14 does not '
  'identify day 14 as the best withdrawal date. Late gains often depend on competitors continuing to retire '
@@ -472,12 +476,12 @@ for i,ratio in enumerate(ratios):
         params.update(name='sensitivity',buy_eth_hour=ratio*central_sell_eth/(1-state['buy_tax'])/(1-state['lp_fee']),demand_half_life_hours=half_life)
         paths=np.stack([m.simulate(state,m.Scenario(**params),SEED+k,days=7,protected_branches=0,owned_wallet_tokens=TOKEN_QUANTITY) for k in range(20)])
         heat[i,j]=paths[0,np.argmax(paths[:,:,4].mean(axis=0)),0]
-fig,ax=plt.subplots(figsize=(10,5))
+fig,ax=plt.subplots(figsize=(14,9))
 im=ax.imshow(heat,origin='lower',aspect='auto',cmap='YlOrRd')
 ax.set_xticks(range(len(half_lives)),half_lives);ax.set_yticks(range(len(ratios)),ratios)
-ax.set(xlabel='Buying half-life, hours',ylabel='Approximate initial buy / sell ETH ratio',title='Peak of mean simulated price curve: hours after snapshot')
+ax.set(xlabel='Buying half-life, hours',ylabel='Approximate initial buy / sell ETH ratio',title='Peak of mean price: elapsed hours + UTC timestamp (2026)')
 for i in range(len(ratios)):
-    for j in range(len(half_lives)):ax.text(j,i,f'{heat[i,j]:.0f}',ha='center',va='center',fontsize=9)
+    for j in range(len(half_lives)):ax.text(j,i,f'{heat[i,j]:.0f} h\n{utc_at(snapshot_utc,heat[i,j],"%m-%d %H:%M")}',ha='center',va='center',fontsize=8)
 fig.colorbar(im,ax=ax,label='Hours');fig.tight_layout()
 fig.savefig(OUT/'top-sensitivity.png',dpi=160);plt.show()
 """)
@@ -538,7 +542,7 @@ for name,data in participation.items():
             mean_funding_ETH=float(cost[:,best].mean()),
             break_even_share_at_this_date=float(cost[:,best].mean()/max(paid_probability*payout[:,best].mean(),1e-20)),
             boundary_optimum=bool(best==len(hours)-1)))
-participation_summary=pd.DataFrame(participation_rows)
+participation_summary=with_utc(pd.DataFrame(participation_rows),snapshot_utc)
 display(participation_summary)
 participation_summary.to_csv(OUT/'third-party-participation.csv',index=False)
 """)
@@ -549,12 +553,13 @@ display(pd.DataFrame(probes))
 peak_summary.to_csv(OUT/'peak-summary.csv',index=False)
 position_summary.to_csv(OUT/'position-summary.csv',index=False)
 scenario_inputs.to_csv(OUT/'scenario-assumptions.csv',index=False)
-results=dict(snapshot_utc=str(snapshot_utc),snapshot_jst=str(snapshot_jst),block=complete['block'],block_hash=complete['hash'],
+results=dict(snapshot_utc=str(snapshot_utc),display_timezone='UTC',block=complete['block'],block_hash=complete['hash'],
     token_quantity=TOKEN_QUANTITY,paths=PATHS,position_paths=POSITION_PATHS,horizon_days=HORIZON_DAYS,seed=SEED,
     state=state,scenarios={n:vars(s) for n,s in scenarios.items()},subjective_weights=weights,
     peak_summary=peak_summary.to_dict('records'),position_summary=position_summary.to_dict('records'),
     weighted_modal_peak_bucket=modal_window,equal_width_modal_window=six_window,equal_width_modal_mass=float(six_mass[six_mode]),weighted_modal_bucket_mass=float(weighted_mass[mode_idx]),
-    weighted_best_sale_h=weighted_best,weighted_best_sale_JST=at_jst(weighted_best),
+    weighted_best_sale_h=weighted_best,weighted_best_sale_UTC=at_utc(weighted_best),
+    presentation_source_sha256={'time_display.py':hashlib.sha256((ROOT/'time_display.py').read_bytes()).hexdigest()},
     evidence_sha256={n:hashlib.sha256((m.EVIDENCE/n).read_bytes()).hexdigest() for n in
                      ['home.json','state.json','charters.json','recent-swaps.json','swap-time-headers.json','collection-complete.json','liquidity-ticks.json','liquidity-positions.json']})
 (OUT/'notebook-results.json').write_text(json.dumps(results,indent=2,allow_nan=False))

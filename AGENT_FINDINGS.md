@@ -1,12 +1,14 @@
 # Findings: demand decisions, taxes and the apparent top
 
+[UTC timestamp reference](TIME_REFERENCE.md): elapsed hours/days are retained; calendar times are UTC.
+
 **Decision-tree coverage:** [what participant choices are modeled, and what remains approximate](DECISION_TREE.md).
 
-**The model does not establish a most likely top or a likely decline within 48 hours.** It now generates demand from profitable-looking actions and finite funds, but its baseline +31-hour peak is strongly determined by an assumed spending pace. The forecast-consistency check also fails its stated tolerance. These are useful scenario experiments, not an equilibrium forecast.
+**The model does not establish a most likely top or a likely decline within 48 hours.** It now generates demand from profitable-looking actions and finite funds, but its baseline peak at +31 hours (2026-09-16 17:09:19 UTC) is strongly determined by an assumed spending pace. The forecast-consistency check also fails its stated tolerance. These are useful scenario experiments, not an equilibrium forecast.
 
 [Executed agent notebook](rational_scenarios.ipynb) · [Spending-pace and valuation audit](assumption_sensitivity.ipynb) · [Equations, tax treatment and limitations](AGENT_MODEL.md)
 
-All times below are measured from **September 15, 2026 at 10:09:19 UTC / 19:09:19 JST**, block 63,576,310. The observations are frozen. The simulation assumes existing locked protocol LP stays safe and in place.
+All times below are measured from **September 15, 2026 at 10:09:19 UTC**, block 63,576,310. The observations are frozen. The simulation assumes existing locked protocol LP stays safe and in place.
 
 ## 1. What determines the apparent top?
 
@@ -18,18 +20,18 @@ Changing just that pace produces:
 
 | Assumed daily spending allowance | Peak of mean price, seven-day experiment |
 | --- | ---: |
-| 25% of initial cash | +92 hours |
-| 50% | +48 hours |
-| 77%: default | +31 hours |
-| 150% | +16 hours |
+| 25% of initial cash | +92 hours (2026-09-19 06:09:19 UTC) |
+| 50% | +48 hours (2026-09-17 10:09:19 UTC) |
+| 77%: default | +31 hours (2026-09-16 17:09:19 UTC) |
+| 150% | +16 hours (2026-09-16 02:09:19 UTC) |
 
-Three common seeds per setting; the statistic is the peak of the mean path. At the slowest pace, the median of individual path peaks is +85 hours instead. These are different statistics, neither a fitted market probability.
+Three common seeds per setting; the statistic is the peak of the mean path. At the slowest pace, the median of individual path peaks is +85 hours (2026-09-18 23:09:19 UTC) instead. These are different statistics, neither a fitted market probability.
 
 ![Spending and valuation sensitivity](agent-results/behavioral-assumption-sensitivity.png)
 
-**It is not necessary for all investors to run out of money.** At hour 31, aggregate speculative cash is still about 6,276 ETH. Much of that cash belongs to the participants who have been selling. The active optimistic buyers have used their budgets; the holders of the remaining cash need a sufficient expected return before spending it. At hour 32, mean speculative spending drops from roughly 273 to 46 ETH per hour, while gross pool outflows remain around 202 ETH. That imbalance causes the reversal in this experiment.
+**It is not necessary for all investors to run out of money.** At hour 31 (2026-09-16 17:09:19 UTC), aggregate speculative cash is still about 6,276 ETH. Much of that cash belongs to the participants who have been selling. The active optimistic buyers have used their budgets; the holders of the remaining cash need a sufficient expected return before spending it. At hour 32 (2026-09-16 18:09:19 UTC), mean speculative spending drops from roughly 273 to 46 ETH per hour, while gross pool outflows remain around 202 ETH. That imbalance causes the reversal in this experiment.
 
-Valuation horizons of 7, 14, 30 and 60 days leave this early peak near +31 hours, but substantially change later withdrawals and price paths. This supports the spending-pace explanation within this implementation; it does not validate the default pace.
+Valuation horizons of 7, 14, 30 and 60 days leave this early peak near +31 hours (2026-09-16 17:09:19 UTC), but substantially change later withdrawals and price paths. This supports the spending-pace explanation within this implementation; it does not validate the default pace.
 
 ## 2. Why might buying weaken—or continue?
 
@@ -75,11 +77,11 @@ The launch's 90% hook taxes decay to the normal floors after an hour; the snapsh
 
 ## 5. What changes if ETH Charter sales open?
 
-ETH Charter auctions are disabled in the saved state. The counterfactual opens them at +48 hours, allows ten per day and uses an assumed 0.45 ETH first opening / 0.15 ETH floor. Buyers still need a positive modeled value and cash. This produces a mean **122.5 new Charters and 115.8 ETH of Charter receipts** over the experiment.
+ETH Charter auctions are disabled in the saved state. The counterfactual opens them at +48 hours (2026-09-17 10:09:19 UTC), allows ten per day and uses an assumed 0.45 ETH first opening / 0.15 ETH floor. Buyers still need a positive modeled value and cash. This produces a mean **122.5 new Charters and 115.8 ETH of Charter receipts** over the experiment.
 
 That ETH enters the fee engine: 70% to the active vault, 15% to POL and 15% to the team at modeled epoch settlement. It is **not an immediate token purchase**. New owners can subsequently purchase licenses, but the same global quota applies. New initial branches also dilute issuance per branch.
 
-Delaying sales can preserve incumbents' issuance shares and defer competition for the license quota. Opening sales can collect outside ETH and broaden future participation. Which helps incumbent returns or token price more depends on those competing effects. In this run, opening after +48 hours does not move the earlier peak; its later price and branch outcomes differ. This does not prove the team's chosen timing is optimal.
+Delaying sales can preserve incumbents' issuance shares and defer competition for the license quota. Opening sales can collect outside ETH and broaden future participation. Which helps incumbent returns or token price more depends on those competing effects. In this run, opening after +48 hours (2026-09-17 10:09:19 UTC) does not move the earlier peak; its later price and branch outcomes differ. This does not prove the team's chosen timing is optimal.
 
 The separate buyback/POL scenario includes taxes, routing and capped spending, conditional on authorization and TWAP gates permitting execution. It spends about **372 ETH on buybacks and 84 ETH on POL token purchases**. Support changes actors' behavior, so it does not guarantee that every later price is above the no-execution path. Retained reserves are not treated as token-holder redemption rights.
 
@@ -89,16 +91,16 @@ The new main experiment uses 12 seeds per scenario. “Best wallet sale” maxim
 
 | Scenario | Median path price peak | Best wallet sale | Best existing one-branch exit |
 | --- | ---: | ---: | ---: |
-| Adaptive, Charters closed | +31 h | +31 h | +327 h |
-| ETH Charters open at +48 h | +31 h | +31 h | +327 h |
-| Buybacks and POL executed | +31 h | +31 h | +130 h |
-| Additional 3,000 ETH/day | +233 h | +237 h | +327 h |
-| Flat price beliefs | Snapshot | Snapshot | +336 h: unresolved boundary |
-| External license funding only | +31 h | +31 h | +207 h |
-| 10% buy and sell taxes | +31 h | +31 h | +31 h |
-| No initial banker cash/inventory | +31 h | +31 h | +114 h |
+| Adaptive, Charters closed | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +327 h / 13.62 days<br>2026-09-29 01:09:19 UTC |
+| ETH Charters open at +48 h (2026-09-17 10:09:19 UTC) | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +327 h / 13.62 days<br>2026-09-29 01:09:19 UTC |
+| Buybacks and POL executed | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +130 h / 5.42 days<br>2026-09-20 20:09:19 UTC |
+| Additional 3,000 ETH/day | +233 h / 9.71 days<br>2026-09-25 03:09:19 UTC | +237 h / 9.88 days<br>2026-09-25 07:09:19 UTC | +327 h / 13.62 days<br>2026-09-29 01:09:19 UTC |
+| Flat price beliefs | Snapshot: 2026-09-15 10:09:19 UTC | Snapshot: 2026-09-15 10:09:19 UTC | +336 h / 14.00 days<br>2026-09-29 10:09:19 UTC: unresolved boundary |
+| External license funding only | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +207 h / 8.62 days<br>2026-09-24 01:09:19 UTC |
+| 10% buy and sell taxes | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC |
+| No initial banker cash/inventory | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +31 h / 1.29 days<br>2026-09-16 17:09:19 UTC | +114 h / 4.75 days<br>2026-09-20 04:09:19 UTC |
 
-**These are model optima, not recommended orders.** The additional-capital scenario assumes **42,000 new ETH over 14 days**; it is not an observed forecast of inflows. Two of its twelve price paths peak at the final horizon. The main baseline +31 hours corresponds to September 17 at 02:09 JST, but the spending-pace audit demonstrates why that timestamp is not identified by the evidence.
+**These are model optima, not recommended orders.** The additional-capital scenario assumes **42,000 new ETH over 14 days**; it is not an observed forecast of inflows. Two of its twelve price paths peak at the final horizon. The main baseline peak is +31 hours (2026-09-16 17:09:19 UTC), but the spending-pace audit demonstrates why that timestamp is not identified by the evidence.
 
 The fee recycling, changes in earning share, seven-day withdrawal expiry and later price path can make a branch's best modeled exit much later than a wallet's. Conversely, high trading taxes or different funding assumptions change those incentives. There is no universal sale time across position types.
 

@@ -1,5 +1,7 @@
 # STANDARD research: incentives, taxes, liquidity and exits
 
+[UTC timestamp reference](TIME_REFERENCE.md): elapsed hours/days are retained; calendar times are UTC.
+
 **Decision-tree coverage:** [what participant choices are modeled, and what remains approximate](DECISION_TREE.md).
 
 An executed, editable notebook for wallet tokens, Charter earnings, branch purchases, reinvestment and hypothetical funding of someone else's branch.
@@ -14,7 +16,7 @@ The notebook compares eight scenarios, tests capital and license quotas, and che
 
 ![Agent scenario paths](agent-results/agent-price-scenarios.png)
 
-The [earlier flow notebook](standard_scenarios.ipynb) and [its findings](FINDINGS.md) remain available. Its +19-hour central peak came from an assumed buying half-life. It is not an independently established forecast and is not the conclusion of the new agent model.
+The [earlier flow notebook](standard_scenarios.ipynb) and [its findings](FINDINGS.md) remain available. Its central peak at +19 hours (2026-09-16 05:09:19 UTC) came from an assumed buying half-life. It is not an independently established forecast and is not the conclusion of the new agent model.
 
 ## What is modeled?
 
@@ -36,7 +38,7 @@ The model reconstructs **3,352.88 ETH of actual pool principal** from **66 initi
 
 **Locked protocol liquidity is assumed permanently safe and retained.** It accounts for **3,340.98 ETH** of current principal. Swaps can still remove ETH from that liquidity.
 
-Snapshot: **September 15, 2026 at 10:09:19 UTC / 19:09:19 JST**, Robinhood chain 4663, block **63,576,310**. Cap getters were checked separately at a later identified block. Re-running uses the same frozen observations; it does not produce a current market forecast.
+Snapshot: **September 15, 2026 at 10:09:19 UTC**, Robinhood chain 4663, block **63,576,310**. Cap getters were checked separately at a later identified block. Re-running uses the same frozen observations; it does not produce a current market forecast.
 
 ## Run locally
 

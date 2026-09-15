@@ -1,6 +1,6 @@
 {
   "snapshot_utc": "2026-09-15 10:09:19+00:00",
-  "snapshot_jst": "2026-09-15 19:09:19+09:00",
+  "display_timezone": "UTC",
   "block": "63576310",
   "block_hash": "0xaa4a216e415c3fe6a7d2bdfdd661bdf8d1486d9f183b96422db098a8468d6a6b",
   "token_quantity": 100000,
@@ -524,11 +524,16 @@
       "p90_peak_h": 8.099999999999994,
       "peak_of_mean_price_h": 4.0,
       "best_precommitted_sale_h": 4.0,
-      "best_sale_JST": "Sep 15 23:09 JST",
+      "best_sale_UTC": "2026-09-15 14:09:19 UTC",
       "mean_net_ETH_at_best": 18.98211240728142,
       "snapshot_is_future_max_fraction": 0.19,
       "final_hour_peak_fraction": 0.0,
-      "recent_observed_high_not_exceeded_fraction": 0.19
+      "recent_observed_high_not_exceeded_fraction": 0.19,
+      "median_path_peak_utc": "2026-09-15 13:09:19 UTC",
+      "p10_peak_utc": "2026-09-15 10:09:19 UTC",
+      "p90_peak_utc": "2026-09-15 18:15:18 UTC",
+      "peak_of_mean_price_utc": "2026-09-15 14:09:19 UTC",
+      "best_precommitted_sale_utc": "2026-09-15 14:09:19 UTC"
     },
     {
       "scenario": "Central case",
@@ -538,11 +543,16 @@
       "p90_peak_h": 32.0,
       "peak_of_mean_price_h": 19.0,
       "best_precommitted_sale_h": 19.0,
-      "best_sale_JST": "Sep 16 14:09 JST",
+      "best_sale_UTC": "2026-09-16 05:09:19 UTC",
       "mean_net_ETH_at_best": 33.81933646188305,
       "snapshot_is_future_max_fraction": 0.0,
       "final_hour_peak_fraction": 0.0,
-      "recent_observed_high_not_exceeded_fraction": 0.0
+      "recent_observed_high_not_exceeded_fraction": 0.0,
+      "median_path_peak_utc": "2026-09-16 05:09:19 UTC",
+      "p10_peak_utc": "2026-09-15 18:09:19 UTC",
+      "p90_peak_utc": "2026-09-16 18:09:19 UTC",
+      "peak_of_mean_price_utc": "2026-09-16 05:09:19 UTC",
+      "best_precommitted_sale_utc": "2026-09-16 05:09:19 UTC"
     },
     {
       "scenario": "Continued rebound",
@@ -552,11 +562,16 @@
       "p90_peak_h": 72.19999999999999,
       "peak_of_mean_price_h": 35.0,
       "best_precommitted_sale_h": 35.0,
-      "best_sale_JST": "Sep 17 06:09 JST",
+      "best_sale_UTC": "2026-09-16 21:09:19 UTC",
       "mean_net_ETH_at_best": 87.26798147097847,
       "snapshot_is_future_max_fraction": 0.0,
       "final_hour_peak_fraction": 0.0,
-      "recent_observed_high_not_exceeded_fraction": 0.0
+      "recent_observed_high_not_exceeded_fraction": 0.0,
+      "median_path_peak_utc": "2026-09-16 23:39:19 UTC",
+      "p10_peak_utc": "2026-09-16 08:09:19 UTC",
+      "p90_peak_utc": "2026-09-18 10:21:18 UTC",
+      "peak_of_mean_price_utc": "2026-09-16 21:09:19 UTC",
+      "best_precommitted_sale_utc": "2026-09-16 21:09:19 UTC"
     },
     {
       "scenario": "Withdrawal wave (stress)",
@@ -566,11 +581,16 @@
       "p90_peak_h": 32.0,
       "peak_of_mean_price_h": 19.0,
       "best_precommitted_sale_h": 19.0,
-      "best_sale_JST": "Sep 16 14:09 JST",
+      "best_sale_UTC": "2026-09-16 05:09:19 UTC",
       "mean_net_ETH_at_best": 33.849449165525385,
       "snapshot_is_future_max_fraction": 0.0,
       "final_hour_peak_fraction": 0.0,
-      "recent_observed_high_not_exceeded_fraction": 0.0
+      "recent_observed_high_not_exceeded_fraction": 0.0,
+      "median_path_peak_utc": "2026-09-16 05:09:19 UTC",
+      "p10_peak_utc": "2026-09-15 18:09:19 UTC",
+      "p90_peak_utc": "2026-09-16 18:09:19 UTC",
+      "peak_of_mean_price_utc": "2026-09-16 05:09:19 UTC",
+      "best_precommitted_sale_utc": "2026-09-16 05:09:19 UTC"
     }
   ],
   "position_summary": [
@@ -582,7 +602,8 @@
       "p10_ETH": 0.4505723720824366,
       "p90_ETH": 0.5102432291080904,
       "boundary_optimum": true,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-29 10:09:19 UTC"
     },
     {
       "scenario": "Fast fade",
@@ -592,7 +613,8 @@
       "p10_ETH": 3.9655498960536373,
       "p90_ETH": 4.457417642915408,
       "boundary_optimum": true,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-29 10:09:19 UTC"
     },
     {
       "scenario": "Fast fade",
@@ -602,7 +624,8 @@
       "p10_ETH": -4.957025064948627,
       "p90_ETH": -2.0939434379997244,
       "boundary_optimum": true,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-29 10:09:19 UTC"
     },
     {
       "scenario": "Fast fade",
@@ -612,7 +635,8 @@
       "p10_ETH": 0.16012252064455954,
       "p90_ETH": 0.3290203696816423,
       "boundary_optimum": true,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-29 10:09:19 UTC"
     },
     {
       "scenario": "Fast fade",
@@ -622,7 +646,8 @@
       "p10_ETH": 0.8766894287074221,
       "p90_ETH": 0.9921418076379528,
       "boundary_optimum": true,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-29 10:09:19 UTC"
     },
     {
       "scenario": "Central case",
@@ -632,7 +657,8 @@
       "p10_ETH": 0.1699402860251962,
       "p90_ETH": 0.5352953068185128,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-17 06:09:19 UTC"
     },
     {
       "scenario": "Central case",
@@ -642,7 +668,8 @@
       "p10_ETH": 1.6944936726114035,
       "p90_ETH": 5.340589700296121,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-17 06:09:19 UTC"
     },
     {
       "scenario": "Central case",
@@ -652,7 +679,8 @@
       "p10_ETH": -13.057194054839238,
       "p90_ETH": -4.82282856615332,
       "boundary_optimum": false,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-17 18:09:19 UTC"
     },
     {
       "scenario": "Central case",
@@ -662,7 +690,8 @@
       "p10_ETH": -0.42031025249300197,
       "p90_ETH": -0.13255624303824648,
       "boundary_optimum": false,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-17 18:09:19 UTC"
     },
     {
       "scenario": "Central case",
@@ -672,7 +701,8 @@
       "p10_ETH": 0.16036860478176004,
       "p90_ETH": 0.5545762869897722,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-17 00:09:19 UTC"
     },
     {
       "scenario": "Continued rebound",
@@ -682,7 +712,8 @@
       "p10_ETH": 0.7382744179140082,
       "p90_ETH": 2.251058287640661,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-19 12:09:19 UTC"
     },
     {
       "scenario": "Continued rebound",
@@ -692,7 +723,8 @@
       "p10_ETH": 7.34844077843154,
       "p90_ETH": 22.196784172842623,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-19 11:09:19 UTC"
     },
     {
       "scenario": "Continued rebound",
@@ -702,7 +734,8 @@
       "p10_ETH": -24.432583030470358,
       "p90_ETH": -7.997637545596151,
       "boundary_optimum": false,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-19 18:09:19 UTC"
     },
     {
       "scenario": "Continued rebound",
@@ -712,7 +745,8 @@
       "p10_ETH": -0.26319766038627884,
       "p90_ETH": 0.694577397307498,
       "boundary_optimum": false,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-19 18:09:19 UTC"
     },
     {
       "scenario": "Continued rebound",
@@ -722,7 +756,8 @@
       "p10_ETH": 0.7152028154653671,
       "p90_ETH": 2.538541468161569,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-20 00:09:19 UTC"
     },
     {
       "scenario": "Withdrawal wave (stress)",
@@ -732,7 +767,8 @@
       "p10_ETH": 0.16974223150817624,
       "p90_ETH": 0.5353679293830486,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-17 06:09:19 UTC"
     },
     {
       "scenario": "Withdrawal wave (stress)",
@@ -742,7 +778,8 @@
       "p10_ETH": 1.6954137679433765,
       "p90_ETH": 5.346616110595769,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-17 06:09:19 UTC"
     },
     {
       "scenario": "Withdrawal wave (stress)",
@@ -752,7 +789,8 @@
       "p10_ETH": -13.054263953337657,
       "p90_ETH": -4.830618692992638,
       "boundary_optimum": false,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-17 10:09:19 UTC"
     },
     {
       "scenario": "Withdrawal wave (stress)",
@@ -762,7 +800,8 @@
       "p10_ETH": -0.4176541825199112,
       "p90_ETH": -0.1435593731704904,
       "boundary_optimum": false,
-      "measure": "incremental net ETH"
+      "measure": "incremental net ETH",
+      "best_utc": "2026-09-17 10:09:19 UTC"
     },
     {
       "scenario": "Withdrawal wave (stress)",
@@ -772,15 +811,19 @@
       "p10_ETH": 0.1605396132304736,
       "p90_ETH": 0.543637955949434,
       "boundary_optimum": false,
-      "measure": "total net ETH"
+      "measure": "total net ETH",
+      "best_utc": "2026-09-17 01:09:19 UTC"
     }
   ],
-  "weighted_modal_peak_bucket": "0\u20136 h",
-  "equal_width_modal_window": "0\u20136 h",
+  "weighted_modal_peak_bucket": "0\u20136 h\n09-15 10:09\u2013\n09-15 16:09",
+  "equal_width_modal_window": "0\u20136 h (2026-09-15 10:09:19 UTC to 2026-09-15 16:09:19 UTC)",
   "equal_width_modal_mass": 0.18849999999999997,
   "weighted_modal_bucket_mass": 0.1885,
   "weighted_best_sale_h": 23.0,
-  "weighted_best_sale_JST": "Sep 16 18:09 JST",
+  "weighted_best_sale_UTC": "2026-09-16 09:09:19 UTC",
+  "presentation_source_sha256": {
+    "time_display.py": "1274f5fd8020a6d5d7af344f086b4102aa2d733042f8b3b063d38975b6095cc2"
+  },
   "evidence_sha256": {
     "home.json": "61366d444b52338d2c982edf1b5062c76aebb7623e6de355030cea0f8db972e8",
     "state.json": "dd97ff2be592c36a8eaba72d89ae8102892547c56c81942e20739fef0bd16f8c",

@@ -5,7 +5,9 @@ root=Path(__file__).resolve().parent
 md=nbf.v4.new_markdown_cell;code=nbf.v4.new_code_cell
 cells=[md('''# Does the apparent top come from our assumptions?
 
-The [agent notebook](rational_scenarios.ipynb) produces a baseline top near +31 hours. Its initial spending allowance is `initial cohort cash × 0.77 / 24` each hour. A persistently willing cohort can therefore use its initial cash in approximately `24 / 0.77 = 31.17` hours. Sale proceeds and changing willingness complicate that identity, but it is an immediate reason to challenge the timing.
+**Times are UTC**, with elapsed hours/days retained. See the [UTC reference](TIME_REFERENCE.md).
+
+The [agent notebook](rational_scenarios.ipynb) produces a baseline top near +31 hours (2026-09-16 17:09:19 UTC). Its initial spending allowance is `initial cohort cash × 0.77 / 24` each hour. A persistently willing cohort can therefore use its initial cash in approximately `24 / 0.77 = 31.17` hours. Sale proceeds and changing willingness complicate that identity, but it is an immediate reason to challenge the timing.
 
 This notebook changes **spending pace** and **valuation horizon**, separately. It uses three common seeds and seven simulation days per setting. The valuation horizon is how far ahead an actor values earnings, not a forced exit date. A peak at the seven-day boundary is unresolved. These settings are not calibrated population probabilities.
 '''),code('''from pathlib import Path
@@ -19,7 +21,11 @@ ROOT=next(p for p in [Path.cwd(),Path.cwd()/'research'/'standard-exit'] if (p/'r
 sys.path.insert(0,str(ROOT))
 import model as old
 import rational_model as rm
+from time_display import utc_at, with_utc, utc_axis
 old.EVIDENCE=ROOT/'notebook-evidence'
+start=pd.Timestamp(old.snapshot()['timestamp'],unit='s',tz='UTC')
+pd.set_option('display.max_columns',None)
+print('Frozen snapshot:',utc_at(start))
 OUT=ROOT/'agent-results';OUT.mkdir(exist_ok=True)
 SEED=20260915
 PATHS=3
@@ -44,7 +50,7 @@ for group,setting,c in configs:
     for f in fs:
         audits.append([f.eth_accounting_error.abs().max(),f.token_accounting_error.abs().max(),f.ledger_accounting_error.abs().max()])
     print(group,setting,'complete',flush=True)
-table=pd.DataFrame(rows);display(table)
+table=with_utc(pd.DataFrame(rows),start);display(table)
 table.to_csv(OUT/'behavioral-assumption-sensitivity.csv',index=False)
 assert np.max(np.array(audits)[:,0])<1e-5
 assert np.max(np.array(audits)[:,1])<.02
@@ -54,11 +60,11 @@ for ax,group in zip(axes,['Spending pace','Valuation horizon']):
     for (g,setting),curve in curves.items():
         if g==group:ax.plot(hours,curve,label=str(setting))
     ax.set(xlabel='Hours after frozen snapshot',ylabel='Price / snapshot price',title=group)
-    ax.grid(alpha=.2);ax.legend(title='Per day' if group=='Spending pace' else 'Days')
+    ax.grid(alpha=.2);ax.legend(title='Per day' if group=='Spending pace' else 'Days');utc_axis(ax,start)
 fig.tight_layout();fig.savefig(OUT/'behavioral-assumption-sensitivity.png',dpi=160);plt.show()
 metadata=dict(seed=SEED,paths=PATHS,simulation_days=BASE.days,
     configurations=[dict(experiment=g,setting=s,config=asdict(c)) for g,s,c in configs],
-    source_sha256={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ['rational_model.py','model.py','liquidity.py']},
+    source_sha256={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ['rational_model.py','model.py','liquidity.py','time_display.py']},
     evidence_sha256={n:hashlib.sha256((old.EVIDENCE/n).read_bytes()).hexdigest() for n in ['home.json','state.json','charters.json','liquidity-ticks.json','liquidity-positions.json']},
     max_accounting_errors=dict(zip(['ETH','physical_tokens','ledger'],np.max(audits,axis=0).tolist())))
 (OUT/'assumption-audit-metadata.json').write_text(json.dumps(metadata,indent=2,allow_nan=False)+'\\n')

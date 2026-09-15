@@ -1,16 +1,18 @@
 # Findings from the frozen September 15 snapshot
 
+[UTC timestamp reference](TIME_REFERENCE.md): elapsed hours/days are retained; calendar times are UTC.
+
 **Earlier imposed-flow experiment.** For the model with profit-seeking demand, taxes, finite cash and Charter-entry scenarios, see [the new findings](AGENT_FINDINGS.md) and [agent notebook](rational_scenarios.ipynb). Timing below is conditional on the older buying-decay assumptions.
 
 **Read first:** these dates are conditional on imposed buying-decay assumptions. They are not calibrated forecasts of when buyers stop. [The rational-demand analysis](RATIONAL_DEMAND.md) explains the branch caps, dilution, funding sources and disabled ETH Charter auction.
 
 ## 1. A top estimate requires a view on how long buying continues
 
-The central scenario puts the price top and best 100,000-token sale at **+19 hours**, or **September 16, 2026 at 14:09 JST**. The distribution of individual path peaks has a 10–90% range of **+8 to +32 hours**. The mean sale-proceeds curve stays within 1% of its maximum from **+16 to +22 hours**; the exact maximizing hour should not be overinterpreted.
+The central scenario puts the price top and best 100,000-token sale at **+19 hours / 0.79 days (2026-09-16 05:09:19 UTC)**. The distribution of individual path peaks has a 10–90% range of **+8 to +32 hours (2026-09-15 18:09:19 UTC to 2026-09-16 18:09:19 UTC)**. The mean sale-proceeds curve stays within 1% of its maximum from **+16 to +22 hours (2026-09-16 02:09:19 UTC to 2026-09-16 08:09:19 UTC)**; the exact maximizing hour should not be overinterpreted.
 
-A six-hour demand half-life moves the best sale to +4 hours. A 72-hour buying half-life moves it to +35 hours. The observed two-hour average buying rate was approximately **272 ETH/hour**, versus **448 ETH/hour** over the latest hour. The central initial rate blends those two observations; it does not assume the latest burst lasts indefinitely.
+A six-hour demand half-life moves the best sale to +4 hours (2026-09-15 14:09:19 UTC). A 72-hour buying half-life moves it to +35 hours (2026-09-16 21:09:19 UTC). The observed two-hour average buying rate was approximately **272 ETH/hour**, versus **448 ETH/hour** over the latest hour. The central initial rate blends those two observations; it does not assume the latest burst lasts indefinitely.
 
-Under the editable 30/50/20 weights, the most populated six-hour peak bin is **0–6 hours** (18.8%); a further **5.7%** of weighted paths have their maximum at the snapshot. The mixture's maximum-mean-ETH selling time is **+23 hours**, September 16 at 18:09 JST. This distinction matters: a likely early top and a later expected-value optimum can coexist when bullish paths offer larger payoffs.
+Under the editable 30/50/20 weights, the most populated six-hour peak bin is **0–6 hours (2026-09-15 10:09:19 UTC to 2026-09-15 16:09:19 UTC)** (18.8%); a further **5.7%** of weighted paths have their maximum at the snapshot. The mixture's maximum-mean-ETH selling time is **+23 hours / 0.96 days (2026-09-16 09:09:19 UTC)**. This distinction matters: a likely early top and a later expected-value optimum can coexist when bullish paths offer larger payoffs.
 
 These percentages describe assumed scenarios. They are not estimated real-world probabilities, and the empirical history does not establish an unconditional “most likely top.”
 
@@ -35,17 +37,17 @@ Central-case results, measured from the snapshot:
 
 | Position | Best modeled exit | Mean ETH | Interpretation |
 | --- | ---: | ---: | --- |
-| Existing one branch | +44 h | 0.3379 | Total withdrawal-and-sale proceeds |
-| Existing ten branches | +44 h | 3.3703 | Total proceeds; own exit fees and impact included |
-| Extra branch at implied next opening | +56 h | −8.2726 | Incremental net ETH after funding, versus keeping the original branch |
-| Extra branch at illustrative floor | +56 h | −0.2505 | Incremental net ETH; floor availability is hypothetical |
-| Internal reinvestment policy | +38 h | 0.3356 | Total proceeds; includes exiting before sufficient earnings accrue to reinvest |
+| Existing one branch | +44 h (2026-09-17 06:09:19 UTC) | 0.3379 | Total withdrawal-and-sale proceeds |
+| Existing ten branches | +44 h (2026-09-17 06:09:19 UTC) | 3.3703 | Total proceeds; own exit fees and impact included |
+| Extra branch at implied next opening | +56 h (2026-09-17 18:09:19 UTC) | −8.2726 | Incremental net ETH after funding, versus keeping the original branch |
+| Extra branch at illustrative floor | +56 h (2026-09-17 18:09:19 UTC) | −0.2505 | Incremental net ETH; floor availability is hypothetical |
+| Internal reinvestment policy | +38 h (2026-09-17 00:09:19 UTC) | 0.3356 | Total proceeds; includes exiting before sufficient earnings accrue to reinvest |
 
 Current gross income is **636.94 tokens per branch per day**. The illustrative floor is **1,273.89 tokens**, roughly two days' output. The implied next opening is **23,776.68 tokens**, roughly 37.3 days' current output. An entry price stated in “days of rewards” still needs the future token price, dilution and fees to work out.
 
 The high opening-price branch purchase loses money in every modeled scenario. The floor purchase is negative in the central case and positive in the continued-rebound case, where average incremental proceeds are about **0.1996 ETH** and the simulated 10th percentile is negative. Early speculative buying does not automatically make buying a branch attractive at the later auction time.
 
-In the fast-fade scenario, surviving branches recover later as competitors retire. Their best value is at the final 14-day boundary. **The optimal date is unresolved** in that case; the result depends on continued competitor retirement and is not a reason to declare day 14 optimal.
+In the fast-fade scenario, surviving branches recover later as competitors retire. Their best value is at the final 14-day boundary (2026-09-29 10:09:19 UTC). **The optimal date is unresolved** in that case; the result depends on continued competitor retirement and is not a reason to declare day 14 optimal.
 
 ## 4. Funding someone else's branch adds a separate participation problem
 
