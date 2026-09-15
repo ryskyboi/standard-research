@@ -159,6 +159,7 @@
     "notebook-evidence/state.json": "dd97ff2be592c36a8eaba72d89ae8102892547c56c81942e20739fef0bd16f8c",
     "notebook-evidence/swap-time-headers.json": "3c228d8d5637e790bbfe471adb21044baf9bae3ae399c2891fb9021e81536f6d",
     "notebook-evidence/token-abi.json": "bcd042b95cb0677089b6d083043e51b84bc07f6f0a4a57f7921e84735d4a777c",
-    "notebook-evidence/vault-abi.json": "c050db11ce18942f0af3792711d1ccc1449ccbe19a6bcf4cb4d6d8943db6d8de"
+    "notebook-evidence/vault-abi.json": "c050db11ce18942f0af3792711d1ccc1449ccbe19a6bcf4cb4d6d8943db6d8de",
+    "branch-cap-evidence.json": "f2f5aab8ecb870a265dd75b1551abc4fcce8b3200d26be32101494aed40df3d6"
   }
 }

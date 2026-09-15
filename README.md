@@ -4,7 +4,9 @@ An executed, editable notebook comparing wallet-token sales, Charter withdrawals
 
 **[Open the notebook](standard_scenarios.ipynb)** · **[Read the findings](FINDINGS.md)** · [Methodology](METHODOLOGY.md) · [Evidence and reproduction](DATA.md)
 
-## When is the most likely top?
+## Conditional timing experiment
+
+**Interpretation update:** speculative buying decay is an input, not a predicted event. The notebook does not establish that a flywheel is unlikely or that a drop within 48 hours is likely. See [branch caps and rational demand](RATIONAL_DEMAND.md) for the constraints a demand model must satisfy.
 
 **The central scenario peaks around September 16, 2026 at 14:09 JST, about 19 hours after the frozen snapshot.** Its simulated 10–90% peak-time range is +8 to +32 hours. The central sale-proceeds curve is within 1% of its maximum from **+16 to +22 hours**.
 

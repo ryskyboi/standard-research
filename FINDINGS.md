@@ -1,5 +1,7 @@
 # Findings from the frozen September 15 snapshot
 
+**Read first:** these dates are conditional on imposed buying-decay assumptions. They are not calibrated forecasts of when buyers stop. [The rational-demand analysis](RATIONAL_DEMAND.md) explains the branch caps, dilution, funding sources and disabled ETH Charter auction.
+
 ## 1. A top estimate requires a view on how long buying continues
 
 The central scenario puts the price top and best 100,000-token sale at **+19 hours**, or **September 16, 2026 at 14:09 JST**. The distribution of individual path peaks has a 10–90% range of **+8 to +32 hours**. The mean sale-proceeds curve stays within 1% of its maximum from **+16 to +22 hours**; the exact maximizing hour should not be overinterpreted.
