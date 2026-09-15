@@ -1,0 +1,35 @@
+{
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 7,
+    "method": "eth_getLogs",
+    "params": [
+      {
+        "address": [
+          "0x5977B25419f9c0dDcB2F89fE204955622f4F57ea",
+          "0xF1eE073811B14359D850825E48d200483200eDcd"
+        ],
+        "topics": [
+          [
+            "0xfca0d4c142a1e3085d891c92cde8193ccd316ff4ba9bb3f6b439136681115856",
+            "0x1599c0fcf897af5babc2bfcf707f5dc050f841b044d97c3251ecec35b9abf80b",
+            "0x2d8f8db7fbfa12fe7bf24542012ebba583e95870e8bcd9e170829fb8817fda12",
+            "0x5b0e4c8ef83b965c0909af73beae99d4f828ad85638330683305c9f010d4ad78",
+            "0x34b356a06378218b842d641adfef56661747ff542e604819d252280127354123",
+            "0x68007815d9d398485be662c351b4cdcf4c613f5e29d03eecc6ef2e0a74eabf2e",
+            "0x35d461df023e70886ad5e68610133ecb7d637c2263453f6ea50daf699cb31ed4"
+          ]
+        ],
+        "fromBlock": "0x3d0473f",
+        "toBlock": "0x3d06e4e"
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "error": {
+      "code": 429,
+      "message": "Too Many Requests"
+    }
+  }
+}

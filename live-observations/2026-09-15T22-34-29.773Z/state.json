@@ -1,0 +1,131 @@
+[
+  {
+    "label": "token.name",
+    "value": "STANDARD"
+  },
+  {
+    "label": "token.symbol",
+    "value": "STANDARD"
+  },
+  {
+    "label": "token.decimals",
+    "value": 18
+  },
+  {
+    "label": "token.totalSupply",
+    "value": "98110644246798797740039418"
+  },
+  {
+    "label": "hook.buyTaxBps",
+    "value": "200"
+  },
+  {
+    "label": "hook.sellTaxBps",
+    "value": "300"
+  },
+  {
+    "label": "hook.TAX_CAP_BPS",
+    "value": "1000"
+  },
+  {
+    "label": "hook.taxOverridden",
+    "value": false
+  },
+  {
+    "label": "hook.taxDecayStart",
+    "value": "1789434030"
+  },
+  {
+    "label": "hook.taxDecayDuration",
+    "value": "3600"
+  },
+  {
+    "label": "hook.owner",
+    "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+  },
+  {
+    "label": "bank.totalPendingLive",
+    "value": "1320418900740094148714032"
+  },
+  {
+    "label": "bank.totalBranches",
+    "value": "1099"
+  },
+  {
+    "label": "bank.baseIssuancePerDay",
+    "value": "700000000000000000000000"
+  },
+  {
+    "label": "bank.multiplierWad",
+    "value": "1000000000000000000"
+  },
+  {
+    "label": "bank.genesisTime",
+    "value": "1789434030"
+  },
+  {
+    "label": "bank.feeWindowDays",
+    "value": "7"
+  },
+  {
+    "label": "bank.RESOLUTION_FEE_MIN_WAD",
+    "value": "20000000000000000"
+  },
+  {
+    "label": "bank.RESOLUTION_FEE_MAX_WAD",
+    "value": "600000000000000000"
+  },
+  {
+    "label": "bank.owner",
+    "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+  },
+  {
+    "label": "license.remainingToday",
+    "value": "0"
+  },
+  {
+    "label": "license.dayFloorPrice",
+    "value": "1400000000000000000000"
+  },
+  {
+    "label": "license.lastSalePrice",
+    "value": "11888340929148039869600"
+  },
+  {
+    "label": "currentBuyBps",
+    "value": "200"
+  },
+  {
+    "label": "currentSellBps",
+    "value": "300"
+  },
+  {
+    "label": "resolution.0",
+    "value": "20084525840868683"
+  },
+  {
+    "label": "resolution.1000",
+    "value": "20099109410085684"
+  },
+  {
+    "label": "resolution.100000",
+    "value": "27284882762568811"
+  },
+  {
+    "label": "resolution.1000000",
+    "value": "600000000000000000"
+  },
+  {
+    "label": "getSlot0",
+    "value": [
+      "7349819692033805970197871455621",
+      90606,
+      0,
+      10000
+    ]
+  },
+  {
+    "label": "getLiquidity",
+    "value": "329399781909919839916749"
+  }
+]
