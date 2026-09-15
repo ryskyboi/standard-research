@@ -1,0 +1,49 @@
+{
+  "block": 64018215,
+  "state": [
+    {
+      "label": "license.auctionAnchor",
+      "value": "1789434244"
+    },
+    {
+      "label": "license.licensesPerDay",
+      "value": "100"
+    },
+    {
+      "label": "license.MAX_PER_CHARTER_PER_DAY",
+      "value": "3"
+    },
+    {
+      "label": "license.startMultiplier",
+      "value": "2"
+    },
+    {
+      "label": "license.floorPaybackDays",
+      "value": "2"
+    },
+    {
+      "label": "license.lastSaleDay",
+      "value": "0"
+    },
+    {
+      "label": "license.currentDay",
+      "value": "0"
+    },
+    {
+      "label": "license.dayStartPrice",
+      "value": "12000000000000000000000"
+    },
+    {
+      "label": "license.remainingToday",
+      "value": "0"
+    },
+    {
+      "label": "charter.chartersPerDay",
+      "value": "0"
+    },
+    {
+      "label": "charter.remainingToday",
+      "value": "0"
+    }
+  ]
+}

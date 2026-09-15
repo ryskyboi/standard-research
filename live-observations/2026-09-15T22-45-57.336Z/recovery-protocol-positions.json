@@ -1,0 +1,24 @@
+{
+  "block": 64018215,
+  "positions": [
+    {
+      "owner": "0x242F3e67BEf43470C2434d95E7D618E19f87c8f8",
+      "tickLower": -887200,
+      "tickUpper": 115000,
+      "salt": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "liquidity": "318369591652337008091978",
+      "priorLiquidity": "318369591652337008091978",
+      "unchanged": true
+    },
+    {
+      "owner": "0x242F3e67BEf43470C2434d95E7D618E19f87c8f8",
+      "tickLower": 115000,
+      "tickUpper": 115200,
+      "salt": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "liquidity": "789222933362815021526378",
+      "priorLiquidity": "789222933362815021526378",
+      "unchanged": true
+    }
+  ],
+  "scope": "Recheck known protocol positions; not a discovery of new positions. Custody remains assumed safe."
+}

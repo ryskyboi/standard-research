@@ -1,5 +1,7 @@
 # Findings: demand decisions, taxes and the apparent top
 
+**Later evidence:** see the [22:45 UTC recovery update](RECOVERY_FINDINGS.md) and [executed notebook](recovery_update.ipynb). The experiments on this page retain their original frozen snapshot.
+
 [UTC timestamp reference](TIME_REFERENCE.md): elapsed hours/days are retained; calendar times are UTC.
 
 **Decision-tree coverage:** [what participant choices are modeled, and what remains approximate](DECISION_TREE.md).

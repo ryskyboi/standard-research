@@ -1,0 +1,580 @@
+{
+  "chainId": 4663,
+  "token": "0x88ad8DdF1E3898412146a534538d418c6F8A9062",
+  "poolId": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+  "block": 64018215,
+  "blockHash": "0xf022515d563b7eadb1e406ec3fab9124b9e74f01f9ce89fda869141328e7d117",
+  "blockUTC": "2026-09-15T22:45:58.000Z",
+  "completedUTC": "2026-09-15T22:48:59.068Z",
+  "state": [
+    {
+      "label": "token.name",
+      "value": "STANDARD"
+    },
+    {
+      "label": "token.symbol",
+      "value": "STANDARD"
+    },
+    {
+      "label": "token.decimals",
+      "value": 18
+    },
+    {
+      "label": "token.totalSupply",
+      "value": "98110579088762222558238807"
+    },
+    {
+      "label": "hook.buyTaxBps",
+      "value": "200"
+    },
+    {
+      "label": "hook.sellTaxBps",
+      "value": "300"
+    },
+    {
+      "label": "hook.TAX_CAP_BPS",
+      "value": "1000"
+    },
+    {
+      "label": "hook.taxOverridden",
+      "value": false
+    },
+    {
+      "label": "hook.taxDecayStart",
+      "value": "1789434030"
+    },
+    {
+      "label": "hook.taxDecayDuration",
+      "value": "3600"
+    },
+    {
+      "label": "hook.owner",
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "bank.totalPendingLive",
+      "value": "1326001076666020074639050"
+    },
+    {
+      "label": "bank.totalBranches",
+      "value": "1099"
+    },
+    {
+      "label": "bank.baseIssuancePerDay",
+      "value": "700000000000000000000000"
+    },
+    {
+      "label": "bank.multiplierWad",
+      "value": "1000000000000000000"
+    },
+    {
+      "label": "bank.genesisTime",
+      "value": "1789434030"
+    },
+    {
+      "label": "bank.feeWindowDays",
+      "value": "7"
+    },
+    {
+      "label": "bank.RESOLUTION_FEE_MIN_WAD",
+      "value": "20000000000000000"
+    },
+    {
+      "label": "bank.RESOLUTION_FEE_MAX_WAD",
+      "value": "600000000000000000"
+    },
+    {
+      "label": "bank.owner",
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "license.remainingToday",
+      "value": "0"
+    },
+    {
+      "label": "license.dayFloorPrice",
+      "value": "1400000000000000000000"
+    },
+    {
+      "label": "license.lastSalePrice",
+      "value": "11888340929148039869600"
+    },
+    {
+      "label": "currentBuyBps",
+      "value": "200"
+    },
+    {
+      "label": "currentSellBps",
+      "value": "300"
+    },
+    {
+      "label": "resolution.0",
+      "value": "20084525840868683"
+    },
+    {
+      "label": "resolution.1000",
+      "value": "20099109410085684"
+    },
+    {
+      "label": "resolution.100000",
+      "value": "27284882762568811"
+    },
+    {
+      "label": "resolution.1000000",
+      "value": "600000000000000000"
+    },
+    {
+      "label": "getSlot0",
+      "value": [
+        "7405318020508678769521642273346",
+        90756,
+        0,
+        10000
+      ]
+    },
+    {
+      "label": "getLiquidity",
+      "value": "329272155715875007714033"
+    }
+  ],
+  "withdrawalWindow": [
+    {
+      "label": "withdrawn.0",
+      "value": "12072042428449388969743"
+    }
+  ],
+  "windows": [
+    {
+      "label": "previous_20m",
+      "startBlock": 63994326,
+      "endBlock": 64006271,
+      "startUTC": "2026-09-15T22:05:58.000Z",
+      "endUTC": "2026-09-15T22:25:58.000Z",
+      "durationSeconds": 1200,
+      "buyCount": 30,
+      "sellCount": 73,
+      "swapCount": 103,
+      "startPriceETH": 0.00012092579575563905,
+      "endPriceETH": 0.00011630871481893854,
+      "priceChangePct": -3.818110857033752,
+      "buysETH": 10.37972718467937,
+      "sellsETH": 80.11638857547476,
+      "netSwapETH": -69.73666139079539,
+      "tokensSold": 683162.7372980996,
+      "withdrawals": 0,
+      "branchesRetired": 0,
+      "withdrawalGross": 0,
+      "withdrawalNet": 0,
+      "licensesOpened": 0,
+      "deposits": 0,
+      "taxChanges": [],
+      "liquidityChanges": [
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000000001563000000000000000000000000000000000000000000000000000000000000168f0000000000000000000000000000000000000000000000000346c6a761f5f099100000000000000000000000000000000000000000000000000000000002a1c6d",
+          "blockNumber": "0x3d08434",
+          "transactionHash": "0x3826707acfbe0bf5dfff7309767fcabfd9793b80762f6df02aef424451f20599",
+          "transactionIndex": "0x7",
+          "blockHash": "0x42d7f27a6a6170c384b635a9c57987e0e1dbe516e3982ea2d2d96d0e8af6bc03",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x37",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 87600,
+            "tickUpper": 92400,
+            "liquidityDelta": "3777511243022010769",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1c6d"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec8000000000000000000000000000000000000000000000000000000000001637800000000000000000000000000000000000000000000000645cb83d43401800500000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d09be2",
+          "transactionHash": "0x28f6588637c5b7c3c3a70f40b83aa429f03aad9bbfb913242fe4b6a1a6b0ae53",
+          "transactionIndex": "0x6",
+          "blockHash": "0x89d5232b002aa518ade001c810dcfb1b2d5b66af4791f4b982cf15afecf7ea24",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x1",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "115709722798575419397",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec80000000000000000000000000000000000000000000000000000000000016378000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d0a6d2",
+          "transactionHash": "0xa84b7e52ec796bf17cf4aab48654167d846ab1435851b51906f753df520e9c5d",
+          "transactionIndex": "0x6",
+          "blockHash": "0xc1181fdaeac397ca1ef35751d378774db03a2ed86b2b798a2adcdf8df15742f9",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x2f",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "0",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        }
+      ]
+    },
+    {
+      "label": "last_20m",
+      "startBlock": 64006271,
+      "endBlock": 64018215,
+      "startUTC": "2026-09-15T22:25:58.000Z",
+      "endUTC": "2026-09-15T22:45:58.000Z",
+      "durationSeconds": 1200,
+      "buyCount": 16,
+      "sellCount": 52,
+      "swapCount": 68,
+      "startPriceETH": 0.00011630871481893854,
+      "endPriceETH": 0.00011446474352696987,
+      "priceChangePct": -1.5854111145834904,
+      "buysETH": 12.573929309918958,
+      "sellsETH": 40.71307168960146,
+      "netSwapETH": -28.139142379682504,
+      "tokensSold": 355967.69115154207,
+      "withdrawals": 0,
+      "branchesRetired": 0,
+      "withdrawalGross": 0,
+      "withdrawalNet": 0,
+      "licensesOpened": 0,
+      "deposits": 0,
+      "taxChanges": [],
+      "liquidityChanges": [
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec80000000000000000000000000000000000000000000000000000000000016378000000000000000000000000000000000000000000000001c28ff07bffc3768b00000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d0a991",
+          "transactionHash": "0x50735c058f3efec06a227085f476ab9db710489bb84be1421febb736606c012a",
+          "transactionIndex": "0x3",
+          "blockHash": "0x1e7f6550cb4c127f1921ad90242f31a7bc9259f08d1b13c63b17fa219089e892",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x0",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "32466432654099838603",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec8000000000000000000000000000000000000000000000000000000000001637800000000000000000000000000000000000000000000000070a77c5e024b09c500000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d0a9ef",
+          "transactionHash": "0x3d43925d39eddbcde9a8da1d553ac893297c1a8a4093e38ad6a16e395e78a760",
+          "transactionIndex": "0x7",
+          "blockHash": "0xa927613c61ab2ebdcc64aa5f4f574ca4d97816cb406d9eee8804779b94e9a0a3",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x19",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "8117593596565850565",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec800000000000000000000000000000000000000000000000000000000000163780000000000000000000000000000000000000000000000001c29df178092d01800000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d0aa67",
+          "transactionHash": "0xdd150467afea6f2cb3601224a565dc79c58ed9eaecca8888f2a3023f81188581",
+          "transactionIndex": "0x7",
+          "blockHash": "0x3fda3acef082c9cd65181e3854a13e4220f6bae760626d6e6e0d802f4aa0bc1c",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x3",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "2029398399141466136",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec80000000000000000000000000000000000000000000000000000000000016378000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d0be6f",
+          "transactionHash": "0x19122132a91ec7d07038312d5e83a4f142363535c33ae8d946286cd535ef1549",
+          "transactionIndex": "0x4",
+          "blockHash": "0x0af9b0b429267ceb9c5a163c69db8c75a866e2dd6a5807e65c7661d5573d71b0",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x5",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "0",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000015ec80000000000000000000000000000000000000000000000000000000000016378fffffffffffffffffffffffffffffffffffffffffffffff76ad3303a495d2f9300000000000000000000000000000000000000000000000000000000002a1d26",
+          "blockNumber": "0x3d0bedd",
+          "transactionHash": "0x27e420a61be9d8ec5df8384aff15336e31d60d0d4b4b81812648bb1eb1ca3c99",
+          "transactionIndex": "0x1",
+          "blockHash": "0x7fe4bdaba4ad78f03bdc6c116657ddd2d367242a679b605728eb4ca4e903ba7e",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x0",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 89800,
+            "tickUpper": 91000,
+            "liquidityDelta": "-158323147448382574701",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1d26"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000000000d61000000000000000000000000000000000000000000000000000000000000160580000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000029f2bc",
+          "blockNumber": "0x3d0c4f9",
+          "transactionHash": "0x768d346d8af2876e0f82d482cedfe914d47487d244a10435603be06b79f84ed4",
+          "transactionIndex": "0x6",
+          "blockHash": "0x6b17988797ac582d60dc91afda75f56cc6744b7f7c979150f7029ea31a961682",
+          "blockTimestamp": "0x0",
+          "logIndex": "0xd",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 54800,
+            "tickUpper": 90200,
+            "liquidityDelta": "0",
+            "salt": "0x000000000000000000000000000000000000000000000000000000000029f2bc"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x00000000000000000000000000000000000000000000000000000000000129a800000000000000000000000000000000000000000000000000000000000162b0000000000000000000000000000000000000000000000001aa017c7b2956909100000000000000000000000000000000000000000000000000000000002a1e34",
+          "blockNumber": "0x3d0c615",
+          "transactionHash": "0x695af7f3d4d3e5249125a7f06877f11ecfb478d3cb470a93b1de3ae7c7864e6d",
+          "transactionIndex": "0x1",
+          "blockHash": "0x74f5712a75131854a0f0644d0cf0f3859607beb1157631dd34bef52d71db06fb",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x2",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 76200,
+            "tickUpper": 90800,
+            "liquidityDelta": "30696953403550371985",
+            "salt": "0x00000000000000000000000000000000000000000000000000000000002a1e34"
+          }
+        },
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000000000d6100000000000000000000000000000000000000000000000000000000000016058fffffffffffffffffffffffffffffffffffffffffffffffe19ef88f1e482a063000000000000000000000000000000000000000000000000000000000029f2bc",
+          "blockNumber": "0x3d0d090",
+          "transactionHash": "0x5e57e6a555fdbf03443a0ed5813c5bde3940ccd22a229ebf01c40037a7471d7f",
+          "transactionIndex": "0x4",
+          "blockHash": "0x5adc3c06ab01602d92e68ca0db4cf87281640b6dced4ebc3a38054198e012164",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x7",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 54800,
+            "tickUpper": 90200,
+            "liquidityDelta": "-35024625204534796189",
+            "salt": "0x000000000000000000000000000000000000000000000000000000000029f2bc"
+          }
+        }
+      ]
+    },
+    {
+      "label": "last_5m",
+      "startBlock": 64015259,
+      "endBlock": 64018215,
+      "startUTC": "2026-09-15T22:40:58.000Z",
+      "endUTC": "2026-09-15T22:45:58.000Z",
+      "durationSeconds": 300,
+      "buyCount": 3,
+      "sellCount": 6,
+      "swapCount": 9,
+      "startPriceETH": 0.00011452169549150171,
+      "endPriceETH": 0.00011446474352696987,
+      "priceChangePct": -0.04973028410678593,
+      "buysETH": 0.05806007201697527,
+      "sellsETH": 0.9337613692955979,
+      "netSwapETH": -0.8757012972786227,
+      "tokensSold": 8237.97900410593,
+      "withdrawals": 0,
+      "branchesRetired": 0,
+      "withdrawalGross": 0,
+      "withdrawalNet": 0,
+      "licensesOpened": 0,
+      "deposits": 0,
+      "taxChanges": [],
+      "liquidityChanges": [
+        {
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "topics": [
+            "0xf208f4912782fd25c7f114ca3723a2d5dd6f3bcc3ac8db5af63baa85f711d5ec",
+            "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000000000d6100000000000000000000000000000000000000000000000000000000000016058fffffffffffffffffffffffffffffffffffffffffffffffe19ef88f1e482a063000000000000000000000000000000000000000000000000000000000029f2bc",
+          "blockNumber": "0x3d0d090",
+          "transactionHash": "0x5e57e6a555fdbf03443a0ed5813c5bde3940ccd22a229ebf01c40037a7471d7f",
+          "transactionIndex": "0x4",
+          "blockHash": "0x5adc3c06ab01602d92e68ca0db4cf87281640b6dced4ebc3a38054198e012164",
+          "blockTimestamp": "0x0",
+          "logIndex": "0x7",
+          "removed": false,
+          "event": "ModifyLiquidity",
+          "decoded": {
+            "id": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+            "sender": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+            "tickLower": 54800,
+            "tickUpper": 90200,
+            "liquidityDelta": "-35024625204534796189",
+            "salt": "0x000000000000000000000000000000000000000000000000000000000029f2bc"
+          }
+        }
+      ]
+    }
+  ],
+  "largestSales": [
+    {
+      "transaction": "0x19ca914b223c1f1aed372d2eb58d938507f51abf6067deb0306d50cbd9c62f0a",
+      "from": "0x4337054681fb21ecd8576720eee873f5358ee061",
+      "utc": "2026-09-15T22:37:56.000Z",
+      "eth": 14.09535898850607,
+      "tokens": 123594.98824178772,
+      "afterPriceETH": 0.0001147381322785212
+    },
+    {
+      "transaction": "0x1e88e5c23a11c9886567c5e1a67eb98a820b9e80532e6295b159db6b7dc9a15d",
+      "from": "0x24e7a8963c07dc0ad58098172ab2b9826bc90fb2",
+      "utc": "2026-09-15T22:34:30.000Z",
+      "eth": 8.893097725614755,
+      "tokens": 77499.90000000001,
+      "afterPriceETH": 0.000115618587292058
+    },
+    {
+      "transaction": "0x61cefa377b32417595d99b7e7a0a8a0688ed034d1b5d23a0277e9f8a580cdbc7",
+      "from": "0x43370350f0a1c28aba50545fb34722b06ae25627",
+      "utc": "2026-09-15T22:26:54.000Z",
+      "eth": 5.343955127112064,
+      "tokens": 46484.41444129182,
+      "afterPriceETH": 0.00011594884200782232
+    },
+    {
+      "transaction": "0x9ee8ed4aecc23392bf601879e1e7b5e61d516ce872f3fa67058a19f409251e38",
+      "from": "0xcb610336e847dde55c319ed8513ed8601a67f719",
+      "utc": "2026-09-15T22:40:47.000Z",
+      "eth": 1.7014683596468507,
+      "tokens": 15000,
+      "afterPriceETH": 0.00011452169549150171
+    },
+    {
+      "transaction": "0xb83719ef514f24c6ae65bcfd5df3e39affd3488eca0ef37633e6f5da011a1760",
+      "from": "0x433768867635038eef028526125d551b580bbc7a",
+      "utc": "2026-09-15T22:31:32.000Z",
+      "eth": 1.3619411536297497,
+      "tokens": 11871.173487161788,
+      "afterPriceETH": 0.00011584110547254044
+    },
+    {
+      "transaction": "0xad613c8a0505ac1ed653f2dc81b5c758049fefedae5bcd333c82984a2bc8318f",
+      "from": "0x4381045063b19a615a272733fa6b5f169b622646",
+      "utc": "2026-09-15T22:31:02.000Z",
+      "eth": 1.196805439978565,
+      "tokens": 10424.211464254147,
+      "afterPriceETH": 0.00011593074374398094
+    }
+  ],
+  "note": "Canonical STANDARD/ETH pool. RPC log blockTimestamp fields were zero and are NOT used. Window boundaries use actual verified block headers, within one second of target time; trades filtered by block number. Pool swap deltas, not USD or wallet totals. Latest L2 pin rechecked; no L1 finality claim."
+}

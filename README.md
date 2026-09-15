@@ -8,9 +8,17 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Open the agent notebook](rational_scenarios.ipynb)** · **[Read the findings](AGENT_FINDINGS.md)** · [Model and tax details](AGENT_MODEL.md) · [Evidence and reproduction](DATA.md)
 
-## Observed market update
+## Latest evidence-conditioned recovery update
 
-[September 15, 2026, 13:20:38–13:40:38 UTC: fees and the observed twenty-minute decline](live-observations/2026-09-15T13-40-35.886Z/FINDINGS.md). This separate on-chain observation leaves the notebooks' frozen inputs unchanged.
+**[Executed recovery notebook](recovery_update.ipynb)** · **[Updated assessment](RECOVERY_FINDINGS.md)**
+
+The September 15, 2026 **22:45:58 UTC** update uses a fresh price, all 77 initialized liquidity ticks, current fees, auction quotas and observed selling. It distinguishes a bounce from regaining earlier prices and calculates the ETH buying required. Scenarios vary seller exhaustion, continuing demand, license funding, buybacks and branch withdrawals. They do not assign calibrated probabilities or claim to know the all-time top.
+
+![Recovery buying requirements](recovery-results/recovery-costs.png)
+
+Run `python run_notebook.py recovery_update.ipynb`. This is a new short-horizon supplement; the agent experiments below retain their original 10:09 UTC snapshot and are not current forecasts.
+
+Earlier observations: [13:40 UTC](live-observations/2026-09-15T13-40-35.886Z/FINDINGS.md) and [22:34 UTC](live-observations/2026-09-15T22-34-29.773Z/FINDINGS.md).
 
 ## What can this tell us about the top?
 

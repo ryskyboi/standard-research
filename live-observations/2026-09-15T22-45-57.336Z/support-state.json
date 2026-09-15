@@ -1,0 +1,67 @@
+{
+  "block": 64018215,
+  "blockHash": "0xf022515d563b7eadb1e406ec3fab9124b9e74f01f9ce89fda869141328e7d117",
+  "state": [
+    {
+      "label": "vault.lastTickAt",
+      "value": "0"
+    },
+    {
+      "label": "vault.paused",
+      "value": false
+    },
+    {
+      "label": "vault.poolEthDepth",
+      "value": "3406178867291735897891"
+    },
+    {
+      "label": "vault.tickCooldown",
+      "value": "3600"
+    },
+    {
+      "label": "vault.tickVaultPctBps",
+      "value": "1000"
+    },
+    {
+      "label": "vault.effectiveTickPoolPctBps",
+      "value": "20"
+    },
+    {
+      "label": "bank.epochStart",
+      "value": "1789434030"
+    },
+    {
+      "label": "bank.epochEnd",
+      "value": "1789693230"
+    },
+    {
+      "label": "bank.epochNumber",
+      "value": "1"
+    },
+    {
+      "label": "bank.epochsSettled",
+      "value": "0"
+    },
+    {
+      "label": "bank.previousEpochFlow",
+      "value": "0"
+    },
+    {
+      "label": "hook.epochBoundary",
+      "value": "1789693230"
+    },
+    {
+      "label": "hook.epochNetFlow",
+      "value": "2511824042136201970984"
+    },
+    {
+      "label": "hook.settledNetFlow",
+      "value": "0"
+    }
+  ],
+  "balancesWei": {
+    "contractionVault": "111718993777400491613",
+    "expansionVault": "111718993777400491613",
+    "feeSplitter": "0"
+  }
+}

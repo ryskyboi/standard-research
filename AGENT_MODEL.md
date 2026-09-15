@@ -1,5 +1,7 @@
 # Agent model: decisions, taxes, and limitations
 
+**Later evidence:** see the [22:45 UTC recovery update](RECOVERY_FINDINGS.md) and [executed notebook](recovery_update.ipynb). The experiments on this page retain their original frozen snapshot.
+
 **Decision-tree coverage:** [what participant choices are modeled, and what remains approximate](DECISION_TREE.md).
 
 This model turns the branch-cap and rational-demand discussion into executable scenarios. Read [rational_scenarios.ipynb](rational_scenarios.ipynb) for the executed experiment. The earlier flow notebook is retained as an explicitly imposed-demand comparison.

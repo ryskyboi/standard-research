@@ -1,5 +1,7 @@
 # Findings from the frozen September 15 snapshot
 
+**Later evidence:** see the [22:45 UTC recovery update](RECOVERY_FINDINGS.md) and [executed notebook](recovery_update.ipynb). The experiments on this page retain their original frozen snapshot.
+
 [UTC timestamp reference](TIME_REFERENCE.md): elapsed hours/days are retained; calendar times are UTC.
 
 **Earlier imposed-flow experiment.** For the model with profit-seeking demand, taxes, finite cash and Charter-entry scenarios, see [the new findings](AGENT_FINDINGS.md) and [agent notebook](rational_scenarios.ipynb). Timing below is conditional on the older buying-decay assumptions.

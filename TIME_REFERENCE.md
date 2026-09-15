@@ -34,3 +34,7 @@ Charts retain elapsed hours/days below and add UTC dates above. Tables and CSVs 
 | +336 | 14.0000 | 2026-09-29 10:09:19 UTC |
 
 Calendar conversions apply to events measured from the snapshot. A buying half-life, valuation horizon, seven-day rolling fee window, dormancy period or number of future auction days is a **duration**, not necessarily an event occurring that many days after the snapshot. Those quantities retain their original units.
+
+## Recovery update anchor
+
+The separate `recovery_update.ipynb` uses **2026-09-15 22:45:58 UTC**, block **64,018,215**. Its +24h is **2026-09-16 22:45:58 UTC**; +48h is **2026-09-17 22:45:58 UTC**. Do not apply the earlier notebook's 10:09 UTC anchor to recovery results.

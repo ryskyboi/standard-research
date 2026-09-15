@@ -1,0 +1,10 @@
+name,hours,dt,buy_multiple,sell_multiple,sell_half_life_hours,buy_half_life_hours,buybacks,license_fill,license_external_fraction,license_tokens_each,license_delay_hours,withdrawal_fraction,withdrawal_hour,sell_first
+Observed turnover persists,48,0.25,1,1,,,False,0,0.0,11888.34092914804,0,0.0,6,False
+Selling halves every 6h,48,0.25,1,1,6.0,,False,0,0.0,11888.34092914804,0,0.0,6,False
+Rapid seller exhaustion: 2h,48,0.25,1,1,2.0,,False,0,0.0,11888.34092914804,0,0.0,6,False
+Demand fades too,48,0.25,1,1,6.0,6.0,False,0,0.0,11888.34092914804,0,0.0,6,False
+Buying triples; selling halves in 6h,48,0.25,3,1,6.0,,False,0,0.0,11888.34092914804,0,0.0,6,False
+6h selling decay + buybacks,48,0.25,1,1,6.0,,True,0,0.0,11888.34092914804,0,0.0,6,False
+"6h decay + 100 licenses, 20% fresh-funded",48,0.25,1,1,6.0,,False,1,0.2,11888.34092914804,0,0.0,6,False
+"6h decay + 100 licenses, fully fresh-funded",48,0.25,1,1,6.0,,False,1,1.0,11888.34092914804,0,0.0,6,False
+6h decay + half of branches retire at +6h,48,0.25,1,1,6.0,,False,0,0.0,11888.34092914804,0,0.5,6,False

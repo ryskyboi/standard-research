@@ -101,4 +101,31 @@ for directory in [root/'notebook-results',agent]:
             assert table[col].fillna('').equals(expected[col].fillna('')),f'Wrong UTC timestamp: {path.name}: {col}'
         utc_tables+=bool(date_columns)
 print(f'UTC presentation: verified {utc_tables} tables against the frozen snapshot.')
-print(f'OK: {len(manifest["sha256"])} evidence files; {executed} executed code cells across three notebooks; source hashes, tables and liquidity/accounting reconcile.')
+recovery=root/'recovery-results'
+meta=json.loads((recovery/'metadata.json').read_text())
+assert meta['calibrated_probabilities'] is False
+observation=root/'live-observations'/meta['observation']
+current=json.loads((observation/'summary.json').read_text())
+assert current['blockHash']==meta['block_hash'] and current['block']==meta['block']
+for source,digest in meta['source_sha256'].items():
+    assert hashlib.sha256((root/source).read_bytes()).hexdigest()==digest,f'Stale recovery model: {source}'
+for evidence,digest in meta['evidence_sha256'].items():
+    assert hashlib.sha256((observation/evidence).read_bytes()).hexdigest()==digest,f'Changed recovery evidence: {evidence}'
+nb=nbformat.read(root/'recovery_update.ipynb',as_version=4);nbformat.validate(nb)
+code=[c for c in nb.cells if c.cell_type=='code']
+assert all(c.execution_count is not None for c in code)
+assert not any(o.output_type=='error' for c in code for o in c.outputs)
+executed+=len(code)
+audit=pd.read_csv(recovery/'accounting-checks.csv')
+assert len(audit)==len(meta['scenarios'])
+assert audit.max_eth_error.max()<1e-6 and audit.max_token_error.max()<.02
+paths=pd.read_csv(recovery/'scenario-paths.csv')
+assert np.isfinite(paths.select_dtypes('number')).all().all()
+assert paths.timestamp_utc.equals(with_utc(paths,meta['timestamp_utc']).timestamp_utc)
+summary=pd.read_csv(recovery/'scenario-summary.csv')
+assert len(summary)==len(meta['scenarios'])
+# NaN is intentional for recovery levels never reached; never fill these with an exit time.
+expected=with_utc(summary,meta['timestamp_utc'])
+for col in expected:
+    if col.endswith('_utc'):assert summary[col].fillna('').equals(expected[col].fillna(''))
+print(f'OK: {len(manifest["sha256"])} original evidence files plus recovery pin; {executed} executed code cells across four notebooks; source hashes, UTC times, liquidity and accounting reconcile.')
