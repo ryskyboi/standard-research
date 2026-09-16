@@ -1,0 +1,16 @@
+{
+  "tax_collected_wei": "2343038050967732609083",
+  "lp_eth_tax_wei": "1204545462555541013",
+  "forwarded_wei": "0",
+  "observed_balance_wei": "2344242596430288150096",
+  "unexplained_difference_wei": "0",
+  "events": {
+    "EpochWindowOpened": 1,
+    "TaxCollected": 50433,
+    "LpTaxCollected": 139,
+    "OwnershipTransferStarted": 1,
+    "OwnershipTransferred": 1
+  },
+  "from_block": 63251626,
+  "to_block": 64126372
+}

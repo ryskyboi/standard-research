@@ -10,7 +10,17 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
-## Latest participant and branch-auction evidence
+## Latest: re-entry and buyback map — September 16, 01:47:19 UTC
+
+**[Read the re-entry findings](REENTRY_FINDINGS.md)** · **[Open the executed notebook](reentry_analysis.ipynb)**
+
+Fresh evidence separates the 111.72 ETH buyback vault from 2,344.24 ETH of exactly reconciled, unforwarded hook taxes. Public buyback execution is disabled; the owner counterfactual call succeeds, but no buyback has executed. The current first tick is limited to 6.59 ETH. All 48 remaining daily licenses can feasibly use existing owner inventories and bank ledgers with no compulsory fresh buying.
+
+The notebook quantifies recovery budgets, finite seller inventories, actual license funding, native ETH/WETH/USDG holdings, optional bank withdrawals, dilution, and conditional six-hour paths. The latest 20-minute window has 1.91 ETH buying versus 141.74 ETH selling; scenario outcomes are not assigned invented probabilities.
+
+Run `python run_notebook.py reentry_analysis.ipynb`. Rebuild the saved-data analysis with `python reentry_flow_refresh.py`, `python reentry_followup.py`, `python reentry_model.py`, then `python build_reentry_notebook.py` and execute the notebook. Run `python verify_reentry.py` for frozen artifact integrity; hashes must be regenerated deliberately after changing model or results. Public RPC collectors write a pinned evidence directory and should be run into a new snapshot location when refreshing history.
+
+## Earlier participant and branch-auction evidence
 
 **[Executed participant notebook](participant_analysis.ipynb)** · **[Who bought/sold and how branches were funded](PARTICIPANTS.md)** · [Method and limits](PARTICIPANT_METHOD.md)
 

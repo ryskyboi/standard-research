@@ -1,0 +1,4 @@
+new_branches_per_day,gross_token_payback_days,payback_utc,branch_cap,assumption
+0,34.781024512119046,2026-10-20T20:31:59.517847061+00:00,9990,"Constant issuance and token price; no fees, no retirements, no ETH Charters. Not a return forecast."
+50,81.2134458250793,2026-12-06T06:54:40.719286919+00:00,9990,"Constant issuance and token price; no fees, no retirements, no ETH Charters. Not a return forecast."
+100,174.20420240539482,2027-03-09T06:41:22.087826014+00:00,9990,"Constant issuance and token price; no fees, no retirements, no ETH Charters. Not a return forecast."

@@ -1,0 +1,36 @@
+{
+  "block": "0x3d27da4",
+  "checks": [
+    {
+      "label": "synthetic_public_caller",
+      "from": "0x0000000000000000000000000000000000001234",
+      "result": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "error": {
+          "code": 3,
+          "message": "execution reverted",
+          "data": "0xc32d1d76"
+        }
+      },
+      "decoded": {
+        "abiItem": {
+          "type": "error",
+          "name": "NotExecutor",
+          "inputs": []
+        },
+        "errorName": "NotExecutor"
+      }
+    },
+    {
+      "label": "owner_counterfactual",
+      "from": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c",
+      "result": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": "0x"
+      },
+      "decoded": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+fraction_daily_issuance_withdrawn,STANDARD_sellable_before_AMM,buyer_ETH_at_spot_to_absorb,note
+0.25,171500.0,18.760692468695204,Small-flow approximation; assumes quiet 2% resolution fee. Issuance remains internal until retirement.
+0.5,343000.0,37.52138493739041,Small-flow approximation; assumes quiet 2% resolution fee. Issuance remains internal until retirement.
+1.0,686000.0,75.04276987478082,Small-flow approximation; assumes quiet 2% resolution fee. Issuance remains internal until retirement.
