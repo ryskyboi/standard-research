@@ -129,3 +129,23 @@ expected=with_utc(summary,meta['timestamp_utc'])
 for col in expected:
     if col.endswith('_utc'):assert summary[col].fillna('').equals(expected[col].fillna(''))
 print(f'OK: {len(manifest["sha256"])} original evidence files plus recovery pin; {executed} executed code cells across four notebooks; source hashes, UTC times, liquidity and accounting reconcile.')
+
+# Participant attribution and separate later auction observation.
+part=root/'participant-results'
+pm=json.loads((part/'manifest.json').read_text())
+for category in ['evidence_sha256','source_sha256']:
+    for name,digest in pm[category].items():
+        assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, f'Changed participant artifact: {name}'
+pt=json.loads((root/'strategy-current/target.json').read_text())
+assert pt['header']['hash']==pm['snapshot_hash']
+assert pt['allWalletTokenBalancesReconciled'] and pt['status']=='complete'
+follow=json.loads((part/'followup-summary.json').read_text())
+assert follow['block_hash']==pm['followup_hash']
+assert abs(follow['ledger_reconciliation_error_tokens'])<1e-5
+nb=nbformat.read(root/'participant_analysis.ipynb',as_version=4);nbformat.validate(nb)
+code=[c for c in nb.cells if c.cell_type=='code']
+assert all(c.execution_count is not None for c in code)
+assert not any(o.output_type=='error' for c in code for o in c.outputs)
+pdpaths=pd.read_csv(part/'conditional-paths.csv')
+assert pdpaths.ETH_error.abs().max()<1e-6 and pdpaths.token_error.abs().max()<.001
+print(f'Participant extension OK: {len(code)} executed cells; evidence/source hashes, pinned balances and follow-up ledger reconcile.')

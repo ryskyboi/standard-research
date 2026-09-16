@@ -8,7 +8,19 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Open the agent notebook](rational_scenarios.ipynb)** · **[Read the findings](AGENT_FINDINGS.md)** · [Model and tax details](AGENT_MODEL.md) · [Evidence and reproduction](DATA.md)
 
-## Latest evidence-conditioned recovery update
+## Latest participant and branch-auction evidence
+
+**[Executed participant notebook](participant_analysis.ipynb)** · **[Who bought/sold and how branches were funded](PARTICIPANTS.md)** · [Method and limits](PARTICIPANT_METHOD.md)
+
+The **September 16, 2026 00:44:57 UTC** snapshot traces token inventories, ownership, acquisition sources and split-route trades. A separate **01:14:41 UTC** auction observation records **51 new branches**, real license funding, and a rebound that weakened as selling resumed. The last six-hour canonical buy/sell attribution exceeds 99% by ETH volume. Market-purchased inventory dominated selling; this was not an observed branch-withdrawal wave.
+
+About 90% of tokens spent on the new licenses came from prior bank balances or prefunded wallet inventory. A license sale therefore does not imply an equal new market purchase. The notebook uses actual participant stocks and branch balances for decision sensitivities, and clearly separates conditional earlier stress paths from the later observed auction. It does not assign calibrated top/recovery probabilities.
+
+![Actual license funding and branch incentives](participant-results/branch-funding-and-incentives.png)
+
+Run `python run_notebook.py participant_analysis.ipynb` offline. Earlier notebooks below retain their own dated snapshots.
+
+## Earlier recovery update (September 15)
 
 **[Executed recovery notebook](recovery_update.ipynb)** · **[Updated assessment](RECOVERY_FINDINGS.md)**
 
@@ -22,7 +34,7 @@ Earlier observations: [13:40 UTC](live-observations/2026-09-15T13-40-35.886Z/FIN
 
 ## What can this tell us about the top?
 
-**The available evidence does not establish a most likely top or a decline within 48 hours.** The new model generates buying from expected profits, available cash and auction eligibility. It does not impose a buying-decay half-life. Its results still depend on assumed capital, expectations and participation limits; they are conditional experiments, not calibrated market probabilities.
+**The available evidence does not establish a most likely all-time top or an inevitable decline within 48 hours.** The new model generates buying from expected profits, available cash and auction eligibility. It does not impose a buying-decay half-life. Its results still depend on assumed capital, expectations and participation limits; they are conditional experiments, not calibrated market probabilities.
 
 The notebook compares eight scenarios, tests capital and license quotas, and checks whether agents' forecasts agree with the paths they generate. A separate [assumption audit](assumption_sensitivity.ipynb) varies spending pace and valuation horizon. It distinguishes the peak in spot price from the best precommitted exit for an existing wallet or branch. An optimum at the final observation remains unresolved.
 

@@ -1,0 +1,33 @@
+{
+  "block": 64089150,
+  "block_hash": "0xdf344150dc24a1dedad2f606cc809abcc1cfb2bf785e5318e8c5a676bae421b8",
+  "snapshot_utc": "2026-09-16T00:44:57+00:00",
+  "transfer_logs": 213702,
+  "canonical_swaps": 49945,
+  "all_pool_eth": {
+    "buy": 13438.981016158612,
+    "sell": 10981.250541395126
+  },
+  "attributed_pool_eth": {
+    "buy": 13140.527861899849,
+    "sell": 10813.81977253063
+  },
+  "all_swap_tokens": {
+    "buy": 157109142.09182373,
+    "sell": 88349126.64872074
+  },
+  "attributed_swap_tokens": {
+    "buy": 154710056.02098852,
+    "sell": 87072330.23508514
+  },
+  "attribution_eth_fraction": {
+    "buy": 0.9777919803666727,
+    "sell": 0.9847530326137861
+  },
+  "unresolved_transactions": 2286,
+  "integer_supply_reconciled": true,
+  "all_collected_wallet_balances_reconciled": true,
+  "provenance_max_error_tokens": 4.6193599700927734e-07,
+  "timing": "Trade timestamps interpolated between archived block headers; exact block/transaction IDs retained. Window boundaries approximate.",
+  "scope": "Canonical pool only. Addresses are not people. Pool ETH before output sell tax / after input buy hook accounting; no assumed identity, motive or ETH funding provenance. Pro-rata token lineage is a convention; no P&L claimed for unknown basis. Current Charter ownership used; Charter transfers disabled at this snapshot. Native ETH is buying-capacity ceiling, not intention. Fully exited inactive addresses lack fresh ETH reads and remain missing, never zero-filled."
+}

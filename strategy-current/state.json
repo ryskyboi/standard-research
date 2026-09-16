@@ -1,0 +1,191 @@
+[
+  {
+    "label": "token.name",
+    "value": "STANDARD"
+  },
+  {
+    "label": "token.symbol",
+    "value": "STANDARD"
+  },
+  {
+    "label": "token.decimals",
+    "value": 18
+  },
+  {
+    "label": "token.totalSupply",
+    "value": "98085803620603547822305102"
+  },
+  {
+    "label": "bank.totalPendingLive",
+    "value": "1408520197036390445002924"
+  },
+  {
+    "label": "bank.totalBranches",
+    "value": "1099"
+  },
+  {
+    "label": "bank.baseIssuancePerDay",
+    "value": "700000000000000000000000"
+  },
+  {
+    "label": "bank.multiplierWad",
+    "value": "1000000000000000000"
+  },
+  {
+    "label": "bank.genesisTime",
+    "value": "1789434030"
+  },
+  {
+    "label": "bank.epochStart",
+    "value": "1789434030"
+  },
+  {
+    "label": "bank.epochEnd",
+    "value": "1789693230"
+  },
+  {
+    "label": "bank.epochNumber",
+    "value": "1"
+  },
+  {
+    "label": "bank.epochsSettled",
+    "value": "0"
+  },
+  {
+    "label": "bank.previousEpochFlow",
+    "value": "0"
+  },
+  {
+    "label": "bank.positiveSignalStreak",
+    "value": "0"
+  },
+  {
+    "label": "bank.cumulativeIssued",
+    "value": "690148148148148148075584"
+  },
+  {
+    "label": "bank.recycleBuffer",
+    "value": "121230624053127440963"
+  },
+  {
+    "label": "bank.recycleRate",
+    "value": "0"
+  },
+  {
+    "label": "hook.buyTaxBps",
+    "value": "200"
+  },
+  {
+    "label": "hook.sellTaxBps",
+    "value": "300"
+  },
+  {
+    "label": "hook.taxOverridden",
+    "value": false
+  },
+  {
+    "label": "hook.epochNetFlow",
+    "value": "2457730474763690497930"
+  },
+  {
+    "label": "license.auctionAnchor",
+    "value": "1789434244"
+  },
+  {
+    "label": "license.licensesPerDay",
+    "value": "100"
+  },
+  {
+    "label": "license.MAX_PER_CHARTER_PER_DAY",
+    "value": "3"
+  },
+  {
+    "label": "license.startMultiplier",
+    "value": "2"
+  },
+  {
+    "label": "license.floorPaybackDays",
+    "value": "2"
+  },
+  {
+    "label": "license.lastSaleDay",
+    "value": "0"
+  },
+  {
+    "label": "license.currentDay",
+    "value": "0"
+  },
+  {
+    "label": "license.dayStartPrice",
+    "value": "12000000000000000000000"
+  },
+  {
+    "label": "license.dayFloorPrice",
+    "value": "1400000000000000000000"
+  },
+  {
+    "label": "license.lastSalePrice",
+    "value": "11888340929148039869600"
+  },
+  {
+    "label": "license.remainingToday",
+    "value": "0"
+  },
+  {
+    "label": "license.soldToday",
+    "value": "100"
+  },
+  {
+    "label": "vault.lastTickAt",
+    "value": "0"
+  },
+  {
+    "label": "vault.paused",
+    "value": false
+  },
+  {
+    "label": "vault.poolEthDepth",
+    "value": "3352000730697770856602"
+  },
+  {
+    "label": "vault.tickCooldown",
+    "value": "3600"
+  },
+  {
+    "label": "vault.tickVaultPctBps",
+    "value": "1000"
+  },
+  {
+    "label": "vault.effectiveTickPoolPctBps",
+    "value": "20"
+  },
+  {
+    "label": "getSlot0",
+    "value": [
+      "7525009620681257700011602890097",
+      91077,
+      0,
+      10000
+    ]
+  },
+  {
+    "label": "getLiquidity",
+    "value": "329589389677499066502198"
+  },
+  {
+    "label": "balance.contractionVault",
+    "value": "111718993777400491613"
+  },
+  {
+    "label": "balance.expansionVault",
+    "value": "111718993777400491613"
+  },
+  {
+    "label": "balance.feeSplitter",
+    "value": "0"
+  },
+  {
+    "label": "charter.chartersPerDay",
+    "value": "0"
+  }
+]
