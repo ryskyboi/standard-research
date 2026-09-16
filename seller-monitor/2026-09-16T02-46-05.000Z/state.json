@@ -1,0 +1,71 @@
+[
+  {
+    "label": "token.totalSupply",
+    "value": "96873607618982886595697431"
+  },
+  {
+    "label": "token.decimals",
+    "value": 18
+  },
+  {
+    "label": "bank.totalBranches",
+    "value": "1152"
+  },
+  {
+    "label": "bank.totalPendingLive",
+    "value": "1425196841169391594956641"
+  },
+  {
+    "label": "hook.buyTaxBps",
+    "value": "200"
+  },
+  {
+    "label": "hook.sellTaxBps",
+    "value": "300"
+  },
+  {
+    "label": "hook.epochNetFlow",
+    "value": "2129882219423097303258"
+  },
+  {
+    "label": "vault.lastTickAt",
+    "value": "0"
+  },
+  {
+    "label": "vault.paused",
+    "value": false
+  },
+  {
+    "label": "vault.poolEthDepth",
+    "value": "3073656994385204268094"
+  },
+  {
+    "label": "vault.tickVaultPctBps",
+    "value": "1000"
+  },
+  {
+    "label": "vault.effectiveTickPoolPctBps",
+    "value": "20"
+  },
+  {
+    "label": "vault.tickCooldown",
+    "value": "3600"
+  },
+  {
+    "label": "vaultETH",
+    "value": "111718993777400491613"
+  },
+  {
+    "label": "permissionless",
+    "value": false
+  },
+  {
+    "label": "slot0",
+    "value": [
+      "8206458233013286120575536465163",
+      92811,
+      0,
+      10000
+    ]
+  }
+]

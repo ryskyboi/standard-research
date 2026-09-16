@@ -10,6 +10,10 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Seller monitor — September 16, 02:48:06 UTC
+
+**[Seller entry cohorts, fixed-group depletion and replacement selling](SELLER_MONITOR.md)**. Three polls show old inventories shrinking while newly active sellers dominate subsequent sales. Includes a public-RPC polling command, per-wallet acquisition lineage, UTC entry observations and a watchlist. No reliable selling-stop time is inferred.
+
 ## Fresh buyback-trade check — September 16, 02:22:37 UTC
 
 **[Remaining seller inventory versus buybacks](BUYBACK_TRADE.md)** · **[Liquid supply, vault address and execution status](BUYBACK_STATUS.md)**

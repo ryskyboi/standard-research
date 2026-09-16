@@ -1,0 +1,67 @@
+{
+  "timestamp_utc": "2026-09-16T02:47:07+00:00",
+  "block": 64161999,
+  "block_hash": "0x1ceaa142c3aea33e585e0d614bad2072500ea5e3e04c36990c6d2d43126022e1",
+  "price_ETH": 9.356853107714738e-05,
+  "source_inventory_reconciled": true,
+  "total_supply_reconciled": true,
+  "recent_seller_addresses": 548,
+  "recent_sellers_empty": 449,
+  "recent_seller_inventory": 2276821.8599047507,
+  "fixed_cohort_start_utc": "2026-09-16T02:22:37+00:00",
+  "fixed_cohort_initial_tokens": 2343123.8637286224,
+  "fixed_cohort_remaining_tokens": 2131623.6284284987,
+  "fixed_cohort_incoming_tokens": 69709.70748952751,
+  "fixed_cohort_outgoing_tokens": 281209.942789651,
+  "fixed_cohort_net_drain_tokens_hour": 517959.7599186703,
+  "fixed_cohort_canonical_sold_tokens": 127648.60045611394,
+  "fixed_cohort_canonical_bought_tokens": 21445.016578483806,
+  "fixed_cohort_other_net_outgoing_tokens": 105296.65142249332,
+  "fixed_cohort_constant_net_drain_hours_to_empty": 4.1154232304903475,
+  "fixed_cohort_constant_net_drain_empty_utc": "2026-09-16T06:54:02.523629664+00:00",
+  "new_seller_addresses_since_fixed_snapshot": 58,
+  "new_seller_remaining_inventory": 147093.5269162834,
+  "new_seller_tokens_sold_since_fixed_snapshot": 2676245.3061749297,
+  "buyback_vault_ETH": 111.7189937774005,
+  "last_buyback_timestamp": 0,
+  "new_buyback_events": 0,
+  "delta_attribution_fraction": 0.9838426971578444,
+  "entry_cohorts": [
+    {
+      "entry_phase": "after_hour_18",
+      "addresses": 82,
+      "remaining_tokens": 88937.99732133756,
+      "sold_tokens_6h": 601917.3426898819,
+      "sold_tokens_20m": 39374.70845762998
+    },
+    {
+      "entry_phase": "first_hour",
+      "addresses": 281,
+      "remaining_tokens": 1446878.2994528858,
+      "sold_tokens_6h": 6881105.8177749785,
+      "sold_tokens_20m": 1643070.6673573225
+    },
+    {
+      "entry_phase": "hours_1_to_6",
+      "addresses": 124,
+      "remaining_tokens": 730713.4237097081,
+      "sold_tokens_6h": 3042999.1575560267,
+      "sold_tokens_20m": 916283.3953742953
+    },
+    {
+      "entry_phase": "hours_6_to_18",
+      "addresses": 61,
+      "remaining_tokens": 10292.13942081932,
+      "sold_tokens_6h": 792550.9881296719,
+      "sold_tokens_20m": 31467.33362345674
+    }
+  ],
+  "inventory_sources": {
+    "current_own_canonical_purchase_tokens": 1579386.1689977357,
+    "current_transferred_market_purchase_tokens": 272632.8905684705,
+    "current_own_other_pool_purchase_tokens": 92595.56360799611,
+    "current_branch_withdrawal_tokens": 0.0,
+    "current_other_tokens": 332207.23673054855
+  },
+  "limitations": "Entry dates are first observed receipts or first canonical purchases at an address; transferred tokens can have older economic owners. Pool-side lifetime VWAP excludes buy tax, router/gas, secondary basis and basis allocation to remaining units: not profit/loss. Source mix uses pro-rata accounting. Constant-pace empty times assume unchanged net drain and zero replacement cohorts; they are mechanical illustrations, not forecasts. Transfers can relocate selling capacity without selling. No persistent background alert service is implied."
+}
