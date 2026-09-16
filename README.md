@@ -10,6 +10,10 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Market check — September 16, 10:08:30 UTC
+
+**[Recovery continues with buying into other addresses](market-checks/2026-09-16T1008/FINDINGS.md)**. Price is up 3.60% from 09:11. The last 20 minutes show 50.30 ETH buying versus 1.86 ETH selling; the three previously investigated buyers retain their positions and cash unchanged. Watched large sellers also retain inventory. No buyback has executed. Includes refreshed liquidity, 21 reconciled wallet balances and the updated fee-adjusted entry hurdle.
+
 ## Buyer attribution — September 16, 09:23:06 UTC
 
 **[The three dominant buying recipients: holdings, protocol links and remaining cash](buyer-investigation/FINDINGS.md)**. They hold 1.324m STANDARD and 2.44 ETH combined, with no WETH/USDG in the checked wallets. One owns Charter #738 with one branch; no direct team-control relationship is established. The third purchase used about 20,000 USDG through an external execution route, showing why a recipient's zero ETH balance does not establish exhaustion of buying capital. Native ETH funding ancestry remains unresolved because the public history/trace services were unavailable.
