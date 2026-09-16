@@ -10,6 +10,10 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Spot-entry check — September 16, 09:11:08 UTC
+
+**[Fresh flow, large-holder balances and fee-adjusted entry analysis](decision-evidence/2026-09-16T0908/FINDINGS.md)**. Buying continues, but the latest 20-minute volume is concentrated: 90.8% reaches three token recipient addresses. A modeled 1 ETH entry needs about 131 ETH of additional buying to break even with no sellers, or 216 ETH if 750,000 STANDARD sells first. Buybacks remain inactive. These are conditional requirements, not forecasts.
+
 ## Latest tape and inventory findings — September 16, 06:16:07 UTC
 
 **[Why the tape looks all buys or all sells](TRADE_TAPE.md)** · **[Where sellers obtain inventory](SELLER_ORIGINS.md)**

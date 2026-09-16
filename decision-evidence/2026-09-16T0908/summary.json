@@ -1,0 +1,125 @@
+{
+  "snapshot_utc": "2026-09-16T09:11:08+00:00",
+  "block": 64390990,
+  "hash": "0x824c504f8747ac6f6e1e7de4b8c3bf2908c1791446e9238b5337f054b7831239",
+  "price_ETH": 0.0001136864263022771,
+  "change_since_0616": 0.06489441798249374,
+  "buy_ETH_since_0616": 169.98790276250358,
+  "sell_ETH_since_0616": 49.306903419947126,
+  "current_vault_ETH": 111.7189937774005,
+  "lastTickAt": "0",
+  "licenses_remaining": "0",
+  "buy_tax": 0.02,
+  "sell_tax": 0.03,
+  "lp_fee": 0.01,
+  "small_trade_break_even_rise": 0.0733263734557974,
+  "payoffs": [
+    {
+      "spot_move": -0.1,
+      "net_return": -0.16148524600000003
+    },
+    {
+      "spot_move": 0,
+      "net_return": -0.0683169400000001
+    },
+    {
+      "spot_move": 0.05,
+      "net_return": -0.02173278700000003
+    },
+    {
+      "spot_move": 0.1,
+      "net_return": 0.02485136600000004
+    },
+    {
+      "spot_move": 0.2,
+      "net_return": 0.11801967199999974
+    }
+  ],
+  "flow_windows": [
+    {
+      "minutes": 20,
+      "side": "buy",
+      "eth": 40.78009727423556,
+      "transactions": 27,
+      "attributed_eth": 40.78009727423555,
+      "addresses": 16,
+      "top_address": "0x47d579fe2962cca1f2936b30be1981eae391b1fe",
+      "top_eth": 18.54552,
+      "top3_eth": 37.023026839711164
+    },
+    {
+      "minutes": 20,
+      "side": "sell",
+      "eth": 0.9810511229294668,
+      "transactions": 11,
+      "attributed_eth": 0.9542515567841796,
+      "addresses": 7,
+      "top_address": "0xcdba91a0dda105c041d44f698730c96ff3a8dfbf",
+      "top_eth": 0.32434277625122176,
+      "top3_eth": 0.9372005654939399
+    },
+    {
+      "minutes": 60,
+      "side": "buy",
+      "eth": 41.54906487555181,
+      "transactions": 32,
+      "attributed_eth": 41.549064875551814,
+      "addresses": 21,
+      "top_address": "0x47d579fe2962cca1f2936b30be1981eae391b1fe",
+      "top_eth": 18.54552,
+      "top3_eth": 37.023026839711164
+    },
+    {
+      "minutes": 60,
+      "side": "sell",
+      "eth": 1.1841466233124136,
+      "transactions": 16,
+      "attributed_eth": 1.1573470571671263,
+      "addresses": 11,
+      "top_address": "0xcdba91a0dda105c041d44f698730c96ff3a8dfbf",
+      "top_eth": 0.32434277625122176,
+      "top3_eth": 0.9372005654939399
+    },
+    {
+      "minutes": 120,
+      "side": "buy",
+      "eth": 68.04597684249967,
+      "transactions": 48,
+      "attributed_eth": 67.96858099165966,
+      "addresses": 33,
+      "top_address": "0x3821c23b51515086e0aa91400b5fe00199b47e4a",
+      "top_eth": 23.73623274885874,
+      "top3_eth": 52.571752748858735
+    },
+    {
+      "minutes": 120,
+      "side": "sell",
+      "eth": 27.77963145315571,
+      "transactions": 50,
+      "attributed_eth": 27.752831887010423,
+      "addresses": 40,
+      "top_address": "0x8585e035a8cea3741f201c9e42ed8d821ecc6dfd",
+      "top_eth": 13.240904574819858,
+      "top3_eth": 17.58430419959739
+    }
+  ],
+  "break_even": [
+    {
+      "other_sells_STANDARD": 0,
+      "other_buy_ETH_break_even": 130.84434928054822
+    },
+    {
+      "other_sells_STANDARD": 250000,
+      "other_buy_ETH_break_even": 159.62596932922946
+    },
+    {
+      "other_sells_STANDARD": 750000,
+      "other_buy_ETH_break_even": 215.92158614461442
+    }
+  ],
+  "buyback_24h_no_sellers_net_return": -0.015570519723587473,
+  "buyback_24h_spent_ETH": 101.06118172858815,
+  "active_liquidity_reconciled": true,
+  "watched_balances_reconciled": true,
+  "assumptions": "Illustrative 1 ETH spot entry and exit; unchanged current liquidity/taxes, no gas/router costs; sellers act before modeled new buyers. Amounts are conditional requirements, not forecasts. Future locked liquidity retained. Buyback case assumes successful hourly execution; none observed. Window times interpolated. Address concentration is not beneficial-owner concentration."
+}
