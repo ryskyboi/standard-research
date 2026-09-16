@@ -1,0 +1,20 @@
+// Focused receipt and custody checks at the existing full snapshot. No signing.
+import fs from 'node:fs';import zlib from 'node:zlib';
+import {parseAbi,encodeFunctionData,decodeFunctionResult,keccak256} from 'viem';
+const root=new URL('./',import.meta.url),dir=new URL('seller-origin-evidence/',root);fs.mkdirSync(dir,{recursive:true});
+const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
+const target=read('behavior-updates/2026-09-16T054047Z/evidence/target.json'),tag=target.header.number;let id=0;const raw=[];
+async function rpc(method,params){const request={jsonrpc:'2.0',id:++id,method,params};const response=await fetch('https://rpc.mainnet.chain.robinhood.com',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(request),signal:AbortSignal.timeout(45000)}).then(r=>r.json());raw.push({request,response});fs.writeFileSync(new URL('raw.json.gz',dir),zlib.gzipSync(JSON.stringify(raw)));if(response.error)throw Error(JSON.stringify(response.error));return response.result;}
+if(BigInt(await rpc('eth_chainId',[]))!==4663n)throw Error('Wrong chain');
+const addresses=['0x65ee0e9d98ed1564655ac51d78ffd6ef61f66404','0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f','0x6aa80dbbed9ae5ab45fbf61f9644fada3b29326e','0x039ec98a76f111092d4751365ff09dd2aec301e8','0xe4385370a92c6ab64758bc7a9f672e5c1d022ba1','0xe0763177d7e80e290fc4fea055fae11f5024f687'];
+const code=[];let stateAvailable=true;for(const address of addresses){try{const runtime=await rpc('eth_getCode',[address,tag]);code.push({address,code_bytes:(runtime.length-2)/2,runtime_hash:keccak256(runtime)});}catch(error){if(!String(error).includes('historical state'))throw error;code.push({address,error:String(error)});stateAvailable=false;break;}}
+const abi=parseAbi(['function token0() view returns(address)','function token1() view returns(address)','function factory() view returns(address)']);
+const mc=parseAbi(['function aggregate3((address target,bool allowFailure,bytes callData)[] calls) payable returns((bool success,bytes returnData)[])']);
+const names=['token0','token1','factory'];let checks=[];
+if(stateAvailable){const bytes=await rpc('eth_call',[{to:'0xcA11bde05977b3631167028862bE2a173976CA11',data:encodeFunctionData({abi:mc,functionName:'aggregate3',args:[names.map(functionName=>({target:addresses[0],allowFailure:true,callData:encodeFunctionData({abi,functionName})}))]})},tag]);checks=decodeFunctionResult({abi:mc,functionName:'aggregate3',data:bytes}).map((x,i)=>({functionName:names[i],success:x.success,...(x.success?{value:decodeFunctionResult({abi,functionName:names[i],data:x.returnData})}:{returnData:x.returnData})}));}
+const hashes=['0x645be7ef327d98c59d52a8733d19c2dfd4f5c7d97fe21212e312edae1d658ced','0xa3121f313ee4258fe074ed5822354a85c41a3dd1563b4b98a1579b3a8245ff38','0x4ddc0b14ddaeb7dcbb175337b3f46cde302ab1c7dc726e90f53bd823c78682b6','0xf79546cce3882ce33bd77f569955387fd435f2da62c7cd48a8797b57db8833a1','0x3c0cbbe337d2e9ec184d4550a9d15e992fcc559dbdada89eb913966abb97494e','0x29e9c0be91b7d85ea3c17920a99f8bcad0e072c615369aa407a9c646c0c93bab','0x38504b07e419bec86445f61c0153a952762ad450dd56edeb59f4ecdb6e8fb7d2'];
+const receipts=[];for(const hash of hashes){const receipt=await rpc('eth_getTransactionReceipt',[hash]);if(receipt.status!=='0x1'||BigInt(receipt.blockNumber)>BigInt(tag))throw Error('Invalid example receipt');const header=await rpc('eth_getBlockByNumber',[receipt.blockNumber,false]);if(header.hash!==receipt.blockHash)throw Error('Receipt reorg');receipts.push({receipt,header});}
+if((await rpc('eth_getBlockByNumber',[tag,false])).hash!==target.header.hash)throw Error('Pin changed');
+fs.writeFileSync(new URL('raw.json.gz',dir),zlib.gzipSync(JSON.stringify(raw)));
+fs.writeFileSync(new URL('checks.json',dir),JSON.stringify({chainId:4663,token:target.token,header:target.header,historical_state_available:stateAvailable,code,custody_address:addresses[0],custody_checks:checks,receipts},null,2));
+console.log(JSON.stringify({code,custody_checks:checks,verified_receipts:receipts.length},null,2));

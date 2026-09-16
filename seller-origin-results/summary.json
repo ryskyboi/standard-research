@@ -1,0 +1,69 @@
+{
+  "from_utc": "2026-09-16T02:57:33+00:00",
+  "to_utc": "2026-09-16T05:40:47+00:00",
+  "from_block": 64168224,
+  "to_block": 64265663,
+  "block_hash": "0xe02747f5426047f715c7a4dc56ad72b9de3db6579d7aee7ff350816375a3213f",
+  "fixed_seller_addresses": 547,
+  "initial_fixed_tokens": 2421187.067971908,
+  "remaining_fixed_tokens": 2353564.1629951475,
+  "gross_external_incoming": 963819.5635429866,
+  "gross_external_outgoing": 1031442.468519747,
+  "internal_group_transfers": 429.40205112973825,
+  "same_transaction_boundary_churn": 1709.7449585425118,
+  "replenishment_sources": {
+    "canonical_swap_output": 783934.9553734326,
+    "other_custody_output": 87161.11919982909,
+    "outside_wallet_inventory": 38052.4823393286,
+    "same_group_inventory_via_relay": 1709.7449585425118,
+    "verified_secondary_swap_output": 52961.261671853674
+  },
+  "fixed_cohort_canonical_rebuys": 783934.9553734326,
+  "fixed_cohort_rebuy_addresses": 26,
+  "fixed_cohort_rebuy_pool_ETH": 83.93455310457323,
+  "attributed_sold_tokens": 2481001.3206330184,
+  "sale_origins": {
+    "own_pool_buy": 1651188.4491595346,
+    "transferred_pool_buy": 376836.7639645085,
+    "branch_withdrawal": 0.0,
+    "transferred_branch_withdrawal": 0.0,
+    "initial_allocation": 0.0,
+    "transferred_allocation": 0.0,
+    "other_custody_or_unresolved": 371948.49281890725,
+    "own_other_pool_buy": 70086.6817843103,
+    "transferred_other_pool_buy": 10940.932905757552
+  },
+  "rolling_inventory": 4351579.557673918,
+  "inventory_origins": {
+    "own_pool_buy": 2867896.4798817188,
+    "transferred_pool_buy": 777419.1644812858,
+    "branch_withdrawal": 0.0,
+    "transferred_branch_withdrawal": 0.0,
+    "initial_allocation": 0.0,
+    "transferred_allocation": 0.0,
+    "other_custody_or_unresolved": 561700.5339442487,
+    "own_other_pool_buy": 139257.93473325676,
+    "transferred_other_pool_buy": 5305.444633409271
+  },
+  "cohort_membership": [
+    {
+      "membership": "retained",
+      "addresses": 396,
+      "current_tokens": 1622588.8928618324
+    },
+    {
+      "membership": "newly_in_rolling_group",
+      "addresses": 212,
+      "current_tokens": 2728990.664812087
+    },
+    {
+      "membership": "aged_out_of_rolling_group",
+      "addresses": 151,
+      "current_tokens": 730975.2701333151
+    }
+  ],
+  "all_token_balances_reconciled": true,
+  "total_supply_reconciled": true,
+  "maximum_mixed_source_error": 7.450580596923828e-09,
+  "limitations": "Sources refer to tokens, not private wallet ownership or origin of ETH used to buy. Same-transaction relays are traced in log order, with pro-rata allocation if a relay mixes balances. Pool output counts as a verified purchase only to the extent supported by matching Swap legs; canonical transactions with liquidity changes stay unresolved. Other custody output remains unresolved. Historical sale/inventory lineage uses the frozen pro-rata attribution. Cohort membership uses approximate six-hour timestamps; interval transfers use exact block cutoffs."
+}

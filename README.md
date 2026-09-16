@@ -10,7 +10,17 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
-## Latest update — September 16, 05:56:10 UTC
+## Latest tape and inventory findings — September 16, 06:16:07 UTC
+
+**[Why the tape looks all buys or all sells](TRADE_TAPE.md)** · **[Where sellers obtain inventory](SELLER_ORIGINS.md)**
+
+Twenty addresses sold identical fractions of their balances in synchronized batches over seven seconds: 5% repeatedly, then 3%. Nineteen small addresses produced 84 sell transactions totaling only 0.60 ETH; the large address sold 28.23 ETH. This supports automated execution, without establishing ownership or manipulation. The broader uninterrupted streak was 118 sells and 71.25 ETH, with a 3.79% spot decline.
+
+Buying subsequently returned: 107.83 ETH buys versus 8.06 ETH sells from 05:56:10 to 06:16:07 UTC. No contraction-vault buyback had executed. The three largest token destinations received about 64% of that buying; destination concentration does not prove beneficial-owner concentration.
+
+Source tracing through the full 05:40:47 inventory snapshot finds that verified market repurchases supplied 86.8% of incoming tokens to the original seller group. Older holders joining the rolling seller set explain much of its rising remaining inventory. Includes raw RPC evidence, transfer paths, synchronized balance fractions, acquisition histories, executable analysis and charts. The scenario notebooks retain their dated assumptions; this extension does not invent a calibrated probability of another recovery or a selling-stop time.
+
+## Previous update — September 16, 05:56:10 UTC
 
 **[Fresh findings and comparison](behavior-updates/2026-09-16T054047Z/FINDINGS.md)** · **[Executed update notebook](behavior-updates/2026-09-16T054047Z/update.ipynb)**
 

@@ -1,0 +1,105 @@
+{
+  "pin_utc": "2026-09-16T06:16:07+00:00",
+  "block": 64286684,
+  "hash": "0xc26416bd52e42a02fa533c5ddb9b9ffa359a5854bcf15ddb5d431dcd977cbb62",
+  "transactions": 967,
+  "swap_logs": 967,
+  "multi_swap_transactions": 0,
+  "mixed_transactions": 0,
+  "buy_eth": 539.0113923572327,
+  "sell_eth": 316.25130685383476,
+  "actor_attributed_eth": 830.4174781678796,
+  "gross_eth": 855.2626992110675,
+  "price_eth": 0.00010675840194341786,
+  "lastTickAt": "0",
+  "segments": [
+    {
+      "segment": "full",
+      "side": "buy",
+      "transactions": 486,
+      "eth": 539.0113923572327,
+      "addresses": 280,
+      "attributed_eth": 515.5560176409458,
+      "top_address": "0xfc3c962fad2c1cc77f1a0d46e7b8a2de79a21774",
+      "top_eth": 58.604,
+      "top3_eth": 151.16500000000002
+    },
+    {
+      "segment": "full",
+      "side": "sell",
+      "transactions": 481,
+      "eth": 316.25130685383476,
+      "addresses": 279,
+      "attributed_eth": 314.86146052693385,
+      "top_address": "0xd4b4cab5cf150f46448a8b312cf4d96521953c5f",
+      "top_eth": 33.21691540419546,
+      "top3_eth": 90.54202429612124
+    },
+    {
+      "segment": "sell_wave",
+      "side": "buy",
+      "transactions": 74,
+      "eth": 37.6082636227086,
+      "addresses": 56,
+      "attributed_eth": 32.617656860852286,
+      "top_address": "0xa6ebe798a17b351b0c04cd61654c7ca38860e253",
+      "top_eth": 8.063592483060802,
+      "top3_eth": 15.540170852845785
+    },
+    {
+      "segment": "sell_wave",
+      "side": "sell",
+      "transactions": 329,
+      "eth": 255.47340444279126,
+      "addresses": 208,
+      "attributed_eth": 254.61318354544298,
+      "top_address": "0xd4b4cab5cf150f46448a8b312cf4d96521953c5f",
+      "top_eth": 31.507076568420004,
+      "top3_eth": 88.83218546034578
+    },
+    {
+      "segment": "rebound",
+      "side": "buy",
+      "transactions": 104,
+      "eth": 107.82821706612793,
+      "addresses": 65,
+      "attributed_eth": 107.82740144152794,
+      "top_address": "0x2408ce75d217e3a70d6ca370c78c1b34d706f5a0",
+      "top_eth": 37.693624998724054,
+      "top3_eth": 68.85762499872406
+    },
+    {
+      "segment": "rebound",
+      "side": "sell",
+      "transactions": 11,
+      "eth": 8.060683085495604,
+      "addresses": 10,
+      "attributed_eth": 8.060683085495603,
+      "top_address": "0xd026f7a62fad79952d2f136ebd598a71b0053da1",
+      "top_eth": 2.4876873577390257,
+      "top3_eth": 5.829335377778095
+    },
+    {
+      "segment": "last20",
+      "side": "buy",
+      "transactions": 104,
+      "eth": 107.82821706612793,
+      "addresses": 65,
+      "attributed_eth": 107.82740144152794,
+      "top_address": "0x2408ce75d217e3a70d6ca370c78c1b34d706f5a0",
+      "top_eth": 37.693624998724054,
+      "top3_eth": 68.85762499872406
+    },
+    {
+      "segment": "last20",
+      "side": "sell",
+      "transactions": 11,
+      "eth": 8.060683085495604,
+      "addresses": 10,
+      "attributed_eth": 8.060683085495603,
+      "top_address": "0xd026f7a62fad79952d2f136ebd598a71b0053da1",
+      "top_eth": 2.4876873577390257,
+      "top3_eth": 5.829335377778095
+    }
+  ]
+}
