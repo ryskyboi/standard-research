@@ -1,0 +1,22 @@
+{
+  "snapshot_utc": "2026-09-16T02:22:37+00:00",
+  "block": 64147400,
+  "price_ETH": 0.00010298347245526298,
+  "actual_pool_ETH": 2371.9431850778706,
+  "total_minted": 96892383.44805528,
+  "holder_side_tokens": 64253903.58950068,
+  "recent_seller_inventory": 2343123.8637286224,
+  "other_holder_inventory": 61910779.72577206,
+  "recent_seller_top5_inventory": 1326794.9774866214,
+  "recent_seller_top10_inventory": 1750605.5231421483,
+  "current_vault_ETH": 111.7189937774005,
+  "entire_vault_tokens_bought": 1023383.2452737577,
+  "entire_vault_no_seller_price_return": 0.05770218960395046,
+  "current_tick_ETH": 6.461678438577122,
+  "new_delta_unresolved_transactions": 24,
+  "new_delta_canonical_ETH": 152.31446605721231,
+  "new_delta_unattributed_ETH": 0.8886768126244592,
+  "integer_total_supply_reconciled": true,
+  "known_custody_balances_reconciled": true,
+  "limitations": "Recent means addresses attributed to canonical-pool sells in the chosen trailing window, not all potential sellers. Other-venue-only or unresolved sellers may be missing. Remaining balances replay all STANDARD transfers from the prior individually reconciled snapshot, including new buys/transfers; inventory does not imply intention. Future paths assume successful hourly owner execution, fixed liquidity/taxes, no replenishment or additional branch withdrawals, and modeled counterparty selling spread evenly. The 48h case crosses epoch settlement but deliberately excludes any replenishment."
+}

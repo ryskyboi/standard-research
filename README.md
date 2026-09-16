@@ -10,6 +10,12 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Fresh buyback-trade check — September 16, 02:22:37 UTC
+
+**[Remaining seller inventory versus buybacks](BUYBACK_TRADE.md)** · **[Liquid supply, vault address and execution status](BUYBACK_STATUS.md)**
+
+Six-hour sellers retain 2.343 million STANDARD; 24-hour sellers retain 7.435 million. The 111.72 ETH current vault buys approximately 1.023 million tokens with no sellers. A modeled 1 ETH canonical-pool entry still loses about 2% after a day of hourly buybacks even with no opposing sellers, because the spot lift does not clear round-trip fees. No scheduled buyback start is verified; owner execution succeeds in simulation but no buyback has occurred.
+
 ## Latest: re-entry and buyback map — September 16, 01:47:19 UTC
 
 **[Read the re-entry findings](REENTRY_FINDINGS.md)** · **[Open the executed notebook](reentry_analysis.ipynb)**

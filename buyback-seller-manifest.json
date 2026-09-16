@@ -1,0 +1,31 @@
+{
+  "block": 64147400,
+  "timestamp_utc": "2026-09-16T02:22:37Z",
+  "sha256": {
+    "BUYBACK_STATUS.md": "ce5af14003154c2059552f494d7bc1a5d943f2cbe60716beb7e2b424c6cf8e92",
+    "BUYBACK_TRADE.md": "8a15b1ee9001fbd4beb797f0da2b72c718189ca7dbc6cd75d0caf1bc69ee6c76",
+    "collect_buyback_update.mjs": "7acf597149f848691a40b74597601e56136b29ecf71c4d5685c913f5ec83bf27",
+    "collect_buyback_sellers.mjs": "32b1d58da8f552aeff55d98c4249412e94f421e06576a717b4845816f5868a83",
+    "buyback_sellers.py": "756a7c4111d8cddf20275b73556ba95848e9e9ac012bb430322db470dbc809bb",
+    "test_buyback_sellers.py": "37adabf36d7dff8d9afe7a58ace5a1de613b4fbe8de6b568a746311ff3346d02",
+    "liquidity.py": "6422a32e966be21741cdb712ac8402830ea87afbcec1074f5f78d1e08dfe36bd",
+    "reentry_model.py": "be44fd0120d24a7721932d462d1496b852e19c9ed0610cfa9cbdd32c0363cb21",
+    "buyback-updates/2026-09-16T02-22-37.000Z.json": "ef80405debea7ccf29a11a1a89f6c8ac4b18e254110690639e6d3797930c0439",
+    "buyback-seller-evidence/liquidity.json": "ffe865d2a16b9d1642ba6b7ec3b4fe304168bbfd3694a4868446bce83e810500",
+    "buyback-seller-evidence/events.json.gz": "74157d0ef387b9aa477c9fbcb36705ebea5a13fa11c5672ff56e54104d3d67d2",
+    "buyback-seller-evidence/raw.json.gz": "c6aa5d11a170cf765c40279615ffb3c4481d59efd9c5a790f65873c1ff58d5f7",
+    "buyback-seller-evidence/target.json": "ef80405debea7ccf29a11a1a89f6c8ac4b18e254110690639e6d3797930c0439",
+    "buyback-seller-evidence/transfers.json.gz": "bfe568697acfee16d9d28eca7508df3f173c6993af7a818ff716da6e820150c2",
+    "buyback-seller-results/seller-windows.csv": "7ba038555851fe73b440643b5e50ee394f0e6585efacff48ffb6d5a6512dcad3",
+    "buyback-seller-results/buyback-vs-sellers.csv": "ed3e25053c8e923eaec8bf41e196753bee2d873a9eafaaa8f21e05dd584727a5",
+    "buyback-seller-results/trades.csv.gz": "0ee7feaed33759ec6df9afd7bcfafc01c09a349bb43b9b1c74c1cf5ce62fb231",
+    "buyback-seller-results/sellers-6h.csv": "a4aaf524a207ff3d060bd10adb18ee45ed9f0905a87c871133a9879679cf1623",
+    "buyback-seller-results/sellers-24h.csv": "de78de3f39313e547323fce4d3bd9f79351d01b9e8b5a2e01620b496cf8751ad",
+    "buyback-seller-results/break-even-external-buying.csv": "7d57ee6ef77bc659de5cd563e2d74d3434f05190d4b2601a9195f62ad212ef62",
+    "buyback-seller-results/buyback-absorption.csv": "08f3e213f331fc2279782d5281475c1dc40fce923436260e0a602ebb5cf0f604",
+    "buyback-seller-results/summary.json": "0a347fd057b1e4739f3761dbc172bc466fd1a4f570f7e386df1b02a3b3e83bbd",
+    "buyback-seller-results/new-unresolved.csv": "e2398fc66f0fc23133ff52c1d2119ed58db5345387d4e37680fabbbd802d1d30",
+    "buyback-seller-results/sellers-2h.csv": "2cee2f100cd3a640cb29ecabe4f166ac7d080ee2094e8dd170169a685cd42c74",
+    "buyback-seller-results/sellers-0.333333h.csv": "afa528842a36b742a5d158ddc048c8e7eabf13cd344394375e9a3320d7faa566"
+  }
+}
