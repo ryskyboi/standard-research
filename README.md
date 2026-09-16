@@ -8,6 +8,8 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Open the agent notebook](rational_scenarios.ipynb)** · **[Read the findings](AGENT_FINDINGS.md)** · [Model and tax details](AGENT_MODEL.md) · [Evidence and reproduction](DATA.md)
 
+**[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
+
 ## Latest participant and branch-auction evidence
 
 **[Executed participant notebook](participant_analysis.ipynb)** · **[Who bought/sold and how branches were funded](PARTICIPANTS.md)** · [Method and limits](PARTICIPANT_METHOD.md)
