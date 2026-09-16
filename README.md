@@ -10,6 +10,10 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Buyer attribution — September 16, 09:23:06 UTC
+
+**[The three dominant buying recipients: holdings, protocol links and remaining cash](buyer-investigation/FINDINGS.md)**. They hold 1.324m STANDARD and 2.44 ETH combined, with no WETH/USDG in the checked wallets. One owns Charter #738 with one branch; no direct team-control relationship is established. The third purchase used about 20,000 USDG through an external execution route, showing why a recipient's zero ETH balance does not establish exhaustion of buying capital. Native ETH funding ancestry remains unresolved because the public history/trace services were unavailable.
+
 ## Spot-entry check — September 16, 09:11:08 UTC
 
 **[Fresh flow, large-holder balances and fee-adjusted entry analysis](decision-evidence/2026-09-16T0908/FINDINGS.md)**. Buying continues, but the latest 20-minute volume is concentrated: 90.8% reaches three token recipient addresses. A modeled 1 ETH entry needs about 131 ETH of additional buying to break even with no sellers, or 216 ETH if 750,000 STANDARD sells first. Buybacks remain inactive. These are conditional requirements, not forecasts.

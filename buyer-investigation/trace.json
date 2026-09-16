@@ -1,0 +1,4 @@
+{
+  "tx": "0x04b8205099213c78d5d238ef9960e08fe07a268ec38bc8693e222e3f0669f756",
+  "error": "Error: {\"code\":-32601,\"message\":\"the method debug_traceTransaction does not exist/is not available\"}"
+}

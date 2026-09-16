@@ -1,0 +1,291 @@
+{
+  "chainId": 4663,
+  "token": "0x88ad8DdF1E3898412146a534538d418c6F8A9062",
+  "header": {
+    "baseFeePerGas": "0x344a3b0",
+    "difficulty": "0x1",
+    "extraData": "0x4c62922421d65a41cbd837db6b0a68281937ab10b627764d36db755dceb1e267",
+    "gasLimit": "0x4000000000000",
+    "gasUsed": "0xc4a4a",
+    "hash": "0x21686108317bf6c12a0630611549b61f04b45781c1e0abf763388037831fe459",
+    "l1BlockNumber": "0x18c8ff9",
+    "logsBloom": "0x8000000000000008000000000008000000084400100008000001000000000100000001000000000000010400000020800000000104200020048001000020000010000002000060000008000800210401040024000800002010000004000410000800480002400200000100800100080001004000000040200080007200000000012008000000004200000040000000000008000801000000020010080000004002000020484000001000002000002008000000900000100020000020000020000000040200812000000204000400002000880000008000010000000031012000001000000000000000402000010020c220040040000800000000800406000000",
+    "miner": "0xa4b000000000000000000073657175656e636572",
+    "mixHash": "0x000000000000098300000000018c8ff9000000000000003d0000000000000000",
+    "nonce": "0x0000000000045b12",
+    "number": "0x3d6a328",
+    "parentHash": "0x82fafa4f711a313895cef0e4bc3b1bda031cda5542605857b3bb084ff7870253",
+    "receiptsRoot": "0x4358045f0c32111f8df731d3a87c34a45c8ff62e70d680e847489d35d4dae86e",
+    "sendCount": "0x983",
+    "sendRoot": "0x4c62922421d65a41cbd837db6b0a68281937ab10b627764d36db755dceb1e267",
+    "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+    "size": "0x144f",
+    "stateRoot": "0x209a9344c7b633f49f2dbe31ee0d50158161812db572ccbc560e9c927b0d1b3c",
+    "timestamp": "0x6aaa5ffa",
+    "transactions": [
+      "0x9783cd6845509e7412a9db5059c8cfd9772760a418da64a9aa78ba9fb7152e0c",
+      "0x2a815e02b52f2e493a9697ae2e006d1100b421f79a7e4733fea7dc713fc1ac9f",
+      "0x703b6967267547c64c500819d4fac5d4c56f6fee3f83facfc614a017b158d7f3",
+      "0x7ec1a64ee29fc4ebc26142b0001cdaccb1e942c12b449192a7895e5be9303215",
+      "0x93cff2eecce203e2c55a7217c6f97bc5b9ba5a9c44cba1422773c591f0c1dc30",
+      "0x1a3ef292aa01126ca2192d32e25c34a6c46c33b551bd57f582e3745e98fe0711",
+      "0x87cc55c07ada694671e5cdbf8c94e7344846cd3074b75844bc913fdae8ec58e6"
+    ],
+    "transactionsRoot": "0xd73eefe910d442d5f4a3c2430c28ad663ae8190cfcf8bd3cd5f562922cc78801",
+    "uncles": []
+  },
+  "assets": {
+    "STANDARD": "0x88ad8DdF1E3898412146a534538d418c6F8A9062",
+    "WETH": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+    "USDG": "0x5fc5360d0400a0fd4f2af552add042d716f1d168"
+  },
+  "state": [
+    {
+      "label": "STANDARD.symbol",
+      "success": true,
+      "value": "STANDARD"
+    },
+    {
+      "label": "STANDARD.decimals",
+      "success": true,
+      "value": 18
+    },
+    {
+      "label": "WETH.symbol",
+      "success": true,
+      "value": "WETH"
+    },
+    {
+      "label": "WETH.decimals",
+      "success": true,
+      "value": 18
+    },
+    {
+      "label": "USDG.symbol",
+      "success": true,
+      "value": "USDG"
+    },
+    {
+      "label": "USDG.decimals",
+      "success": true,
+      "value": 6
+    },
+    {
+      "label": "0x47d579fe2962cca1f2936b30be1981eae391b1fe.ETH",
+      "success": true,
+      "value": "1939928904240016000"
+    },
+    {
+      "label": "0x47d579fe2962cca1f2936b30be1981eae391b1fe.STANDARD",
+      "success": true,
+      "value": "704874031376284103893976"
+    },
+    {
+      "label": "0x47d579fe2962cca1f2936b30be1981eae391b1fe.WETH",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x47d579fe2962cca1f2936b30be1981eae391b1fe.USDG",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x47d579fe2962cca1f2936b30be1981eae391b1fe.charters",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x456408c79e4bed7c58d04098438971255bfa98f0.ETH",
+      "success": true,
+      "value": "501456202697557696"
+    },
+    {
+      "label": "0x456408c79e4bed7c58d04098438971255bfa98f0.STANDARD",
+      "success": true,
+      "value": "543165356014641136712469"
+    },
+    {
+      "label": "0x456408c79e4bed7c58d04098438971255bfa98f0.WETH",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x456408c79e4bed7c58d04098438971255bfa98f0.USDG",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x456408c79e4bed7c58d04098438971255bfa98f0.charters",
+      "success": true,
+      "value": "1"
+    },
+    {
+      "label": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6.ETH",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6.STANDARD",
+      "success": true,
+      "value": "75638642891558766509382"
+    },
+    {
+      "label": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6.WETH",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6.USDG",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6.charters",
+      "success": true,
+      "value": "0"
+    },
+    {
+      "label": "protocol.taxHook.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.taxHook.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.standard.owner",
+      "success": false,
+      "returnData": "0x"
+    },
+    {
+      "label": "protocol.standard.pendingOwner",
+      "success": false,
+      "returnData": "0x"
+    },
+    {
+      "label": "protocol.charterNFT.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.charterNFT.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.multicall3.owner",
+      "success": false,
+      "returnData": "0x"
+    },
+    {
+      "label": "protocol.multicall3.pendingOwner",
+      "success": false,
+      "returnData": "0x"
+    },
+    {
+      "label": "protocol.centralBank.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.centralBank.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.feeSplitter.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.feeSplitter.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.genesisMinter.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.genesisMinter.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.charterAuction.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.charterAuction.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.expansionVault.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.expansionVault.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.licenseAuction.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.licenseAuction.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "protocol.contractionVault.owner",
+      "success": true,
+      "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+    },
+    {
+      "label": "protocol.contractionVault.pendingOwner",
+      "success": true,
+      "value": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "label": "charter738.owner",
+      "success": true,
+      "value": "0x456408c79E4Bed7C58d04098438971255BfA98f0"
+    },
+    {
+      "label": "charter738.branchCountOf",
+      "success": true,
+      "value": "1"
+    },
+    {
+      "label": "charter738.pendingOf",
+      "success": true,
+      "value": "843952673560235733234"
+    }
+  ],
+  "codes": [
+    {
+      "address": "0x47d579fe2962cca1f2936b30be1981eae391b1fe",
+      "code": "0x",
+      "nonce": "0x5"
+    },
+    {
+      "address": "0x456408c79e4bed7c58d04098438971255bfa98f0",
+      "code": "0x",
+      "nonce": "0x93"
+    },
+    {
+      "address": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6",
+      "code": "0xef0100000000009b1d0af20d8c6d0a44e162d11f9b8f00",
+      "nonce": "0x1"
+    }
+  ]
+}

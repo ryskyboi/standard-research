@@ -1,0 +1,64 @@
+{
+  "snapshot_utc": "2026-09-16T09:23:06+00:00",
+  "block": 64398120,
+  "hash": "0x21686108317bf6c12a0630611549b61f04b45781c1e0abf763388037831fe459",
+  "addresses": [
+    {
+      "address": "0x47d579fe2962cca1f2936b30be1981eae391b1fe",
+      "STANDARD": 704874.0313762841,
+      "ETH": 1.9399289042400159,
+      "WETH": 0.0,
+      "USDG": 0.0,
+      "charters": 0,
+      "tokens_at_0540": 0.0,
+      "recent_tokens_added": 704874.0313762841,
+      "recent_purchase_transactions_submitted": 5,
+      "recent_submitted_ETH": 79.9,
+      "known_protocol_address": false
+    },
+    {
+      "address": "0x456408c79e4bed7c58d04098438971255bfa98f0",
+      "STANDARD": 543165.3560146411,
+      "ETH": 0.5014562026975578,
+      "WETH": 0.0,
+      "USDG": 0.0,
+      "charters": 1,
+      "tokens_at_0540": 452278.06690332846,
+      "recent_tokens_added": 90887.28911131268,
+      "recent_purchase_transactions_submitted": 11,
+      "recent_submitted_ETH": 10.5,
+      "known_protocol_address": false
+    },
+    {
+      "address": "0x451e9a00df8d6863a9aa9b1bb2eb6e1202ef76d6",
+      "STANDARD": 75638.64289155876,
+      "ETH": 0.0,
+      "WETH": 0.0,
+      "USDG": 0.0,
+      "charters": 0,
+      "tokens_at_0540": 4067.1251572649517,
+      "recent_tokens_added": 71571.51773429381,
+      "recent_purchase_transactions_submitted": 0,
+      "recent_submitted_ETH": 0.0,
+      "known_protocol_address": false
+    }
+  ],
+  "total_native_ETH": 2.441385106937574,
+  "total_STANDARD": 1323678.030282484,
+  "routed_purchase_USDG": 19999.935843,
+  "routed_purchase_transaction": "0x04b8205099213c78d5d238ef9960e08fe07a268ec38bc8693e222e3f0669f756",
+  "routed_transaction_sender": "0xf9d33da08b05e3a78b878ebbedc50485d6e49374",
+  "route_contract": "0x5399d94d2cab7c252a6034042e1917a0e5e17a18",
+  "protocol_owners": [
+    "0x5c19f925e1e0d54e34681a6cb70d55c90b12a68c"
+  ],
+  "charter_738": {
+    "owner": "0x456408c79E4Bed7C58d04098438971255BfA98f0",
+    "branches": 1,
+    "pending_STANDARD": 843.9526735602358
+  },
+  "full_target_token_balance_replay_reconciled": true,
+  "successful_receipts": 17,
+  "direct_standard_transfers_to_or_from_known_protocol_wallets": [],
+  "limitations": "Native ETH funding history is not established: public explorer returned HTTP 403 and RPC trace_filter/debug_traceTransaction are unavailable. No beneficial ownership, shared private capital, other-chain assets, other token assets or customer claim on routing inventory is inferred. Zero present cash does not prevent replenishment or routed execution."
+}
