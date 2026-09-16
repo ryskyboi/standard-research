@@ -10,6 +10,16 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Latest update — September 16, 05:56:10 UTC
+
+**[Fresh findings and comparison](behavior-updates/2026-09-16T054047Z/FINDINGS.md)** · **[Executed update notebook](behavior-updates/2026-09-16T054047Z/update.ipynb)**
+
+**Final market check at 05:56:10 UTC:** another 2.30% price decline since the full 05:40:47 snapshot, with 1.30 ETH buying versus 45.58 ETH selling; no buyback execution. Wallet inventories and scenarios retain the full 05:40:47 snapshot.
+
+At that full snapshot, STANDARD had risen 9.15% from the previous snapshot, but was already 8.96% below its intervening peak. The daily license quota filled at 04:01:14 UTC; price peaked at 04:13:44 UTC. The last 20 minutes show 0.36 ETH buying versus 30.43 ETH selling. Recent-seller inventory increased to 4.35m STANDARD, and no buyback has executed. Only 15.7% of the new license spend traces to market purchases after the prior snapshot.
+
+Includes 8,787 individually reconciled token balances, the same eight model cases rerun across 32 paths, an honest check against the earlier saved scenarios, funding rebased to the previous snapshot and exact milestone block headers. The rebound occurred; seller exhaustion and a sustained recovery remain unproven. Earlier dated research is preserved below.
+
 ## Participant behavior model — September 16, 02:57:33 UTC
 
 **[Decision map and findings](BEHAVIOR_MAP.md)** · **[Executed, editable notebook](participant_behavior.ipynb)** · **[Model rules and limitations](BEHAVIOR_METHOD.md)**

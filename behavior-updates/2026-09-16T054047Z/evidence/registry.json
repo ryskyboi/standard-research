@@ -1,0 +1,22 @@
+[
+  {
+    "label": "executionPermissionless",
+    "value": false
+  },
+  {
+    "label": "owner",
+    "value": "0x5c19F925E1e0D54E34681A6CB70d55c90b12A68c"
+  },
+  {
+    "label": "contractionVault",
+    "error": "0x"
+  },
+  {
+    "label": "expansionVault",
+    "error": "0x"
+  },
+  {
+    "label": "polManager",
+    "error": "0x"
+  }
+]
