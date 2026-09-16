@@ -1,0 +1,11 @@
+strategy,side,events_6h,eligible_addresses,events_per_address_hour,median_sell_fraction,median_buy_wallet_ETH,notes
+charter_owner,buy,82,934,0.014632405424696645,0.5,0.99,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+charter_owner,sell,34,934,0.006067094932191292,0.5999954999999999,2.5516776767882505,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+inactive_holder,buy,0,6534,0.0,0.5,0.1,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+inactive_holder,sell,0,6534,0.0,0.5,0.1,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+recent_buyer,buy,486,269,0.30111524163568776,0.5,0.27170052,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+recent_buyer,sell,0,269,0.0,0.5,0.1,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+recent_seller,buy,23,448,0.00855654761904762,0.5,0.20742346347733512,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+recent_seller,sell,615,448,0.22879464285714285,0.9499980000000002,0.31482902855583295,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+two_way,buy,172,74,0.38738738738738737,0.5,0.19216567515370306,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.
+two_way,sell,116,74,0.26126126126126126,0.9749391780369205,0.3567724972198436,Snapshot-conditioned eligible-address proxy; endogenous/censored participation. Not a validated hazard.

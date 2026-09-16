@@ -10,6 +10,16 @@ An executed, editable notebook for wallet tokens, Charter earnings, branch purch
 
 **[Action framework: sell, keep branches, or expand?](ACTION_FRAMEWORK.md)** — updated September 16, 01:30:53 UTC.
 
+## Participant behavior model — September 16, 02:57:33 UTC
+
+**[Decision map and findings](BEHAVIOR_MAP.md)** · **[Executed, editable notebook](participant_behavior.ipynb)** · **[Model rules and limitations](BEHAVIOR_METHOD.md)**
+
+A new wallet-level model covers selling cadence, partial exits, newly active sellers, speculative re-entry, internal branch funding, fresh purchases, prospective prefunding, retirement and conditional buybacks. It uses 8,575 measured addresses, current Charter ownership and the full canonical liquidity curve. It includes 32 primary paths, eight sensitivity runs, UTC timestamps and conservation checks.
+
+Only 7.8% of the latest 54 licenses' token spend traces to new canonical purchases. All 46 remaining licenses can feasibly use existing balances. New sellers continue to replace old sellers, and buybacks alone do not clear canonical round-trip fees in the illustrated 1 ETH trade. The scenario range is conditional; no most-likely top or calibrated recovery probability is claimed. Action-order and time-step sensitivity make exact simulated selling times unreliable.
+
+Run `python run_notebook.py participant_behavior.ipynb` to execute the saved-data notebook, or follow [full reproduction instructions](BEHAVIOR_MAP.md#reproduce-and-inspect). `python verify_behavior.py` checks the frozen evidence, model, outputs and executed cells. Earlier snapshots below remain dated historical analyses.
+
 ## Seller monitor — September 16, 02:48:06 UTC
 
 **[Seller entry cohorts, fixed-group depletion and replacement selling](SELLER_MONITOR.md)**. Three polls show old inventories shrinking while newly active sellers dominate subsequent sales. Includes a public-RPC polling command, per-wallet acquisition lineage, UTC entry observations and a watchlist. No reliable selling-stop time is inferred.
